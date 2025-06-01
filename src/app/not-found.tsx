@@ -10,7 +10,7 @@ import { Home, ArrowLeft, Search, Mail } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-primary/5 to-navy-primary/10 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FAF9F7] flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-lg w-full text-center">
         {/* Large 404 Number */}
         <div className="mb-8">
