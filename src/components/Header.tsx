@@ -46,7 +46,7 @@ export default function Header() {
                 {/* Logo */}
                 <div className="flex-shrink-0 flex items-center">
                     <Link href="/">
-                    <Image src="/logo.png" alt="logo" width={100} height={100} />
+                    <Image src="/logo.png" alt="logo" width={500} height={500} className="w-30 h-auto" />
                     </Link>
                 </div>
 
@@ -58,7 +58,7 @@ export default function Header() {
                         <Link
                         key={item.href}
                         href={item.href}
-                        className={`inline-flex items-center px-1 py-4 border-b-2 text-sm font-medium transition-colors ${
+                        className={`inline-flex items-center px-1 py-5 border-b-2 text-md font-medium transition-colors ${
                             isActive
                             ? "border-primary text-primary"
                             : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
