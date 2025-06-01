@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iValt Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+      body {
+        background: linear-gradient(
+          84deg,
+          rgba(1, 24, 68, 1) 0%,
+          rgba(0, 61, 116, 1) 62%,
+          rgba(0, 181, 202, 1) 100%
+        );
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+
+      .glass-effect {
+        background: rgba(46, 46, 46, 0.601);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 0px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .h1 {
+        font: 3.625em / 1em industry-medium;
+        color: #91e6c6;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: all 0.6s;
+      }
+
+      .button:hover:before {
+        left: 100%;
+      }
+
+      .button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: #91e6c6;
+        color: #91e6c6;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .bg-grid {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+          );
+        background-size: 20px 20px;
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0)
+        );
+        opacity: 0.7;
+      }
+      .text-ivalt {
+        color: #4dd2a5;
+      }
+
+      .input-field {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+      }
+
+      .input-field:focus {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #91e6c6;
+        box-shadow: 0 0 0 2px rgba(145, 230, 198, 0.2);
+        outline: none;
+      }
+
+      .input-field::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .label-text {
+        color: #91e6c6;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .iti {
+        width: 100%;
+      }
+      .iti__flag-container:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .iti__selected-flag {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+      }
+      .iti__country-list {
+        background-color: #1a2942;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .iti__country {
+        color: white;
+      }
+      .iti__country:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .iti__selected-flag:focus {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+      }
+    </style>
+  </head>
+  <body class="">
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="container mx-auto px-4 py-8 bg-ivalt min-h-screen">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <div class="flex justify-center mb-4">
+          <img
+            src="https://ivalt.com/wp-content/themes/t466jHjHxHAGxHAGqd_ivalt/images/logohome.png"
+            alt="iValt Logo"
+            class="h-16 object-contain"
+          />
+        </div>
+        <h1 class="text-ivalt text-3xl font-bold mb-2">Try iVALT Now!</h1>
+      </div>
+
+      <!-- Form Card -->
+      <div
+        class="max-w-lg mx-auto bg-[#1a2942] rounded-lg shadow-xl p-6 text-white glass-effect"
+      >
+        <form id="registrationForm" class="space-y-4">
+          <!-- Name -->
+          <div>
+            <label for="name" class="label-text block">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="input-field w-full px-4 py-2 rounded-lg"
+              required
+            />
+            <p id="nameError" class="mt-1 text-sm text-red-400 hidden"></p>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="label-text block">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input-field w-full px-4 py-2 rounded-lg"
+              required
+            />
+            <p id="emailError" class="mt-1 text-sm text-red-400 hidden"></p>
+          </div>
+
+          <!-- Mobile -->
+          <div>
+            <label for="mobile" class="label-text block">Mobile</label>
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              class="input-field w-full px-4 py-2 rounded-lg"
+              required
+            />
+            <p id="mobileError" class="mt-1 text-sm text-red-400 hidden"></p>
+          </div>
+
+          <!-- Organization Name -->
+          <div>
+            <label for="orgName" class="label-text block"
+              >Organization Name</label
+            >
+            <input
+              type="text"
+              id="orgName"
+              name="orgName"
+              class="input-field w-full px-4 py-2 rounded-lg"
+              required
+            />
+            <p id="orgNameError" class="mt-1 text-sm text-red-400 hidden"></p>
+          </div>
+
+          <!-- Organization Code -->
+          <div>
+            <label for="orgCode" class="label-text block"
+              >Organization Code</label
+            >
+            <input
+              type="text"
+              id="orgCode"
+              name="orgCode"
+              class="input-field w-full px-4 py-2 rounded-lg"
+              readonly
+            />
+            <button
+              type="button"
+              id="editOrgCode"
+              class="mt-2 text-sm text-[#91E6C6] hover:text-white transition-colors duration-300"
+            >
+              Edit Code
+            </button>
+          </div>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LddhhAeAAAAADYxWHRGh_ri02K_pyoVUnjuuBow"
+          ></div>
+          <!-- Submit Button -->
+          <div>
+            <button
+              type="submit"
+              class="button w-full py-3 text-white font-medium"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div class="mt-8 text-center text-gray-300 text-sm">
+        <a href="#" class="hover:text-[#4dd2a5] mx-2">Terms of Service</a>
+        <a href="#" class="hover:text-[#4dd2a5] mx-2">Privacy Policy</a>
+        <a href="#" class="hover:text-[#4dd2a5] mx-2">Contact Us</a>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("registrationForm");
+        const orgNameInput = document.getElementById("orgName");
+        const orgCodeInput = document.getElementById("orgCode");
+        const editOrgCodeBtn = document.getElementById("editOrgCode");
+
+        // Updated generateOrgCode function to show all characters
+        function generateOrgCode(name) {
+          return name
+            .trim()
+            .toUpperCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^A-Z0-9\-_]/g, "");
+        }
+
+        // Add validation for org code input
+        orgCodeInput.addEventListener("input", function (e) {
+          let value = e.target.value;
+          let sanitizedValue = value.replace(/[^A-Za-z0-9\-_]/g, "");
+          if (value !== sanitizedValue) {
+            this.value = sanitizedValue;
+            showError(
+              "orgCode",
+              "Only letters, numbers, hyphens (-) and underscores (_) are allowed"
+            );
+          }
+        });
+
+        // Update org code when org name changes
+        orgNameInput.addEventListener("input", function () {
+          orgCodeInput.value = generateOrgCode(this.value);
+        });
+
+        // Toggle org code input editability
+        editOrgCodeBtn.addEventListener("click", function () {
+          if (orgCodeInput.readOnly) {
+            orgCodeInput.readOnly = false;
+            orgCodeInput.focus();
+            this.textContent = "Lock Code";
+          } else {
+            const validCode = orgCodeInput.value.match(/^[A-Za-z0-9\-_]+$/);
+            if (!validCode) {
+              showError("orgCode", "Invalid characters in organization code");
+              return;
+            }
+            orgCodeInput.readOnly = true;
+            this.textContent = "Edit Code";
+          }
+        });
+
+        // Initialize the telephone input
+        const phoneInput = window.intlTelInput(
+          document.querySelector("#mobile"),
+          {
+            utilsScript:
+              "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+            preferredCountries: ["us", "in"],
+            separateDialCode: true,
+            formatOnDisplay: true,
+            autoPlaceholder: "polite",
+          }
+        );
+
+        // Update mobile validation in the form submit handler
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          let isValid = true;
+          const nameInput = document.getElementById("name");
+          const name = nameInput.value.trim();
+          if (name.length < 2) {
+            showError("name", "Name must be at least 2 characters long");
+            isValid = false;
+          }
+
+          // Validate email
+          const emailInput = document.getElementById("email");
+          const email = emailInput.value.trim();
+          if (!email.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
+            showError("email", "Please enter a valid email address");
+            isValid = false;
+          }
+
+          // Validate mobile number
+          if (!phoneInput.isValidNumber()) {
+            showError("mobile", "Please enter a valid phone number");
+            isValid = false;
+          }
+
+          if (!isValid) return;
+
+          // Prepare form data for the API call
+          const formData = {
+            name: name,
+            email: email,
+            mobile: phoneInput
+              .getNumber(intlTelInputUtils.numberFormat.NATIONAL)
+              .replace(/\D/g, "")
+              .replace(/^0+/, ""),
+            country_code: phoneInput.getSelectedCountryData().dialCode,
+            mobile_with_country_code: phoneInput.getNumber(), // Get full number with country code
+            organization_name: document.getElementById("orgName").value.trim(),
+            organization_code: document.getElementById("orgCode").value.trim(),
+            "g-recaptcha-response": grecaptcha.getResponse(),
+          };
+
+          // console.log("Sending data:", JSON.stringify(formData, null, 2));
+
+          try {
+            const response = await fetch(
+              "https://api.ivalt.com/admin/public/api/organization/create/onboarding",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "x-api-key": "NgwbltECec1LignlFDa57479D3cZfgnE2bvwGyCp"
+                },
+                body: JSON.stringify(formData),
+              }
+            );
+
+            const result = await response.json();
+
+            if (response.ok) {
+              window.location.href = "/success.html";
+              // alert("Registration successful!");
+              document.getElementById("registrationForm").reset();
+            } else {
+              const errorMessage =
+                result.error && result.error.detail
+                  ? result.error.detail
+                  : "Registration failed.";
+              alert(`Error: ${errorMessage}`);
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert(
+              "An error occurred while submitting the form. Please try again."
+            );
+          }
+        });
+
+        function showError(fieldId, message) {
+          const errorElement = document.getElementById(`${fieldId}Error`);
+          errorElement.textContent = message;
+          errorElement.classList.remove("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

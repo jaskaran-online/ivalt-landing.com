@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Ivalt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: linear-gradient(
+          84deg,
+          rgba(1, 24, 68, 1) 0%,
+          rgba(0, 61, 116, 1) 62%,
+          rgba(0, 181, 202, 1) 100%
+        );
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+
+      .glass-effect {
+        background: rgba(46, 46, 46, 0.601);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 0px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .h1 {
+        font: 3.625em / 1em industry-medium;
+        color: #91e6c6;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: all 0.6s;
+      }
+
+      .button:hover:before {
+        left: 100%;
+      }
+
+      .button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: #91e6c6;
+        color: #91e6c6;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .bg-grid {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+          );
+        background-size: 20px 20px;
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0)
+        );
+        opacity: 0.7;
+      }
+      .text-ivalt {
+        color: #4dd2a5;
+      }
+
+      .input-field {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+      }
+
+      .input-field:focus {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #91e6c6;
+        box-shadow: 0 0 0 2px rgba(145, 230, 198, 0.2);
+        outline: none;
+      }
+
+      .input-field::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .label-text {
+        color: #91e6c6;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .iti {
+        width: 100%;
+      }
+      .iti__flag-container:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .iti__selected-flag {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+      }
+      .iti__country-list {
+        background-color: #1a2942;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .iti__country {
+        color: white;
+      }
+      .iti__country:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .iti__selected-flag:focus {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div
+        class="max-w-xl w-full glass-effect text-white rounded-2xl shadow-xl p-8 space-y-8"
+      >
+        <!-- Success Icon -->
+        <div class="flex justify-center">
+          <div class="bg-green-100 p-3 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-12 h-12 text-green-600"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Welcome Message -->
+        <div class="text-center space-y-2">
+          <h1 class="text-3xl text-[#91e6c6] font-bold">Welcome to iVALT</h1>
+          <p class="text-gray-100">Thank you for registering with us</p>
+        </div>
+
+        <!-- Email Verification Box -->
+        <div class="bg-[#91e6c6]/10 rounded-xl text-white p-6 space-y-4">
+          <div class="flex items-center space-x-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-[#91e6c6]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <h2 class="text-lg font-semibold text-white">Verify Your Email</h2>
+          </div>
+          <p class="text-gray-100">
+            We've sent a verification email to your registered email address.
+            Please check your inbox and follow the instructions to complete your
+            registration.
+          </p>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-[#91e6c6]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+            </svg>
+            What's Next?
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-[#91e6c6] mt-0.5 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+              <span class="text-gray-100"
+                >Check your email for your login credentials and important
+                security information</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-[#91e6c6] mt-0.5 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+              <span class="text-gray-100"
+                >Complete your profile setup using the link provided in the
+                email</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-[#91e6c6] mt-0.5 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+              <span class="text-gray-100"
+                >Review our getting started guide for the best experience</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Help Section -->
+      </div>
+    </div>
+  </body>
+</html>

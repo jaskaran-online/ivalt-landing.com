@@ -1,0 +1,49 @@
+<svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2">
+    <!-- Horizontal lines -->
+    <path d="M 0 100 L 800 100" />
+    <path d="M 0 300 L 800 300" />
+    <path d="M 0 500 L 800 500" />
+    <path d="M 0 700 L 800 700" />
+    
+    <!-- Vertical lines -->
+    <path d="M 100 0 L 100 800" />
+    <path d="M 300 0 L 300 800" />
+    <path d="M 500 0 L 500 800" />
+    <path d="M 700 0 L 700 800" />
+    
+    <!-- Connection points -->
+    <circle cx="100" cy="100" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="300" cy="100" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="500" cy="100" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="700" cy="100" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    
+    <circle cx="100" cy="300" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="300" cy="300" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="500" cy="300" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="700" cy="300" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    
+    <circle cx="100" cy="500" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="300" cy="500" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="500" cy="500" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="700" cy="500" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    
+    <circle cx="100" cy="700" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="300" cy="700" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="500" cy="700" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    <circle cx="700" cy="700" r="5" fill="rgba(255, 255, 255, 0.2)" />
+    
+    <!-- Diagonal connections -->
+    <path d="M 100 100 L 300 300" />
+    <path d="M 300 100 L 500 300" />
+    <path d="M 500 100 L 700 300" />
+    
+    <path d="M 100 300 L 300 500" />
+    <path d="M 300 300 L 500 500" />
+    <path d="M 500 300 L 700 500" />
+    
+    <path d="M 100 500 L 300 700" />
+    <path d="M 300 500 L 500 700" />
+    <path d="M 500 500 L 700 700" />
+  </g>
+</svg> 
