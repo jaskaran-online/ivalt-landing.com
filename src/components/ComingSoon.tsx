@@ -10,7 +10,8 @@ import {
   SmallText,
   Caption 
 } from "@/components/ui/typography";
-import { Clock, Mail, Bell, CheckCircle } from "lucide-react";
+import { Mail, Bell, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 interface ComingSoonProps {
   title?: string;
@@ -34,8 +35,8 @@ export default function ComingSoon({
   subtitle = "Something amazing is on the way",
   description = "We're working hard to bring you something special. Stay tuned for updates and be the first to know when we launch.",
   launchDate,
-  showCountdown = true,
-  showEmailSignup = true,
+  showCountdown = false,
+  showEmailSignup = false,
   className = "",
 }: ComingSoonProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -97,23 +98,21 @@ export default function ComingSoon({
   );
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-navy-primary via-dark-navy to-navy-primary flex items-center justify-center px-4 sm:px-6 lg:px-8 ${className}`}>
-      <div className="max-w-4xl w-full text-center">
+    <div className={` bg-[#FAF9F7]  px-4 sm:px-6 lg:px-8 ${className}`}>
+      <div className="w-full text-center">
         {/* Main Content */}
         <div className="mb-12">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-teal-primary/20 rounded-full mb-8">
-            <Clock className="w-10 h-10 text-teal-primary" />
+          <div className="flex justify-center mb-12">
+          <Image src="/logo.png" alt="logo" width={500} height={500} className="w-56 h-auto" /> 
           </div>
-
           {/* Title & Subtitle */}
-          <Heading1 className="text-white mb-4">
+          <Heading1 className="text-navy-primary mb-4">
             {title}
           </Heading1>
-          <Heading2 color="light-teal" className="mb-6">
+          <Heading2 color="teal-primary" className="mb-6 text-2xl">
             {subtitle}
           </Heading2>
-          <BodyText className="text-gray-300 max-w-2xl mx-auto mb-8">
+          <BodyText className="text-gray-800 max-w-2xl mx-auto mb-8">
             {description}
           </BodyText>
         </div>
@@ -160,7 +159,7 @@ export default function ComingSoon({
                   </Button>
                 </form>
                 <Caption className="text-gray-400 mt-3">
-                  We'll never spam you. Unsubscribe at any time.
+                  We&apos;ll never spam you. Unsubscribe at any time.
                 </Caption>
               </div>
             ) : (
@@ -168,11 +167,11 @@ export default function ComingSoon({
                 <div className="flex items-center justify-center mb-3">
                   <CheckCircle className="w-6 h-6 text-teal-primary mr-2" />
                   <SmallText weight="semibold" className="text-white">
-                    You're all set!
+                    You&apos;re all set!
                   </SmallText>
                 </div>
                 <BodyText className="text-gray-300">
-                  We'll email you as soon as we launch. Thanks for your interest!
+                  We&apos;ll email you as soon as we launch. Thanks for your interest!
                 </BodyText>
               </div>
             )}
@@ -180,7 +179,7 @@ export default function ComingSoon({
         )}
 
         {/* Social Links or Additional Info */}
-        <div className="mt-16 pt-8 border-t border-white/20">
+        {/* <div className="mt-16 pt-8 border-t border-white/20">
           <SmallText className="text-gray-400 mb-4">
             Follow us for updates
           </SmallText>
@@ -204,7 +203,7 @@ export default function ComingSoon({
               GitHub
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

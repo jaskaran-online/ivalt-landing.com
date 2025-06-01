@@ -1,15 +1,14 @@
+import ComingSoon from "@/components/ComingSoon";
 import Container from "@/components/Container";
 
 export default function About() {
   return (
-    <Container>
-      <div className="flex flex-col gap-4">
-        <h1 className="text-4xl font-bold">About</h1>
-        <p className="text-lg">
-          Ivalt is a company that provides a platform for businesses to manage their
-          customers and orders.
-        </p>
-      </div>
-    </Container>
+    <Container className="bg-[#FAF9F7] py-16">
+      <ComingSoon
+        title="About Us"
+        subtitle="Next-gen security is almost here"
+        launchDate={new Date("2024-06-01")}
+      />
+    </Container>  
   );
 }

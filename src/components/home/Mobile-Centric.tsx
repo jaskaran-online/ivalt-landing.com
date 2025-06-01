@@ -8,7 +8,7 @@ import mobileCentric from "@/assets/images/home/mobile-centric-identity.png";
 export default function MobileCentric() {
   return (
     <div className="bg-white py-12">
-      <Container>
+      <Container className="max-w-7xl">
         <SectionTitle
           title="Mobile-Centric Approach"
           description="Taking advantage of everyone’s mobile phone for real-time identity verification."
