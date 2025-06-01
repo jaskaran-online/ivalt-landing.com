@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
 import { BodyText, Heading2 } from "@/components/ui/typography";
+import IntellectualProperty from "@/components/IntellectualProperty";
 
 import Image, { StaticImageData } from "next/image";
 import Baldev from "@/assets/images/about/baldev.png";
@@ -91,57 +92,62 @@ const Founder = ({ founder }: { founder: Founder }) => {
 
 export default function About() {
   return (
-    <Container className="bg-[#FAF9F7] py-16">
-      <SectionTitle
-        title="Our Mission"
-        description="To eliminate identity fraud by providing seamless, one-click authentication that dynamically verifies user and contextual variables, ensuring unparalleled security and user convenience."
-      />
+    <>
+      <Container className="bg-[#FAF9F7] py-16">
+        <SectionTitle
+          title="Our Mission"
+          description="To eliminate identity fraud by providing seamless, one-click authentication that dynamically verifies user and contextual variables, ensuring unparalleled security and user convenience."
+        />
 
-      <div className="max-w-7xl mx-auto mt-16">
-        {/* Founders Section Title */}
-        <div className="text-center mb-12">
-          <Heading2 color="navy-primary" className="text-3xl mb-4">
-            Founders
-          </Heading2>
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-          {/* Founders Cards */}
-          <div className="lg:col-span-1">
-            <div className="flex flex-row gap-4">
-              {founders.map((founder) => (
-                <Founder key={founder.name} founder={founder} />
-              ))}
-            </div>
+        <div className="max-w-7xl mx-auto mt-16">
+          {/* Founders Section Title */}
+          <div className="text-center mb-12">
+            <Heading2 color="navy-primary" className="text-3xl mb-4">
+              Founders
+            </Heading2>
           </div>
 
-          {/* Company Description */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-md p-8 shadow-sm border border-gray-100 h-full">
-              <Heading2 color="teal-primary" className="text-xl mb-6">
-                Our Story
-              </Heading2>
-              <BodyText className="text-gray-700 leading-relaxed">
-                Founded in 2019 by Baldev Krishan and Brian Stout, iVALT®
-                addresses the persistent issue of identity fraud by moving beyond
-                outdated username/password authentication and ineffective 2FA.
-              </BodyText>
-              <BodyText className="text-gray-700 leading-relaxed mt-4">
-                Recognizing that technology alone isn&apos;t the solution, they
-                developed a mobile app that captures and verifies 5+ dynamic
-                variables, including biometrics, location, and time, in a single
-                click.
-              </BodyText>
-              <BodyText className="text-gray-700 leading-relaxed mt-4">
-                This innovative approach, combining a mobile app with a
-                secure SaaS engine, aims to provide technology efficiency and the
-                highest level of security against evolving hacking techniques.
-              </BodyText>
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+            {/* Founders Cards */}
+            <div className="lg:col-span-1">
+              <div className="flex flex-row gap-4">
+                {founders.map((founder) => (
+                  <Founder key={founder.name} founder={founder} />
+                ))}
+              </div>
+            </div>
+
+            {/* Company Description */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-md p-8 shadow-sm border border-gray-100 h-full">
+                <Heading2 color="teal-primary" className="text-xl mb-6">
+                  Our Story
+                </Heading2>
+                <BodyText className="text-gray-700 leading-relaxed">
+                  Founded in 2019 by Baldev Krishan and Brian Stout, iVALT®
+                  addresses the persistent issue of identity fraud by moving beyond
+                  outdated username/password authentication and ineffective 2FA.
+                </BodyText>
+                <BodyText className="text-gray-700 leading-relaxed mt-4">
+                  Recognizing that technology alone isn&apos;t the solution, they
+                  developed a mobile app that captures and verifies 5+ dynamic
+                  variables, including biometrics, location, and time, in a single
+                  click.
+                </BodyText>
+                <BodyText className="text-gray-700 leading-relaxed mt-4">
+                  This innovative approach, combining a mobile app with a
+                  secure SaaS engine, aims to provide technology efficiency and the
+                  highest level of security against evolving hacking techniques.
+                </BodyText>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+
+      {/* Intellectual Property Section */}
+      <IntellectualProperty />
+    </>
   );
 }
