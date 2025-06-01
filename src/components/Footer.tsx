@@ -4,8 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { 
-  Heading3, 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { 
   Heading4, 
   BodyText, 
   SmallText, 
@@ -42,6 +49,7 @@ const footerLinks = {
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [inquiryType, setInquiryType] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -54,10 +62,11 @@ export default function Footer() {
     // Reset form
     setEmail("");
     setMessage("");
+    setInquiryType("");
     setIsSubmitting(false);
     
     // You can add actual form submission logic here
-    console.log("Form submitted:", { email, message });
+    console.log("Form submitted:", { email, message, inquiryType });
   };
 
   return (
@@ -102,7 +111,7 @@ export default function Footer() {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-gray-800 hover:text-gray-800 transition-colors duration-200"
+                          className="text-gray-600 hover:text-navy-primary transition-colors duration-200"
                         >
                           <SmallText>{link.label}</SmallText>
                         </Link>
@@ -121,7 +130,7 @@ export default function Footer() {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-gray-800 hover:text-gray-800 transition-colors duration-200"
+                          className="text-gray-600 hover:text-navy-primary transition-colors duration-200"
                         >
                           <SmallText>{link.label}</SmallText>
                         </Link>
@@ -129,25 +138,6 @@ export default function Footer() {
                     ))}
                   </ul>
                 </div>
-
-                {/* Resources */}
-                {/* <div>
-                  <Heading4 color="navy-primary" className="mb-6">
-                    Resources
-                  </Heading4>
-                  <ul className="space-y-3">
-                    {footerLinks.resources.map((link) => (
-                      <li key={link.href}>
-                        <Link
-                          href={link.href}
-                          className="text-gray-300 hover:text-white transition-colors duration-200"
-                        >
-                          <SmallText>{link.label}</SmallText>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div> */}
 
                 {/* Legal */}
                 <div>
@@ -159,7 +149,7 @@ export default function Footer() {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-gray-300 hover:text-white transition-colors duration-200"
+                          className="text-gray-600 hover:text-navy-primary transition-colors duration-200"
                         >
                           <SmallText>{link.label}</SmallText>
                         </Link>
@@ -172,10 +162,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-300 py-8">
+        {/* Contact Section */}
+        <div className="border-t border-[#E5E7EB] py-8">
           <div className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-12 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
               {/* Contact Info */}
               <div className="space-y-4">
                 <Heading4 color="navy-primary" className="mb-4">
@@ -183,20 +173,20 @@ export default function Footer() {
                 </Heading4>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-light-teal" />
-                    <SmallText className="text-gray-800">
+                    <Mail className="h-5 w-5 text-teal-primary" />
+                    <SmallText className="text-gray-700">
                       hello@ivalt.com
                     </SmallText>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-light-teal" />
-                    <SmallText className="text-gray-800">
+                    <Phone className="h-5 w-5 text-teal-primary" />
+                    <SmallText className="text-gray-700">
                       +1 (555) 123-4567
                     </SmallText>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="h-5 w-5 text-light-teal" />
-                    <SmallText className="text-gray-800">
+                    <MapPin className="h-5 w-5 text-teal-primary" />
+                    <SmallText className="text-gray-700">
                       123 Main St, San Francisco, CA 94101
                     </SmallText>
                   </div>
@@ -210,14 +200,30 @@ export default function Footer() {
                 </Heading4>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <input
+                    <Input
                       type="email"
                       placeholder="Your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent"
+                      className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary py-6 placeholder:text-gray-500"
                     />
+                  </div>
+                  <div>
+                    <Select value={inquiryType} onValueChange={setInquiryType}>
+                          <SelectTrigger className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary w-full py-6 placeholder:text-gray-500">
+                        <SelectValue placeholder="Select inquiry type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="general">General Inquiry</SelectItem>
+                        <SelectItem value="sales">Sales</SelectItem>
+                        <SelectItem value="support">
+                          Technical Support
+                        </SelectItem>
+                        <SelectItem value="partnership">Partnership</SelectItem>
+                        <SelectItem value="media">Media & Press</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div>
                     <textarea
@@ -226,7 +232,7 @@ export default function Footer() {
                       onChange={(e) => setMessage(e.target.value)}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent resize-none"
+                      className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-teal-primary resize-none"
                     />
                   </div>
                   <Button
@@ -244,27 +250,27 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-300 py-6">
+        <div className="border-t border-gray-200 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
-            <Caption className="text-gray-400">
+            <Caption className="text-gray-500">
               © 2025 iVALT. All rights reserved.
             </Caption>
             <div className="flex space-x-6">
               <Link
                 href="/privacy"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-500 hover:text-navy-primary transition-colors duration-200"
               >
                 <Caption>Privacy</Caption>
               </Link>
               <Link
                 href="/terms"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-500 hover:text-navy-primary transition-colors duration-200"
               >
                 <Caption>Terms</Caption>
               </Link>
               <Link
                 href="/cookies"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-500 hover:text-navy-primary transition-colors duration-200"
               >
                 <Caption>Cookies</Caption>
               </Link>
