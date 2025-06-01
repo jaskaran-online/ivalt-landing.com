@@ -33,7 +33,7 @@ export default function Hero() {
           </div>
           <div className="mt-12 lg:mt-0">
             <div className="overflow-hidden">
-              <Image src="/hero.jpg" alt="Hero Image" width={500} height={500} />
+              <Image src="/hero.jpg" alt="Hero Image" width={500} height={500} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
