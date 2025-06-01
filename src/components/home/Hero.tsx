@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+// import HeroImage from "@/assets/hero-image.png";
+// import HeroImage from "@/assets/hero-image-removebg-preview.png";
+import HeroImage from "@/assets/blue-image.png";
 
 export default function Hero() {
   return (
@@ -33,7 +36,7 @@ export default function Hero() {
           </div>
           <div className="mt-12 lg:mt-0">
             <div className="overflow-hidden">
-              <Image src="/hero.jpg" alt="Hero Image" width={500} height={500} className="w-full h-full object-cover" />
+              <Image src={HeroImage} alt="Hero Image" width={500} height={500} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

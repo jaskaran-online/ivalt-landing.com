@@ -71,9 +71,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-[#E5E7EB]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16">
+        <div className="py-16 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Company Info & Contact Form */}
             <div className="lg:col-span-5">
@@ -211,7 +211,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <Select value={inquiryType} onValueChange={setInquiryType}>
-                          <SelectTrigger className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary w-full py-6 placeholder:text-gray-500">
+                      <SelectTrigger className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary w-full py-6 placeholder:text-gray-500">
                         <SelectValue placeholder="Select inquiry type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -251,7 +251,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 py-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
             <Caption className="text-gray-500">
               © 2025 iVALT. All rights reserved.
             </Caption>
