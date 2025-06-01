@@ -99,7 +99,7 @@ export default function About() {
           description="To eliminate identity fraud by providing seamless, one-click authentication that dynamically verifies user and contextual variables, ensuring unparalleled security and user convenience."
         />
 
-        <div className="max-w-7xl mx-auto mt-16">
+        <div className="max-w-7xl mx-auto mt-16 py-16">
           {/* Founders Section Title */}
           <div className="text-center mb-12">
             <Heading2 color="navy-primary" className="text-3xl mb-4">
@@ -144,10 +144,10 @@ export default function About() {
             </div>
           </div>
         </div>
-      </Container>
-
       {/* Intellectual Property Section */}
       <IntellectualProperty />
+      </Container>
+
     </>
   );
 }
