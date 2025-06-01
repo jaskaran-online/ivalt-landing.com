@@ -102,7 +102,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto mt-16 py-16">
           {/* Founders Section Title */}
           <div className="text-center mb-12">
-            <Heading2 color="navy-primary" className="text-3xl mb-4">
+            <Heading2 color="dark-navy" className="text-3xl mb-4">
               Founders
             </Heading2>
           </div>

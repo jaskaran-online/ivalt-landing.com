@@ -61,7 +61,7 @@ export default function IntellectualProperty() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <Heading2 color="navy-primary" className="text-3xl mb-4">
+          <Heading2 color="dark-navy" className="text-3xl mb-4">
             Intellectual Property
           </Heading2>
         </div>
