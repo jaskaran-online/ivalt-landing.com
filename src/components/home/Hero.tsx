@@ -3,13 +3,14 @@ import Image from "next/image";
 // import HeroImage from "@/assets/hero-image.png";
 // import HeroImage from "@/assets/hero-image-removebg-preview.png";
 import HeroImage from "@/assets/blue-image.png";
+import { FadeInOnScroll } from "../ui/FadeInOnScroll";
 
 export default function Hero() {
   return (
     <section className="relative py-30 bg-[#FAF9F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-          <div>
+          <FadeInOnScroll>
             <h1 className="text-5xl font-bold tracking-tight text-primary mb-6">
               <span className="underline decoration-teal-primary">AI-Adaptive </span>{" "}
               Solutions that Redefine Identity
@@ -33,7 +34,7 @@ export default function Hero() {
                 Solutions
               </Link>
             </div>
-          </div>
+          </FadeInOnScroll>
           <div className="mt-12 lg:mt-0">
             <div className="overflow-hidden">
               <Image src={HeroImage} alt="Hero Image" width={500} height={500} className="w-full h-full object-cover" />
