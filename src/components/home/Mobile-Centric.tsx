@@ -14,7 +14,7 @@ export default function MobileCentric() {
           title="Mobile-Centric Approach"
           description="Taking advantage of everyone’s mobile phone for real-time identity verification."
         />
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center my-4 mb-6">
           <Image
             src={mobileCentric}
             alt="Mobile-Centric"
