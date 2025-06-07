@@ -1,13 +1,15 @@
 import Container from "@/components/Container";
-import ComingSoon from "@/components/ComingSoon";
+import SectionTitle from "@/components/SectionTitle";
+import TargetingContent from "@/components/solutions/TargetingContent";
+import Universal from "@/components/solutions/Universal";
 
 export default function Solutions() {
   return (
     <Container className="bg-[#FAF9F7] py-16">
-      <ComingSoon
-        title="Solutions"
-        subtitle="Next-gen security is almost here"
-      />
+      <SectionTitle title="Solutions" description="" />
+      <TargetingContent />
+
+      <Universal />
     </Container>
   );
 }
