@@ -165,7 +165,9 @@ export default function Footer() {
                 {/* social icons from linkedin, facebook, instagram, twitter */}
                 <div className="flex items-center space-x-3">
                   <Link
-                    href="/linkedin"
+                    href="https://www.linkedin.com/company/ivalt-inc/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-navy-primary transition-colors duration-200 bg-navy-primary p-2 rounded-full"
                   >
                     <Linkedin className="h-5 w-5 text-white" />
