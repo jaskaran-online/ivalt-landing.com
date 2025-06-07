@@ -1,12 +1,12 @@
-import {
-  Heading2,
-  Heading3,
-  BodyText,
-  SmallText,
-} from "@/components/ui/typography";
+import { Heading2, Heading3, SmallText } from "@/components/ui/typography";
 import { CheckIcon } from "lucide-react";
 
-const patentsGranted = [
+type Patent = {
+  title: string;
+  number: string;
+};
+
+const patentsGranted: Patent[] = [
   {
     title: "Biometric Access for Streaming",
     number: "(10,931,667)",
