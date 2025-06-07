@@ -6,7 +6,7 @@ import {
   SmallText,
   Caption,
 } from "@/components/ui/typography";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const footerLinks = {
@@ -160,6 +160,16 @@ export default function Footer() {
                       123 Main St, San Francisco, CA 94101
                     </SmallText>
                   </div>
+                </div>
+
+                {/* social icons from linkedin, facebook, instagram, twitter */}
+                <div className="flex items-center space-x-3">
+                  <Link
+                    href="/linkedin"
+                    className="text-gray-500 hover:text-navy-primary transition-colors duration-200 bg-navy-primary p-2 rounded-full"
+                  >
+                    <Linkedin className="h-5 w-5 text-white" />
+                  </Link>
                 </div>
               </div>
 
