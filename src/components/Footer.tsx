@@ -1,28 +1,20 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { 
-  Heading4, 
-  BodyText, 
-  SmallText, 
-  Caption 
+import {
+  Heading4,
+  BodyText,
+  SmallText,
+  Caption,
 } from "@/components/ui/typography";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const footerLinks = {
   products: [
-    { label: "Universal Biometric ID®", href: "/products/universal-biometric-id" },
+    {
+      label: "Universal Biometric ID®",
+      href: "/products/universal-biometric-id",
+    },
     { label: "On-Demand ID™", href: "/products/on-demand-id" },
     { label: "DocuID™", href: "/products/docuid" },
   ],
@@ -47,28 +39,6 @@ const footerLinks = {
 };
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [inquiryType, setInquiryType] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Reset form
-    setEmail("");
-    setMessage("");
-    setInquiryType("");
-    setIsSubmitting(false);
-    
-    // You can add actual form submission logic here
-    console.log("Form submitted:", { email, message, inquiryType });
-  };
-
   return (
     <footer className="bg-white border-t border-[#E5E7EB]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,57 +164,7 @@ export default function Footer() {
               </div>
 
               {/* Quick Contact Form */}
-              <div>
-                <Heading4 color="navy-primary" className="mb-4">
-                  Quick Contact
-                </Heading4>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Your email address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary py-6 placeholder:text-gray-500"
-                    />
-                  </div>
-                  <div>
-                    <Select value={inquiryType} onValueChange={setInquiryType}>
-                      <SelectTrigger className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary w-full py-6 placeholder:text-gray-500">
-                        <SelectValue placeholder="Select inquiry type" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="general">General Inquiry</SelectItem>
-                        <SelectItem value="sales">Sales</SelectItem>
-                        <SelectItem value="support">
-                          Technical Support
-                        </SelectItem>
-                        <SelectItem value="partnership">Partnership</SelectItem>
-                        <SelectItem value="media">Media & Press</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div>
-                    <textarea
-                      placeholder="Your message"
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      required
-                      rows={4}
-                      className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-teal-primary resize-none"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-teal-primary hover:bg-teal-primary/90 text-white font-semibold py-6 rounded-lg transition-colors duration-200"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                    {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
-                  </Button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -280,4 +200,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-} 
+}
