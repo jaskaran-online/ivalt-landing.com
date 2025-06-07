@@ -17,6 +17,7 @@ const footerLinks = {
     },
     { label: "On-Demand ID™", href: "/products/on-demand-id" },
     { label: "DocuID™", href: "/products/docuid" },
+    { label: "Press Releases", href: "/press-release" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -31,10 +32,9 @@ const footerLinks = {
     { label: "Blog", href: "/blog" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-    { label: "Cookie Policy", href: "/cookies" },
-    { label: "GDPR", href: "/gdpr" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-and-conditions" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
   ],
 };
 
