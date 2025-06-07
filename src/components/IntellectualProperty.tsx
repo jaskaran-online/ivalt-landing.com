@@ -1,40 +1,40 @@
-import { 
-  Heading2, 
-  Heading3, 
-  BodyText, 
-  SmallText 
+import {
+  Heading2,
+  Heading3,
+  BodyText,
+  SmallText,
 } from "@/components/ui/typography";
 import { CheckIcon } from "lucide-react";
 
 const patentsGranted = [
   {
     title: "Biometric Access for Streaming",
-    number: "(10,931,667)"
+    number: "(10,931,667)",
   },
   {
     title: "Device Identity for IoT",
-    number: "(11,115,403)"
+    number: "(11,115,403)",
   },
   {
     title: "Biometric Password Management",
-    number: "(10,491,588)"
+    number: "(10,491,588)",
   },
   {
     title: "Identity Release & Sharing between Devices",
-    number: "(11,736,475)"
+    number: "(11,736,475)",
   },
   {
     title: "Identity Verification in IoT Networks",
-    number: "(12,028,335)"
+    number: "(12,028,335)",
   },
   {
     title: "Method and System for User Authentication",
-    number: "(12,267,321)"
+    number: "(12,267,321)",
   },
   {
     title: "China: Use of Mobile Biometrics for Online Authentication",
-    number: "ZL201980012921.0"
-  }
+    number: "ZL201980012921.0",
+  },
 ];
 
 const patentsPending = [
@@ -42,7 +42,7 @@ const patentsPending = [
   "User Data Protection and Control",
   "Streamlined User Experiences",
   "Media Identity Applications",
-  "India – Biometrics for Online Auth"
+  "India – Biometrics for Online Auth",
 ];
 
 const trademarks = [
@@ -52,7 +52,7 @@ const trademarks = [
   "IDENTITY Validation Platform®",
   "1-Click to Zero Trust™",
   "On-Demand ID™",
-  "DocuID™"
+  "DocuID™",
 ];
 
 export default function IntellectualProperty() {
@@ -76,8 +76,8 @@ export default function IntellectualProperty() {
             <div className="space-y-4">
               {patentsGranted.map((patent, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <div className="flex items-center justify-center w-8 h-8 bg-[#FAF9F7] rounded-full mr-2">
-                    <CheckIcon className="w-6 h-6 text-teal-primary " />
+                  <div className="flex items-center justify-center w-8 h-8 bg-[#FAF9F7] rounded-full mr-2 shadow-md">
+                    <CheckIcon className="w-6 h-6 text-navy-primary " />
                   </div>
                   <div>
                     <SmallText className="text-base font-medium text-navy-primary">
@@ -104,8 +104,8 @@ export default function IntellectualProperty() {
               <div className="space-y-4">
                 {patentsPending.map((patent, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="flex items-center justify-center w-8 h-8 bg-[#FAF9F7] rounded-full mr-2">
-                      <CheckIcon className="w-6 h-6 text-teal-primary" />
+                    <div className="flex items-center justify-center w-8 h-8 bg-[#FAF9F7] rounded-full mr-2 shadow-md">
+                      <CheckIcon className="w-6 h-6 text-navy-primary" />
                     </div>
                     <SmallText className="text-base font-medium text-navy-primary">
                       {patent}
@@ -126,8 +126,8 @@ export default function IntellectualProperty() {
               <div className="space-y-4">
                 {trademarks.map((trademark, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="flex items-center justify-center w-8 h-8 bg-[#FAF9F7] rounded-full mr-2">
-                      <CheckIcon className="w-6 h-6 text-teal-primary" />
+                    <div className="flex items-center justify-center w-8 h-8 bg-[#FAF9F7] rounded-full mr-2 shadow-md">
+                      <CheckIcon className="w-6 h-6 text-navy-primary" />
                     </div>
                     <SmallText className="text-base font-medium text-navy-primary">
                       {trademark}
@@ -141,4 +141,4 @@ export default function IntellectualProperty() {
       </div>
     </div>
   );
-} 
+}

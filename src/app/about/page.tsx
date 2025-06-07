@@ -51,15 +51,19 @@ const Founder = ({ founder }: { founder: Founder }) => {
               className="object-cover"
             />
           </div>
-          
+
           {/* Content */}
           <div className="text-center">
             <h3 className="text-xl font-bold text-navy-primary mb-2">
               {founder.name}
             </h3>
-            <p className="text-teal-primary font-semibold mb-3">{founder.title}</p>
-            <p className="text-gray-600 mb-4 text-sm leading-relaxed">{founder.description}</p>
-            
+            <p className="text-teal-primary font-semibold mb-3">
+              {founder.title}
+            </p>
+            <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+              {founder.description}
+            </p>
+
             {/* Awards */}
             <div className="flex justify-center gap-2 mb-4">
               {founder.awards.map((award) => (
@@ -74,14 +78,14 @@ const Founder = ({ founder }: { founder: Founder }) => {
           </div>
         </div>
       </div>
-      
+
       {/* LinkedIn Footer */}
       <div className="absolute bottom-0 left-0 right-0 bg-gray-50 p-4 border-t border-gray-100">
         <a
           href={founder.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 hover:bg-gray-100 p-2 rounded-lg transition-colors"
+          className="flex items-center justify-center gap-2 p-2 rounded-lg transition-colors"
         >
           <Image src={LinkedIn} alt="LinkedIn" width={20} height={20} />
           <span className="text-sm text-gray-600">LinkedIn Profile</span>
@@ -129,28 +133,28 @@ export default function About() {
                 </Heading2>
                 <BodyText className="text-gray-700 leading-relaxed">
                   Founded in 2019 by Baldev Krishan and Brian Stout, iVALT®
-                  addresses the persistent issue of identity fraud by moving beyond
-                  outdated username/password authentication and ineffective 2FA.
+                  addresses the persistent issue of identity fraud by moving
+                  beyond outdated username/password authentication and
+                  ineffective 2FA.
                 </BodyText>
                 <BodyText className="text-gray-700 leading-relaxed mt-4">
-                  Recognizing that technology alone isn&apos;t the solution, they
-                  developed a mobile app that captures and verifies 5+ dynamic
-                  variables, including biometrics, location, and time, in a single
-                  click.
+                  Recognizing that technology alone isn&apos;t the solution,
+                  they developed a mobile app that captures and verifies 5+
+                  dynamic variables, including biometrics, location, and time,
+                  in a single click.
                 </BodyText>
                 <BodyText className="text-gray-700 leading-relaxed mt-4">
-                  This innovative approach, combining a mobile app with a
-                  secure SaaS engine, aims to provide technology efficiency and the
+                  This innovative approach, combining a mobile app with a secure
+                  SaaS engine, aims to provide technology efficiency and the
                   highest level of security against evolving hacking techniques.
                 </BodyText>
               </div>
             </FadeInOnScroll>
           </div>
         </div>
-      {/* Intellectual Property Section */}
-      <IntellectualProperty />
+        {/* Intellectual Property Section */}
+        <IntellectualProperty />
       </Container>
-
     </>
   );
 }
