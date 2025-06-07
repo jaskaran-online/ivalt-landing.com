@@ -1,11 +1,18 @@
 import Container from "@/components/Container";
+import SectionTitle from "@/components/SectionTitle";
+import {
+  ComingSoon,
+  FactorsOfIdentity,
+  PioneeringContent,
+} from "@/components/why-ivalt";
 
 export default function WhyIvalt() {
   return (
-    <Container>
-      <div className="flex flex-col gap-4">
-        <h1 className="text-4xl font-bold">Why Ivalt</h1>
-      </div>
+    <Container className="bg-[#FAF9F7]">
+      <SectionTitle title="Why iVALT ?" description="" />
+      <PioneeringContent />
+      <FactorsOfIdentity />
+      <ComingSoon />
     </Container>
   );
 }

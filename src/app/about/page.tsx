@@ -7,6 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import Baldev from "@/assets/images/about/baldev.png";
 import Brian from "@/assets/images/about/Brian.png";
 import LinkedIn from "@/assets/linkedin.png";
+import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 
 type Founder = {
   name: string;
@@ -111,15 +112,17 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
             {/* Founders Cards */}
             <div className="lg:col-span-1">
-              <div className="flex flex-row gap-4">
-                {founders.map((founder) => (
-                  <Founder key={founder.name} founder={founder} />
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
+                {founders.map((founder, index) => (
+                  <FadeInOnScroll key={founder.name} delay={index * 0.1}>
+                    <Founder key={founder.name} founder={founder} />
+                  </FadeInOnScroll>
                 ))}
               </div>
             </div>
 
             {/* Company Description */}
-            <div className="lg:col-span-1">
+            <FadeInOnScroll delay={1} className="lg:col-span-1">
               <div className="bg-white rounded-md p-8 shadow-sm border border-gray-100 h-full">
                 <Heading2 color="teal-primary" className="text-xl mb-6">
                   Our Story
@@ -141,7 +144,7 @@ export default function About() {
                   highest level of security against evolving hacking techniques.
                 </BodyText>
               </div>
-            </div>
+            </FadeInOnScroll>
           </div>
         </div>
       {/* Intellectual Property Section */}
