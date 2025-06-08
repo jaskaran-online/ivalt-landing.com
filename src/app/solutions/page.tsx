@@ -1,15 +1,22 @@
 import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
-import TargetingContent from "@/components/solutions/TargetingContent";
-import Universal from "@/components/solutions/Universal";
+import {
+  TargetingContent,
+  Universal,
+  OnDemandID,
+  DocuID,
+  SolutionComponents,
+} from "@/components/solutions";
 
 export default function Solutions() {
   return (
     <Container className="bg-[#FAF9F7] py-16">
       <SectionTitle title="Solutions" description="" />
       <TargetingContent />
-
       <Universal />
+      <OnDemandID />
+      <DocuID />
+      <SolutionComponents />
     </Container>
   );
 }
