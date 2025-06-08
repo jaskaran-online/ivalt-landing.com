@@ -7,15 +7,17 @@ import { FadeInOnScroll } from "../ui/FadeInOnScroll";
 
 export default function Hero() {
   return (
-    <section className="relative py-30 bg-[#FAF9F7]">
+    <section className="relative md:py-30 py-12 bg-[#FAF9F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <FadeInOnScroll>
             <h1 className="text-5xl font-bold tracking-tight text-primary mb-6">
-              <span className="underline decoration-teal-primary">AI-Adaptive </span>{" "}
+              <span className="underline decoration-teal-primary">
+                AI-Adaptive{" "}
+              </span>{" "}
               Solutions that Redefine Identity
             </h1>
-            <p className="mt-6 text-xl text-gray-600 max-w-3xl">
+            <p className="mt-6 md:text-xl text-lg text-gray-600 max-w-3xl">
               Real-time Identity to Stop Social Engineering and AI Deepfakes.
               Next Generation Document Access Control. And Everything In
               Between.
@@ -37,7 +39,13 @@ export default function Hero() {
           </FadeInOnScroll>
           <div className="mt-12 lg:mt-0">
             <div className="overflow-hidden">
-              <Image src={HeroImage} alt="Hero Image" width={500} height={500} className="w-full h-full object-cover" />
+              <Image
+                src={HeroImage}
+                alt="Hero Image"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

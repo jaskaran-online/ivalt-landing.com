@@ -103,9 +103,18 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-full">
                 <SheetHeader>
-                  <SheetTitle>Navigation</SheetTitle>
+                  <SheetTitle>
+                    <Image
+                      src="/logo.png"
+                      alt="logo"
+                      width={500}
+                      height={500}
+                      className="w-30 h-auto"
+                    />
+                  </SheetTitle>
                   <SheetDescription>
-                    Navigate through our website sections
+                    iVALT is a company that provides a platform for identity
+                    verification.
                   </SheetDescription>
                 </SheetHeader>
                 <div className="flex flex-col space-y-4 mt-8 px-4">

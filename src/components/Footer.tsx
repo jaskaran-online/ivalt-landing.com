@@ -17,13 +17,13 @@ const footerLinks = {
     },
     { label: "On-Demand ID™", href: "/products/on-demand-id" },
     { label: "DocuID™", href: "/products/docuid" },
-    { label: "Press Releases", href: "/press-release" },
   ],
   company: [
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Sol", href: "/careers" },
-    { label: "Press", href: "/press" },
+    { label: "Solutions", href: "/solutions" },
+    { label: "Why iVALT?", href: "/why-ivalt" },
+    { label: "Press Releases", href: "/press-release" },
   ],
   resources: [
     { label: "Documentation", href: "/docs" },

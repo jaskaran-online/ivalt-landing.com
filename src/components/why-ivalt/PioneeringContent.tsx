@@ -16,10 +16,10 @@ export default function PioneeringContent() {
       <Container className="max-w-7xl pb-4 pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="md:text-4xl text-2xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm text-center md:text-left">
+            <h1 className="md:text-4xl text-3xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm text-center md:text-left">
               Pioneering the Future of Identity
             </h1>
-            <p className="md:text-lg text-base text-navy-primary mt-2 text-center md:text-left">
+            <p className="md:text-lg text-base text-gray-600 mt-2 text-center md:text-left">
               Understanding the needs of the market and creating solutions that
               are future-proof.
             </p>

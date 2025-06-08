@@ -8,7 +8,7 @@ import { FadeInOnScroll } from "../ui/FadeInOnScroll";
 
 export default function MobileCentric() {
   return (
-    <FadeInOnScroll className="bg-white py-12">
+    <FadeInOnScroll className="bg-white md:py-12 py-6">
       <Container className="max-w-7xl">
         <SectionTitle
           title="Mobile-Centric Approach"
@@ -20,7 +20,7 @@ export default function MobileCentric() {
             alt="Mobile-Centric"
             width={1500}
             height={1500}
-            className="w-[80%] h-full object-cover"
+            className="w-full md:w-[80%] h-full object-cover"
           />
         </div>
         <SectionTitleBottom title="Disrupting the Broken Status Quo of Usernames and Passwords" />
