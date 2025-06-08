@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,6 +10,7 @@ import {
 } from "@/components/ui/typography";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { usePathname } from "next/navigation";
 
 const footerLinks = {
   products: [
@@ -39,6 +42,8 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const currentPath = usePathname();
+  const isHome = currentPath === "/";
   return (
     <footer className="bg-white border-t border-[#E5E7EB]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,53 +138,55 @@ export default function Footer() {
         </div>
 
         {/* Contact Section */}
-        <div className="border-t border-[#E5E7EB] py-8">
-          <div className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-              {/* Contact Info */}
-              <div className="space-y-4">
-                <Heading4 color="navy-primary" className="mb-4">
-                  Contact Us
-                </Heading4>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-teal-primary" />
-                    <SmallText className="text-gray-700">
-                      hello@ivalt.com
-                    </SmallText>
+        {isHome && (
+          <div className="border-t border-[#E5E7EB] py-8">
+            <div className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
+                {/* Contact Info */}
+                <div className="space-y-4">
+                  <Heading4 color="navy-primary" className="mb-4">
+                    Contact Us
+                  </Heading4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <Mail className="h-5 w-5 text-teal-primary" />
+                      <SmallText className="text-gray-700">
+                        hello@ivalt.com
+                      </SmallText>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Phone className="h-5 w-5 text-teal-primary" />
+                      <SmallText className="text-gray-700">
+                        +1 (555) 123-4567
+                      </SmallText>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <MapPin className="h-5 w-5 text-teal-primary" />
+                      <SmallText className="text-gray-700">
+                        123 Main St, San Francisco, CA 94101
+                      </SmallText>
+                    </div>
                   </div>
+
+                  {/* social icons from linkedin, facebook, instagram, twitter */}
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-teal-primary" />
-                    <SmallText className="text-gray-700">
-                      +1 (555) 123-4567
-                    </SmallText>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="h-5 w-5 text-teal-primary" />
-                    <SmallText className="text-gray-700">
-                      123 Main St, San Francisco, CA 94101
-                    </SmallText>
+                    <Link
+                      href="https://www.linkedin.com/company/ivalt-inc/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-navy-primary transition-colors duration-200 bg-navy-primary p-2 rounded-full"
+                    >
+                      <Linkedin className="h-5 w-5 text-white" />
+                    </Link>
                   </div>
                 </div>
 
-                {/* social icons from linkedin, facebook, instagram, twitter */}
-                <div className="flex items-center space-x-3">
-                  <Link
-                    href="https://www.linkedin.com/company/ivalt-inc/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-navy-primary transition-colors duration-200 bg-navy-primary p-2 rounded-full"
-                  >
-                    <Linkedin className="h-5 w-5 text-white" />
-                  </Link>
-                </div>
+                {/* Quick Contact Form */}
+                {isHome && <ContactForm />}
               </div>
-
-              {/* Quick Contact Form */}
-              <ContactForm />
             </div>
           </div>
-        </div>
+        )}
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 py-6">

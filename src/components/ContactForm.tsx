@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/form";
 
 const formSchema = z.object({
+  name: z.string().min(1, { message: "Name is required" }),
   email: z.string().email({ message: "Invalid email address" }),
   inquiryType: z.string(),
   message: z
@@ -37,6 +38,7 @@ export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: "",
       email: "",
       inquiryType: "general",
       message: "",
@@ -54,6 +56,24 @@ export default function ContactForm() {
       </Heading4>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-500 mb-2">Name</FormLabel>
+                <FormControl>
+                  <Input
+                    type="text"
+                    placeholder="Your name"
+                    {...field}
+                    className="bg-white border-gray-300 focus:ring-teal-primary focus:border-teal-primary py-6 placeholder:text-gray-500"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="email"
