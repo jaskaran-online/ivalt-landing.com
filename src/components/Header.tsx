@@ -33,10 +33,6 @@ export const navItems = [
     href: "/solutions",
   },
   {
-    label: "Research",
-    href: "/research",
-  },
-  {
     label: "About",
     href: "/about",
   },
