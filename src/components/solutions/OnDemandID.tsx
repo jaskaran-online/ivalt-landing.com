@@ -15,7 +15,7 @@ const Points = [
 
 export default function OnDemandID() {
   return (
-    <FadeInOnScroll className="bg-[#FAF9F7] py-12">
+    <FadeInOnScroll className="bg-[#FAF9F7] py-6 md:py-12">
       <Container className="max-w-7xl">
         <SectionTitle
           title="On-Demand ID™"
@@ -27,11 +27,11 @@ export default function OnDemandID() {
             alt="On-Demand ID"
             width={1500}
             height={1500}
-            className="w-[70%] h-full object-cover mb-3"
+            className="w-full md:w-[70%] h-full object-cover mb-3"
           />
         </div>
         <div className="flex flex-col items-start justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4 md:mt-12 mt-6 max-w-4xl mx-auto">
             {Points.map((point, index) => (
               <FadeInOnScroll
                 delay={index * 2}
@@ -45,7 +45,9 @@ export default function OnDemandID() {
                     height={24}
                   />
                 </div>
-                <h1 className="text-lg text-navy-primary text-left">{point}</h1>
+                <h1 className="text-base md:text-lg text-navy-primary text-left">
+                  {point}
+                </h1>
               </FadeInOnScroll>
             ))}
           </div>

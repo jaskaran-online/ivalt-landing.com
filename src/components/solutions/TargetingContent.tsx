@@ -10,16 +10,16 @@ const Points = [
 
 export default function PioneeringContent() {
   return (
-    <FadeInOnScroll className="md:pb-12">
+    <FadeInOnScroll className="md:pb-12 pb-6">
       <Container className="max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-2xl md:text-5xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm">
               Targeting the Highest Priority Identity Challenges
             </h1>
           </div>
           <div className="flex flex-col items-start justify-center">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-4 md:gap-5">
               {Points.map((point, index) => (
                 <FadeInOnScroll
                   delay={index * 2}
