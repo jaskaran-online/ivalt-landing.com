@@ -2,7 +2,6 @@ import Container from "../Container";
 import SectionTitle from "../SectionTitle";
 
 import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import { Check } from "lucide-react";
 import Image from "next/image";
 
 import swager from "@/assets/images/solutions/components/swager.png";
@@ -13,16 +12,8 @@ import ping from "@/assets/images/solutions/components/ping-identity.png";
 
 import logos from "@/assets/images/solutions/components/logos.png";
 import admin from "@/assets/images/solutions/components/admin.png";
-import aws from "@/assets/images/solutions/components/aws.png";
 import mobile from "@/assets/images/solutions/components/mobile.png";
 import mobileScreens from "@/assets/images/solutions/components/mobile-screens.png";
-
-const Points = [
-  "No Enterprise Infrastructure Integration Required",
-  "Granular Access Control to a Single Person",
-  "Stops Exfiltration Risks (Stolen Docs remain Safe)",
-  "Digital Rights Protection (sharing, printing, downloads, screen shots)",
-];
 
 export default function SolutionComponents() {
   return (
