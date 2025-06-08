@@ -8,7 +8,7 @@ import {
 
 export default function WhyIvalt() {
   return (
-    <Container className="bg-[#FAF9F7]">
+    <Container className="bg-[#FAF9F7] md:py-12 py-6">
       <SectionTitle title="Why iVALT ?" description="" />
       <PioneeringContent />
       <FactorsOfIdentity />

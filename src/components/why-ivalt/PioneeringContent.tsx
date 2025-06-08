@@ -12,20 +12,20 @@ const Points = [
 
 export default function PioneeringContent() {
   return (
-    <FadeInOnScroll className="py-4">
-      <Container className="max-w-7xl">
+    <FadeInOnScroll className="md:py-4 pb-2">
+      <Container className="max-w-7xl pb-4 pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-6xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm">
+            <h1 className="md:text-4xl text-2xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm text-center md:text-left">
               Pioneering the Future of Identity
             </h1>
-            <p className="text-lg text-navy-primary">
+            <p className="md:text-lg text-base text-navy-primary mt-2 text-center md:text-left">
               Understanding the needs of the market and creating solutions that
               are future-proof.
             </p>
           </div>
           <div className="flex flex-col items-start justify-center">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-4 md:gap-5">
               {Points.map((point, index) => (
                 <FadeInOnScroll
                   delay={index * 2}
@@ -39,7 +39,7 @@ export default function PioneeringContent() {
                       height={24}
                     />
                   </div>
-                  <h1 className="text-lg text-navy-primary text-left">
+                  <h1 className="md:text-lg text-base text-navy-primary text-left">
                     {point}
                   </h1>
                 </FadeInOnScroll>

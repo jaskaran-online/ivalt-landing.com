@@ -13,7 +13,7 @@ const Points = [
 
 export default function ComingSoon() {
   return (
-    <FadeInOnScroll className="py-4">
+    <FadeInOnScroll className="md:py-4 py-2">
       <Container className="max-w-7xl">
         <SectionTitle
           title="Coming Soon"
@@ -21,7 +21,7 @@ export default function ComingSoon() {
         />
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col md:gap-5 gap-4">
               {Points.map((point, index) => (
                 <FadeInOnScroll
                   delay={index * 2}
@@ -35,7 +35,7 @@ export default function ComingSoon() {
                       height={24}
                     />
                   </div>
-                  <h1 className="text-lg text-navy-primary text-left">
+                  <h1 className="md:text-lg text-base text-navy-primary text-left">
                     {point}
                   </h1>
                 </FadeInOnScroll>
