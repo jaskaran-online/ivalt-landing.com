@@ -2,7 +2,24 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["localhost", "127.0.0.1", "ivalt.com", "www.ivalt.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ivalt.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.ivalt.com",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+      },
+      {
+        protocol: "https",
+        hostname: "127.0.0.1",
+      },
+    ],
   },
   eslint: {
     ignoreDuringBuilds: true,
