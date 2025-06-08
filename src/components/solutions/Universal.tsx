@@ -8,7 +8,7 @@ import { FadeInOnScroll } from "../ui/FadeInOnScroll";
 
 export default function Universal() {
   return (
-    <FadeInOnScroll className="bg-white py-12">
+    <FadeInOnScroll className="bg-white md:py-12">
       <Container className="max-w-7xl">
         <SectionTitle
           title="Universal Biometric ID®"
@@ -20,7 +20,7 @@ export default function Universal() {
             alt="Mobile-Centric"
             width={1500}
             height={1500}
-            className="w-[70%] h-full object-cover mb-3"
+            className="md:w-[70%] h-full object-cover mb-3"
           />
         </div>
         <SectionTitleBottom title="Definitive Mobile-Centric Identity for Everything" />

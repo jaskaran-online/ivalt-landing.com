@@ -10,11 +10,11 @@ const Points = [
 
 export default function PioneeringContent() {
   return (
-    <FadeInOnScroll className="py-12">
+    <FadeInOnScroll className="md:pb-12">
       <Container className="max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-5xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm">
+            <h1 className="text-2xl md:text-5xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm">
               Targeting the Highest Priority Identity Challenges
             </h1>
           </div>
@@ -33,7 +33,7 @@ export default function PioneeringContent() {
                       height={24}
                     />
                   </div>
-                  <h1 className="text-lg text-navy-primary text-left">
+                  <h1 className="text-md md:text-lg text-navy-primary text-left">
                     {point}
                   </h1>
                 </FadeInOnScroll>

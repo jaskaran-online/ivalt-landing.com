@@ -108,7 +108,7 @@ export default function Header() {
                     Navigate through our website sections
                   </SheetDescription>
                 </SheetHeader>
-                <div className="flex flex-col space-y-4 mt-8">
+                <div className="flex flex-col space-y-4 mt-8 px-4">
                   {navItems.map((item) => {
                     const isActive = pathname === item.href;
                     return (
@@ -116,7 +116,7 @@ export default function Header() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className={`text-lg font-medium py-2 px-4 rounded-md transition-colors ${
+                        className={`text-lg font-medium py-2 px-4 rounded-sm transition-colors ${
                           isActive
                             ? "bg-primary text-white"
                             : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"

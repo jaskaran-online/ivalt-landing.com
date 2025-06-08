@@ -21,17 +21,17 @@ export default function OnDemandID() {
           title="On-Demand ID™"
           description="Real-Time Identity for All Communications."
         />
-        <div className="flex justify-center items-center my-4 mb-6">
+        <div className="flex justify-center items-center md:my-4 mb-6">
           <Image
             src={ondemandidLogo}
             alt="On-Demand ID"
             width={1500}
             height={1500}
-            className="w-[70%] h-full object-cover mb-3"
+            className="w-full md:w-[70%] h-full object-cover mb-3"
           />
         </div>
         <div className="flex flex-col items-start justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 mt-4 md:mt-12 max-w-4xl mx-auto">
             {Points.map((point, index) => (
               <FadeInOnScroll
                 delay={index * 2}
