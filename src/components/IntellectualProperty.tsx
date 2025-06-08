@@ -69,9 +69,9 @@ export default function IntellectualProperty() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Patents Granted */}
-          <div className="bg-white rounded-md shadow-sm p-6">
+          <div className="bg-white rounded-md p-6 border-4 border-gray-100">
             <Heading3 color="navy-primary" className="text-xl mb-6 text-center">
-              7 Patents Granted:
+              7 Patents Granted
             </Heading3>
             <div className="space-y-4">
               {patentsGranted.map((patent, index) => (
@@ -94,12 +94,12 @@ export default function IntellectualProperty() {
 
           <div className="flex flex-col gap-4">
             {/* Patents Pending */}
-            <div className="bg-white rounded-md shadow-sm p-6">
+            <div className="bg-white rounded-md p-6 border-4 border-gray-100">
               <Heading3
                 color="navy-primary"
                 className="text-xl mb-6 text-center"
               >
-                10+ Patents Filed and Pending:
+                10+ Patents Filed and Pending
               </Heading3>
               <div className="space-y-4">
                 {patentsPending.map((patent, index) => (
@@ -116,12 +116,12 @@ export default function IntellectualProperty() {
             </div>
 
             {/* Trademarks */}
-            <div className="bg-white rounded-md shadow-sm p-6">
+            <div className="bg-white rounded-md p-6 border-4 border-gray-100">
               <Heading3
                 color="navy-primary"
                 className="text-xl mb-6 text-center"
               >
-                Trademarks:
+                Trademarks
               </Heading3>
               <div className="space-y-4">
                 {trademarks.map((trademark, index) => (

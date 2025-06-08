@@ -40,7 +40,7 @@ export default function Solutions() {
             <FadeInOnScroll key={solution.title} delay={index * 0.1}>
               <div
                 key={solution.title}
-                className="bg-white rounded-lg p-8 shadow-sm"
+                className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300"
               >
                 <div className="text-accent mb-4">{solution.icon}</div>
                 <h3 className="text-xl font-semibold text-primary mb-2">

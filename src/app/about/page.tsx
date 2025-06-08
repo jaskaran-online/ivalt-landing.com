@@ -39,7 +39,7 @@ const founders: Founder[] = [
 
 const Founder = ({ founder }: { founder: Founder }) => {
   return (
-    <div className="bg-white rounded-md shadow-sm overflow-hidden border border-gray-100 relative h-full">
+    <div className="bg-white rounded-md overflow-hidden border-4 border-gray-100 relative h-full">
       <div className="p-6 pb-20">
         <div className="flex flex-col items-center gap-6">
           {/* Profile Image */}
@@ -127,7 +127,7 @@ export default function About() {
 
             {/* Company Description */}
             <FadeInOnScroll delay={1} className="lg:col-span-1">
-              <div className="bg-white rounded-md p-8 shadow-sm border border-gray-100 h-full">
+              <div className="bg-white rounded-md p-8 border-4 border-gray-100 h-full">
                 <Heading2 color="teal-primary" className="text-xl mb-6">
                   Our Story
                 </Heading2>
