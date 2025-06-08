@@ -24,10 +24,6 @@ export const navItems = [
     label: "Why Ivalt",
     href: "/why-ivalt",
   },
-  // {
-  //   label: "Products",
-  //   href: "/products",
-  // },
   {
     label: "Solutions",
     href: "/solutions",

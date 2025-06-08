@@ -24,7 +24,7 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
-                href="/products"
+                href="/solutions"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-opacity-90"
               >
                 Learn More

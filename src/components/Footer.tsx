@@ -16,10 +16,10 @@ const footerLinks = {
   products: [
     {
       label: "Universal Biometric ID®",
-      href: "/products/universal-biometric-id",
+      href: "/solutions/universal-biometric-id",
     },
-    { label: "On-Demand ID™", href: "/products/on-demand-id" },
-    { label: "DocuID™", href: "/products/docuid" },
+    { label: "On-Demand ID™", href: "/solutions/on-demand-id" },
+    { label: "DocuID™", href: "/solutions/docuid" },
   ],
   company: [
     { label: "About Us", href: "/about" },

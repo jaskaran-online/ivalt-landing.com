@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { 
-  Heading1, 
-  Heading2, 
-  BodyText, 
-  SmallText 
+import {
+  Heading1,
+  Heading2,
+  BodyText,
+  SmallText,
 } from "@/components/ui/typography";
 import { Home, ArrowLeft, Search, Mail } from "lucide-react";
 
@@ -14,8 +14,8 @@ export default function NotFound() {
       <div className="max-w-lg w-full text-center">
         {/* Large 404 Number */}
         <div className="mb-8">
-          <Heading1 
-            color="teal-primary" 
+          <Heading1
+            color="teal-primary"
             className="text-8xl sm:text-9xl lg:text-[12rem] font-bold leading-none mb-4"
           >
             404
@@ -29,16 +29,16 @@ export default function NotFound() {
             Page Not Found
           </Heading2>
           <BodyText color="muted" className="mb-6 max-w-md mx-auto">
-            Sorry, we couldn't find the page you're looking for. 
-            The page might have been moved, deleted, or you entered the wrong URL.
+            Sorry, we couldn't find the page you're looking for. The page might
+            have been moved, deleted, or you entered the wrong URL.
           </BodyText>
         </div>
 
         {/* Action Buttons */}
         <div className="space-y-4 mb-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              asChild 
+            <Button
+              asChild
               className="bg-teal-primary hover:bg-teal-primary/90 text-white"
             >
               <Link href="/" className="inline-flex items-center">
@@ -46,13 +46,16 @@ export default function NotFound() {
                 Go Home
               </Link>
             </Button>
-            
-            <Button 
-              variant="outline" 
+
+            <Button
+              variant="outline"
               asChild
               className="border-navy-primary text-navy-primary hover:bg-navy-primary hover:text-white"
             >
-              <Link href="javascript:history.back()" className="inline-flex items-center">
+              <Link
+                href="javascript:history.back()"
+                className="inline-flex items-center"
+              >
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Go Back
               </Link>
@@ -66,15 +69,15 @@ export default function NotFound() {
             Need help? Try these options:
           </SmallText>
           <div className="space-y-3">
-            <Link 
-              href="/search" 
+            <Link
+              href="/search"
               className="flex items-center justify-center text-gray-600 hover:text-teal-primary transition-colors"
             >
               <Search className="mr-2 h-4 w-4" />
               <SmallText>Search our site</SmallText>
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="flex items-center justify-center text-gray-600 hover:text-teal-primary transition-colors"
             >
               <Mail className="mr-2 h-4 w-4" />
@@ -89,20 +92,20 @@ export default function NotFound() {
             Popular pages:
           </SmallText>
           <div className="flex flex-wrap justify-center gap-2">
-            <Link 
-              href="/products" 
+            <Link
+              href="/solutions"
               className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm hover:bg-teal-primary/10 hover:text-teal-primary transition-colors"
             >
-              Products
+              Solutions
             </Link>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm hover:bg-teal-primary/10 hover:text-teal-primary transition-colors"
             >
               About
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm hover:bg-teal-primary/10 hover:text-teal-primary transition-colors"
             >
               Contact
@@ -112,4 +115,4 @@ export default function NotFound() {
       </div>
     </div>
   );
-} 
+}
