@@ -1,14 +1,21 @@
+import {
+  HeroSection,
+  IdentityCrisisSection,
+  PlatformOverviewSection,
+  KeyApplicationsSection,
+  VisionSection,
+  MarketOpportunitySection,
+} from "@/components/home";
 
-import Hero from "@/components/home/Hero";
-import MobileCentric from "@/components/home/Mobile-Centric";
-import Solutions from "@/components/home/Solutions";
-
-export default function Home() {
+export default function Homepage2() {
   return (
     <>
-      <Hero />
-      <MobileCentric />
-      <Solutions />
+      <HeroSection />
+      <IdentityCrisisSection />
+      <PlatformOverviewSection />
+      <KeyApplicationsSection />
+      <VisionSection />
+      <MarketOpportunitySection />
     </>
   );
 }
