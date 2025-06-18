@@ -1,0 +1,123 @@
+import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
+import SectionTitle from "@/components/SectionTitle";
+import Link from "next/link";
+import { FileText, Eye, Fingerprint, LucideIcon } from "lucide-react";
+
+interface ApplicationCardProps {
+  icon: LucideIcon;
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  delay?: number;
+}
+
+function ApplicationCard({
+  icon: Icon,
+  title,
+  subtitle,
+  description,
+  features,
+  delay = 0,
+}: ApplicationCardProps) {
+  return (
+    <FadeInOnScroll delay={delay}>
+      <div className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300">
+        <div className="text-accent mb-4">
+          <Icon className="w-8 h-8 text-teal-primary" />
+        </div>
+        <h3 className="text-xl font-semibold text-primary mb-2">{title}</h3>
+        <p className="text-gray-600 mb-2 text-sm">{subtitle}</p>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <div className="space-y-2 mb-4">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <div>
+                <div className="w-2 h-2 bg-teal-primary rounded-full" />
+              </div>
+              <p
+                className="text-sm text-gray-600"
+                dangerouslySetInnerHTML={{ __html: feature }}
+              />
+            </div>
+          ))}
+        </div>
+        <Link
+          href="/solutions"
+          className="mt-3 inline-flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-opacity-90"
+        >
+          Learn More
+        </Link>
+      </div>
+    </FadeInOnScroll>
+  );
+}
+
+export default function KeyApplicationsSection() {
+  const applications = [
+    {
+      icon: FileText,
+      title: "DocuID™",
+      subtitle: "Secure Document Access Control",
+      description:
+        "Authors embed authorized recipients (via mobile #) in encrypted documents.",
+      features: [
+        "Recipients verify identity via multi-factor authentication",
+        "Full Digital Rights Management (DRM)",
+        "Prevents forwarding, printing, screenshots",
+      ],
+      delay: 0,
+    },
+    {
+      icon: Eye,
+      title: "On-Demand ID™",
+      subtitle: "Combatting Social Engineering & Deepfakes",
+      description: "Real-time identity verification within our mobile app.",
+      features: [
+        "Instantly verify identity of suspicious calls/messages",
+        "Via biometrics & location verification",
+        "The only solution worldwide to truly defeat deepfake & social engineering attacks",
+      ],
+      delay: 0.1,
+    },
+    {
+      icon: Fingerprint,
+      title: "Universal Biometric ID®",
+      subtitle: "Enterprise Security",
+      description: "Enhances corporate Identity and Access Management (IAM).",
+      features: [
+        'When an employee logs in, iVALT "pings" their mobile',
+        "Real-time biometric and contextual verification",
+        "Makes stolen passwords useless",
+      ],
+      delay: 0.2,
+    },
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeInOnScroll>
+          <SectionTitle
+            title="Key Applications (Initial Focus)"
+            description="Three core applications transforming digital security"
+          />
+        </FadeInOnScroll>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {applications.map((app, index) => (
+            <ApplicationCard
+              key={index}
+              icon={app.icon}
+              title={app.title}
+              subtitle={app.subtitle}
+              description={app.description}
+              features={app.features}
+              delay={app.delay}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
