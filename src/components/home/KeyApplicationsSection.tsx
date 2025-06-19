@@ -26,7 +26,7 @@ function ApplicationCard({
     <FadeInOnScroll delay={delay}>
       <AnimatedShinyCard className="border-[0.4px]">
         <div className="text-accent mb-4">
-          <Icon className="w-8 h-8 text-teal-primary transition-all duration-300 group-hover:scale-110 group-hover:text-teal-600" />
+          <Icon className="w-8 h-8 text-teal-primary transition-all duration-300 group-hover:scale-110 " />
         </div>
         <h3 className="text-xl font-semibold text-primary mb-2 transition-colors duration-300 group-hover:text-teal-700">
           {title}
@@ -47,7 +47,11 @@ function ApplicationCard({
             </div>
           ))}
         </div>
-        <Button variant="shiny" size="lg" className="rounded-[15px]">
+        <Button
+          variant="shiny"
+          size="lg"
+          className="rounded-[15px]  hover:cursor-pointer group-hover:bg-teal-primary hover:bg-teal-primary"
+        >
           <Link href="/solutions">Learn More</Link>
         </Button>
       </AnimatedShinyCard>
