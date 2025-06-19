@@ -41,13 +41,13 @@ export default function Header() {
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-0">
-        <div className="flex justify-between">
-          <div className="flex items-center gap-8">
+        <div className="flex justify-between items-center w-full">
+          <div className="flex items-center gap-8 w-full justify-between">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/">
                 <Image
-                  src="/logo.png"
+                  src="/logo-transparent-bg.png"
                   alt="logo"
                   width={500}
                   height={500}
@@ -75,6 +75,12 @@ export default function Header() {
                 );
               })}
             </div>
+
+            <div className="flex items-center gap-4">
+              <Button variant="shiny" size="lg" className=" rounded-[15px]">
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
           </div>
 
           {/* Desktop CTA Button */}
@@ -97,7 +103,7 @@ export default function Header() {
                 <SheetHeader>
                   <SheetTitle>
                     <Image
-                      src="/logo.png"
+                      src="/logo-transparent-bg.png"
                       alt="logo"
                       width={500}
                       height={500}

@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AnimatedGroup } from "@/components/ui/animated-group";
 
 import HeroImage from "@/assets/hero-bg.jpeg";
+import { AnimatedGroup } from "./animated-group";
 
 const transitionVariants = {
   item: {
@@ -142,9 +142,9 @@ export function HeroSection() {
                     className="bg-foreground/10 rounded-[14px] border p-0.5"
                   >
                     <Button
-                      asChild
                       size="lg"
                       className="rounded-xl px-5 text-base"
+                      variant={"shiny"}
                     >
                       <Link href="/solutions">
                         <span className="text-nowrap">Learn More</span>
@@ -153,10 +153,9 @@ export function HeroSection() {
                   </div>
                   <Button
                     key={2}
-                    asChild
                     size="lg"
-                    variant="ghost"
-                    className="h-10.5 rounded-xl px-5 bg-white/50 hover:bg-white/70"
+                    variant="shiny"
+                    className="h-10.5 rounded-xl px-5 bg-white/50 hover:bg-white/70 transition-all duration-300 text-primary"
                   >
                     <Link href="/contact">
                       <span className="text-nowrap">Get Started</span>
@@ -165,20 +164,6 @@ export function HeroSection() {
                 </AnimatedGroup>
               </div>
             </div>
-
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.05,
-                      delayChildren: 0.75,
-                    },
-                  },
-                },
-                ...transitionVariants,
-              }}
-            ></AnimatedGroup>
           </div>
         </section>
       </main>

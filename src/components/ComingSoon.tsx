@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  Heading1, 
-  Heading2, 
-  BodyText, 
+import {
+  Heading1,
+  Heading2,
+  BodyText,
   SmallText,
-  Caption 
+  Caption,
 } from "@/components/ui/typography";
 import { Mail, Bell, CheckCircle } from "lucide-react";
 import Image from "next/image";
@@ -59,7 +59,9 @@ export default function ComingSoon({
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -76,7 +78,7 @@ export default function ComingSoon({
     setIsSubmitting(true);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setIsSubscribed(true);
     setIsSubmitting(false);
@@ -89,7 +91,7 @@ export default function ComingSoon({
   const CountdownBox = ({ value, label }: { value: number; label: string }) => (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
       <div className="text-3xl md:text-4xl font-bold text-white mb-1">
-        {value.toString().padStart(2, '0')}
+        {value.toString().padStart(2, "0")}
       </div>
       <SmallText className="text-gray-200 uppercase tracking-wider">
         {label}
@@ -103,12 +105,16 @@ export default function ComingSoon({
         {/* Main Content */}
         <div className="mb-12">
           <div className="flex justify-center mb-12">
-          <Image src="/logo.png" alt="logo" width={500} height={500} className="w-56 h-auto" /> 
+            <Image
+              src="/logo-transparent-bg.png"
+              alt="logo"
+              width={500}
+              height={500}
+              className="w-56 h-auto"
+            />
           </div>
           {/* Title & Subtitle */}
-          <Heading1 className="text-navy-primary mb-4">
-            {title}
-          </Heading1>
+          <Heading1 className="text-navy-primary mb-4">{title}</Heading1>
           <Heading2 color="teal-primary" className="mb-6 text-2xl">
             {subtitle}
           </Heading2>
@@ -171,7 +177,8 @@ export default function ComingSoon({
                   </SmallText>
                 </div>
                 <BodyText className="text-gray-300">
-                  We&apos;ll email you as soon as we launch. Thanks for your interest!
+                  We&apos;ll email you as soon as we launch. Thanks for your
+                  interest!
                 </BodyText>
               </div>
             )}
@@ -207,4 +214,4 @@ export default function ComingSoon({
       </div>
     </div>
   );
-} 
+}

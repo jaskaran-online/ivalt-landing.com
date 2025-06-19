@@ -1,7 +1,9 @@
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
-import { FileText, Eye, Fingerprint, LucideIcon } from "lucide-react";
+import { FileText, Eye, Fingerprint, LucideIcon, Check } from "lucide-react";
+import AnimatedShinyCard from "@/components/ui/animated-shiny-card";
+import { Button } from "../ui/button";
 
 interface ApplicationCardProps {
   icon: LucideIcon;
@@ -22,18 +24,21 @@ function ApplicationCard({
 }: ApplicationCardProps) {
   return (
     <FadeInOnScroll delay={delay}>
-      <div className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300">
+      <AnimatedShinyCard className="border-[0.4px]">
         <div className="text-accent mb-4">
-          <Icon className="w-8 h-8 text-teal-primary" />
+          <Icon className="w-8 h-8 text-teal-primary transition-all duration-300 group-hover:scale-110 group-hover:text-teal-600" />
         </div>
-        <h3 className="text-xl font-semibold text-primary mb-2">{title}</h3>
+        <h3 className="text-xl font-semibold text-primary mb-2 transition-colors duration-300 group-hover:text-teal-700">
+          {title}
+        </h3>
         <p className="text-gray-600 mb-2 text-sm">{subtitle}</p>
         <p className="text-gray-600 mb-4">{description}</p>
         <div className="space-y-2 mb-4">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-2">
+            <div key={index} className="flex items-center gap-3">
               <div>
-                <div className="w-2 h-2 bg-teal-primary rounded-full" />
+                <Check className="w-4 h-4 text-teal-primary transition-all duration-300 group-hover:scale-125" />
+                {/* <div className="w-2 h-2 bg-teal-primary rounded-full transition-all duration-300 group-hover:scale-125" /> */}
               </div>
               <p
                 className="text-sm text-gray-600"
@@ -42,13 +47,10 @@ function ApplicationCard({
             </div>
           ))}
         </div>
-        <Link
-          href="/solutions"
-          className="mt-3 inline-flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-opacity-90"
-        >
-          Learn More
-        </Link>
-      </div>
+        <Button variant="shiny" size="lg" className="rounded-[15px]">
+          <Link href="/solutions">Learn More</Link>
+        </Button>
+      </AnimatedShinyCard>
     </FadeInOnScroll>
   );
 }

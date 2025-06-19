@@ -57,7 +57,7 @@ export default function Footer() {
                 <div>
                   <Link href="/" className="inline-block mb-6">
                     <Image
-                      src="/logo.png"
+                      src="/logo-transparent-bg.png"
                       alt="Company Logo"
                       width={500}
                       height={500}
