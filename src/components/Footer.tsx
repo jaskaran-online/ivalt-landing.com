@@ -151,21 +151,11 @@ export default function Footer() {
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-teal-primary" />
                       <SmallText className="text-gray-700">
-                        hello@ivalt.com
+                        info@ivalt.com
                       </SmallText>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-teal-primary" />
-                      <SmallText className="text-gray-700">
-                        +1 (555) 123-4567
-                      </SmallText>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <MapPin className="h-5 w-5 text-teal-primary" />
-                      <SmallText className="text-gray-700">
-                        123 Main St, San Francisco, CA 94101
-                      </SmallText>
-                    </div>
+                    
+                   
                   </div>
 
                   {/* social icons from linkedin, facebook, instagram, twitter */}

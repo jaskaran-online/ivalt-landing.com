@@ -1,16 +1,18 @@
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import SectionTitle from "@/components/SectionTitle";
+import ivolt from "../../assets/images/why-ivalt/ivalt image.jpg"
+import Image from "next/image";
 import {
   Smartphone,
   Fingerprint,
   MapPin,
-  Clock,
+  // Clock,
   TrendingUp,
   Users,
   Bot,
-  CheckCircle,
-  Globe,
-  Lock,
+  // CheckCircle,
+  // Globe,
+  // Lock,
 } from "lucide-react";
 
 export default function PlatformOverviewSection() {
@@ -90,13 +92,14 @@ export default function PlatformOverviewSection() {
           {/* IoT & AI Agent Authentication */}
           <FadeInOnScroll delay={0.1}>
             <div className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-6">
+              <Image src={ivolt}  alt="image"width={760} height={500}/>
+              {/* <div className="flex items-center gap-3 mb-6">
                 <Globe className="h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold text-primary">
                   IoT & AI Agent Identification
                 </h3>
-              </div>
-
+              </div> */}
+{/* 
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-primary" />
@@ -120,7 +123,7 @@ export default function PlatformOverviewSection() {
                   <TrendingUp className="h-5 w-5 text-primary" />
                   <p className="text-gray-600">Dynamic variables</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </FadeInOnScroll>
         </div>
