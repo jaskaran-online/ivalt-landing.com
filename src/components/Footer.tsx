@@ -22,10 +22,10 @@ const footerLinks = {
     { label: "DocuID™", href: "/solutions/docuid" },
   ],
   company: [
+    { label: "Why iVALT?", href: "/why-ivalt" },
+    { label: "Solutions", href: "/solutions" },
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Solutions", href: "/solutions" },
-    { label: "Why iVALT?", href: "/why-ivalt" },
     { label: "Press Releases", href: "/press-release" },
   ],
   resources: [

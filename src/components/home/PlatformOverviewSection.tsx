@@ -93,37 +93,7 @@ export default function PlatformOverviewSection() {
           <FadeInOnScroll delay={0.1}>
             <div className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300">
               <Image src={ivolt}  alt="image"width={760} height={500}/>
-              {/* <div className="flex items-center gap-3 mb-6">
-                <Globe className="h-8 w-8 text-primary" />
-                <h3 className="text-xl font-semibold text-primary">
-                  IoT & AI Agent Identification
-                </h3>
-              </div> */}
-{/* 
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Creator ID / Instance ID</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Time of creation</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Lock className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">
-                    TOTP (Time-based One Time Password)
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Globe className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Expected network origin</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <TrendingUp className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Dynamic variables</p>
-                </div>
-              </div> */}
+              
             </div>
           </FadeInOnScroll>
         </div>
