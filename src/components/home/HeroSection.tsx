@@ -13,7 +13,7 @@ export default function HeroSection() {
               Identity Validation Platform®
             </div>
             <h1 className="text-5xl font-bold tracking-tight text-primary mb-6">
-              <span className="underline decoration-teal-primary">
+              <span className="underline decoration-teal-primary bg-amber-300">
                 iVALT – Identity Validation Platform®
               </span>
             </h1>

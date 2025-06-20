@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <FadeInOnScroll>
             <h1 className="text-5xl font-bold tracking-tight text-primary mb-6">
-              <span className="underline decoration-teal-primary">
+              <span className="underline decoration-teal-primary ">
                 AI-Adaptive{" "}
               </span>{" "}
               Solutions that Redefine Identity
