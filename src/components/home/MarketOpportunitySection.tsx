@@ -60,8 +60,8 @@ export default function MarketOpportunitySection() {
   const competitiveAdvantages = [
     {
       icon: Shield,
-      title: "Holistic Identity",
-      description: "One platform for Humans, IoT, AI",
+      title: "One Identity for Everything",
+      description: "Customizable by risk and AI models",
       borderColor: "border-l-4 border-teal-primary",
       iconColor: "text-teal-primary",
     },
@@ -124,11 +124,12 @@ export default function MarketOpportunitySection() {
         <FadeInOnScroll>
           <SectionTitle
             title="Market Opportunity & Competitive Advantage"
-            description="Positioned to capture significant market share in the rapidly growing IAM space"
+            description="Complete identity solution that works today and into the future"
           />
           <div className="flex justify-center mt-6 mb-12">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-white text-lg font-bold">
-              $20B+ IAM market, growing rapidly with AI and IoT
+              One Unified Platform for ALL Use Cases
+
             </div>
           </div>
         </FadeInOnScroll>

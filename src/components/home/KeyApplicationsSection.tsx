@@ -81,7 +81,8 @@ export default function KeyApplicationsSection() {
       description: "Real-time identity verification within our mobile app.",
       features: [
         "Instantly verify identity of suspicious calls/messages",
-        "Via biometrics & location verification",
+        "Biometrics, registered device and location",
+
         "The only solution worldwide to truly defeat deepfake & social engineering attacks",
       ],
       delay: 0.1,
@@ -94,7 +95,6 @@ export default function KeyApplicationsSection() {
       features: [
         'When an employee logs in, iVALT "pings" their mobile',
         "Real-time biometric and contextual verification",
-        "Makes stolen passwords useless",
       ],
       delay: 0.2,
     },
@@ -105,7 +105,7 @@ export default function KeyApplicationsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInOnScroll>
           <SectionTitle
-            title="Key Applications (Initial Focus)"
+            title="Foundational Applications"
             description="Three core applications transforming digital security"
           />
         </FadeInOnScroll>
