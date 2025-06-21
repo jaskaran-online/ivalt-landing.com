@@ -3,6 +3,7 @@ import SectionTitle from "@/components/SectionTitle";
 import {
   ComingSoon,
   FactorsOfIdentity,
+  PartnershipBenefits,
   PioneeringContent,
 } from "@/components/why-ivalt";
 
@@ -12,6 +13,7 @@ export default function WhyIvalt() {
       <SectionTitle title="Why iVALT ?" description="" />
       <PioneeringContent />
       <FactorsOfIdentity />
+      <PartnershipBenefits />
       <ComingSoon />
     </Container>
   );

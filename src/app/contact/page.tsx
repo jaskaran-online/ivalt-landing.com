@@ -90,7 +90,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     <Label
                       htmlFor="subject"
                       className="text-navy-primary font-medium"
@@ -102,7 +102,7 @@ export default function Contact() {
                       placeholder="What's this about?"
                       className="border-gray-200 focus:border-teal-primary focus:ring-teal-primary/20"
                     />
-                  </div>
+                  </div> */}
 
                   <div className="space-y-2">
                     <Label
@@ -164,71 +164,6 @@ export default function Contact() {
                         </BodyText>
                       </div>
                     </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-teal-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-6 h-6 text-teal-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-navy-primary mb-1">
-                          Call Us
-                        </h3>
-                        <BodyText className="text-gray-600">
-                          +1 (555) 123-4567
-                        </BodyText>
-                        <BodyText className="text-sm text-gray-500">
-                          Mon-Fri 9AM-6PM PST
-                        </BodyText>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-teal-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-6 h-6 text-teal-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-navy-primary mb-1">
-                          Visit Us
-                        </h3>
-                        <BodyText className="text-gray-600">
-                          123 Innovation Drive
-                          <br />
-                          Silicon Valley, CA 94000
-                          <br />
-                          United States
-                        </BodyText>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </FadeInOnScroll>
@@ -239,16 +174,10 @@ export default function Contact() {
                     <Heading2 className="text-white text-xl mb-4">
                       Ready to Get Started?
                     </Heading2>
-                    <BodyText className="text-white/90 mb-6">
-                      Schedule a demo to see how iVALT® can transform your
-                      organization&apos;s security posture.
+                    <BodyText className="text-white/90">
+                      We will be in touch to talk about your needs and schedule
+                      a demo.
                     </BodyText>
-                    <Button
-                      variant="secondary"
-                      className="bg-white text-navy-primary hover:bg-gray-50 font-semibold"
-                    >
-                      Schedule Demo
-                    </Button>
                   </CardContent>
                 </Card>
               </FadeInOnScroll>

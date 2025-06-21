@@ -9,11 +9,11 @@ export default function IdentityCrisisSection() {
         <FadeInOnScroll>
           <SectionTitle
             title="The Identity Crisis"
-            description="Legacy identity methods—passwords, basic 2FA, device certificates—are failing."
+            description="Legacy identity methods—passwords, basic 2FA, device certificates—are not enough."
           />
           <div className="flex justify-center mt-6">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-red-100 text-red-800 text-lg font-bold">
-              Roughly 50% of cyberattacks start with stolen credentials
+              80-90% of cyberattacks start with stolen credentials
             </div>
           </div>
         </FadeInOnScroll>
@@ -32,7 +32,7 @@ export default function IdentityCrisisSection() {
                   <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0" />
                   <p className="text-gray-700">
                     <strong>$10.5 trillion</strong> projected cybercrime costs
-                    annually by 2025
+                    annually in 2025
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -67,9 +67,9 @@ export default function IdentityCrisisSection() {
                   <span className="text-primary">iVALT</span> Solution
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  iVALT delivers a revolutionary platform for verified trust
+                  iVALT delivers a mobile-centric/SaaS platform for verified trust
                   across all digital interactions —{" "}
-                  <strong>without passwords</strong>.
+                  <strong>using existing infrastructure</strong>.
                 </p>
               </div>
               <div className="space-y-4">
@@ -77,7 +77,7 @@ export default function IdentityCrisisSection() {
                   <div className="flex items-center gap-3">
                     <Lock className="h-5 w-5 text-teal-primary" />
                     <p className="text-gray-700">
-                      Legacy passwords and basic 2FA are obsolete
+                      Stolen credentials become worthless
                     </p>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export default function IdentityCrisisSection() {
                   <div className="flex items-center gap-3">
                     <Bot className="h-5 w-5 text-teal-primary" />
                     <p className="text-gray-700">
-                      Existing solutions are fragmented and complex
+                      User experience is simplified to 1-Click
                     </p>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function IdentityCrisisSection() {
                   <div className="flex items-center gap-3">
                     <Shield className="h-5 w-5 text-teal-primary" />
                     <p className="text-gray-700">
-                      Fail to establish true identity at the endpoint
+                      Social engineering and AI deepfakes are blocked
                     </p>
                   </div>
                 </div>

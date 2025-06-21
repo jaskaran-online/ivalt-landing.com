@@ -1,6 +1,8 @@
 import { FadeInOnScroll } from "../ui/FadeInOnScroll";
 import Container from "../Container";
 import { Check } from "lucide-react";
+import PioneeringImage from "@/assets/blue-image.png";
+import Image from "next/image";
 
 const Points = [
   "Best Available Technologies Widely available at Any Point in Time",
@@ -16,7 +18,14 @@ export default function PioneeringContent() {
       <Container className="max-w-7xl pb-4 pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="md:text-4xl text-3xl font-bold text-navy-primary mb-2 leading-tight text-shadow-sm text-center md:text-left">
+            <Image
+              src={PioneeringImage}
+              alt="Pioneering"
+              width={500}
+              height={500}
+            />
+
+            <h1 className="md:text-4xl text-3xl font-bold text-primary mb-2 leading-tight text-shadow-sm text-center md:text-left">
               Pioneering the Future of Identity
             </h1>
             <p className="md:text-lg text-base text-gray-600 mt-2 text-center md:text-left">
@@ -25,7 +34,10 @@ export default function PioneeringContent() {
             </p>
           </div>
           <div className="flex flex-col items-start justify-center">
-            <div className="flex flex-col gap-4 md:gap-5">
+            <h1 className="md:text-4xl text-2xl font-bold text-primary mb-6 leading-tight text-shadow-sm text-center md:text-left">
+              Using the:
+            </h1>
+            <div className="flex flex-col gap-2 md:gap-4">
               {Points.map((point, index) => (
                 <FadeInOnScroll
                   delay={index * 2}
@@ -39,7 +51,7 @@ export default function PioneeringContent() {
                       height={24}
                     />
                   </div>
-                  <h1 className="md:text-lg text-base text-navy-primary text-left">
+                  <h1 className="md:text-lg text-base text-primary text-left">
                     {point}
                   </h1>
                 </FadeInOnScroll>

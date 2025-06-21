@@ -8,9 +8,11 @@ import {
   SmallText,
   Caption,
 } from "@/components/ui/typography";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import { usePathname } from "next/navigation";
+import LinkedIn from "@/assets/linkedin.png";
+import { Button } from "./ui/button";
 
 const footerLinks = {
   products: [
@@ -22,10 +24,10 @@ const footerLinks = {
     { label: "DocuID™", href: "/solutions/docuid" },
   ],
   company: [
+    { label: "Why iVALT?", href: "/why-ivalt" },
+    { label: "Solutions", href: "/solutions" },
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Solutions", href: "/solutions" },
-    { label: "Why iVALT?", href: "/why-ivalt" },
     { label: "Press Releases", href: "/press-release" },
   ],
   resources: [
@@ -151,33 +153,35 @@ export default function Footer() {
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-teal-primary" />
                       <SmallText className="text-gray-700">
-                        hello@ivalt.com
-                      </SmallText>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-teal-primary" />
-                      <SmallText className="text-gray-700">
-                        +1 (555) 123-4567
-                      </SmallText>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <MapPin className="h-5 w-5 text-teal-primary" />
-                      <SmallText className="text-gray-700">
-                        123 Main St, San Francisco, CA 94101
+                        info@ivalt.com
                       </SmallText>
                     </div>
                   </div>
 
                   {/* social icons from linkedin, facebook, instagram, twitter */}
                   <div className="flex items-center space-x-3">
-                    <Link
-                      href="https://www.linkedin.com/company/ivalt-inc/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-navy-primary transition-colors duration-200 bg-navy-primary p-2 rounded-full"
+                    <Button
+                      variant="shiny"
+                      className="bg-slate-100 hover:bg-slate-200 border"
                     >
-                      <Linkedin className="h-5 w-5 text-white" />
-                    </Link>
+                      <Link
+                        href="https://www.linkedin.com/company/ivalt-inc/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="flex items-center justify-center gap-2 p-2 rounded-lg transition-colors">
+                          <Image
+                            src={LinkedIn}
+                            alt="LinkedIn"
+                            width={20}
+                            height={20}
+                          />
+                          <span className="text-sm text-gray-600">
+                            LinkedIn Profile
+                          </span>
+                        </span>
+                      </Link>
+                    </Button>
                   </div>
                 </div>
 

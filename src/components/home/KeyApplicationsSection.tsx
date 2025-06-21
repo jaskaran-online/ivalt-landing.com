@@ -14,7 +14,7 @@ interface ApplicationCardProps {
   delay?: number;
 }
 
-function ApplicationCard({
+export function ApplicationCard({
   icon: Icon,
   title,
   subtitle,
@@ -31,7 +31,7 @@ function ApplicationCard({
         <h3 className="text-xl font-semibold text-primary mb-2 transition-colors duration-300 group-hover:text-teal-700">
           {title}
         </h3>
-        <p className="text-gray-600 mb-2 text-sm">{subtitle}</p>
+        <p className="text-teal-primary mb-2 text-sm">{subtitle}</p>
         <p className="text-gray-600 mb-4">{description}</p>
         <div className="space-y-2 mb-4">
           {features.map((feature, index) => (
@@ -81,7 +81,8 @@ export default function KeyApplicationsSection() {
       description: "Real-time identity verification within our mobile app.",
       features: [
         "Instantly verify identity of suspicious calls/messages",
-        "Via biometrics & location verification",
+        "Biometrics, registered device and location",
+
         "The only solution worldwide to truly defeat deepfake & social engineering attacks",
       ],
       delay: 0.1,
@@ -94,7 +95,7 @@ export default function KeyApplicationsSection() {
       features: [
         'When an employee logs in, iVALT "pings" their mobile',
         "Real-time biometric and contextual verification",
-        "Makes stolen passwords useless",
+        "1-Click user experience",
       ],
       delay: 0.2,
     },
@@ -105,12 +106,12 @@ export default function KeyApplicationsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInOnScroll>
           <SectionTitle
-            title="Key Applications (Initial Focus)"
+            title="Foundational Applications"
             description="Three core applications transforming digital security"
           />
         </FadeInOnScroll>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:gap-12 md:grid-cols-2 lg:grid-cols-3">
           {applications.map((app, index) => (
             <ApplicationCard
               key={index}

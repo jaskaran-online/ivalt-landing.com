@@ -6,6 +6,8 @@ import {
   OnDemandID,
   DocuID,
   SolutionComponents,
+  DataSecurity,
+  ContextID,
 } from "@/components/solutions";
 
 export default function Solutions() {
@@ -16,6 +18,8 @@ export default function Solutions() {
       <Universal />
       <OnDemandID />
       <DocuID />
+      <ContextID />
+      <DataSecurity />
       <SolutionComponents />
     </Container>
   );

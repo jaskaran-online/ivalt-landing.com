@@ -1,16 +1,14 @@
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import SectionTitle from "@/components/SectionTitle";
+import IdentityValidation from "@/assets/images/home/Identity-validation.png";
+import Image from "next/image";
 import {
   Smartphone,
   Fingerprint,
   MapPin,
-  Clock,
   TrendingUp,
   Users,
   Bot,
-  CheckCircle,
-  Globe,
-  Lock,
 } from "lucide-react";
 
 export default function PlatformOverviewSection() {
@@ -89,38 +87,13 @@ export default function PlatformOverviewSection() {
 
           {/* IoT & AI Agent Authentication */}
           <FadeInOnScroll delay={0.1}>
-            <div className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <Globe className="h-8 w-8 text-primary" />
-                <h3 className="text-xl font-semibold text-primary">
-                  IoT & AI Agent Identification
-                </h3>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Creator ID / Instance ID</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Time of creation</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Lock className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">
-                    TOTP (Time-based One Time Password)
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Globe className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Expected network origin</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <TrendingUp className="h-5 w-5 text-primary" />
-                  <p className="text-gray-600">Dynamic variables</p>
-                </div>
-              </div>
+            <div className="bg-white rounded-lg p-2 border-4 border-gray-100 transition-all duration-300">
+              <Image src={IdentityValidation} alt="Identity Validation" />
+            </div>
+            <div className="bg-white rounded-lg p-4 border-4 border-gray-100 transition-all duration-300 mt-4">
+              <h3 className="text-xl font-semibold text-primary text-center">
+                Next Gen MFA for Everything
+              </h3>
             </div>
           </FadeInOnScroll>
         </div>
