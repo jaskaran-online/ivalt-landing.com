@@ -18,8 +18,8 @@ export default function Solutions() {
       <Universal />
       <OnDemandID />
       <DocuID />
-      <DataSecurity />
       <ContextID />
+      <DataSecurity />
       <SolutionComponents />
     </Container>
   );

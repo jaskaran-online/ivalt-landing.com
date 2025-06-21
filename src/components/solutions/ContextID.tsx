@@ -17,7 +17,7 @@ const Points = [
 
 export default function ContextID() {
   return (
-    <FadeInOnScroll className="bg-[#FAF9F7] py-6 md:py-12">
+    <FadeInOnScroll className="bg-[#FAF9F7] py-6 md:pt-12 pb-28">
       <Container className="max-w-7xl">
         <SectionTitle
           title="ContextID"
@@ -51,14 +51,14 @@ export default function ContextID() {
             ))}
           </div>
 
-          <div className="absolute bottom-10 right-0">
-            <h1 className="text-base font-semibold text-navy-primary text-left max-w-md">
+          <div className="absolute bottom-15 right-0">
+            <h1 className="text-base font-semibold text-navy-primary text-left max-w-md mr-6">
               Plus new services like DocuID™ and Others integrated with iVALT
             </h1>
           </div>
 
-          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
-            <h1 className="text-lg font-semibold text-navy-primary text-left max-w-md">
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+            <h1 className="text-2xl font-semibold text-navy-primary text-left max-w-md ml-6">
               Universal Authenticator
             </h1>
           </div>
