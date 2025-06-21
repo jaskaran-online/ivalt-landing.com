@@ -41,14 +41,13 @@ export default function SolutionComponent({
           />
         </div>
         <div className="flex flex-col items-start justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4 md:mt-12 mt-6 max-w-6xl mx-auto">
-            <FeatureList
-              features={features}
-              iconBackgroundClassName={`${iconBackgroundColor} rounded-full p-2 shadow-sm`}
-              animateItems={true}
-              animationDelay={2}
-            />
-          </div>
+          <FeatureList
+            features={features}
+            iconBackgroundClassName={`${iconBackgroundColor} rounded-full p-2 shadow-sm`}
+            animateItems={true}
+            animationDelay={2}
+            responsiveColumns={true}
+          />
         </div>
       </Container>
     </FadeInOnScroll>

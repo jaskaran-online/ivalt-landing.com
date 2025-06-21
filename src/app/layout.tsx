@@ -12,8 +12,26 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "iVALT",
-  description: "Innovative identity solutions for modern security challenges. Protecting your digital future with advanced authentication technology.",
-  keywords: ["iVALT", "identity", "authentication", "security", "biometrics", "facial recognition", "fingerprint", "iris recognition", "on-demand ID", "universal biometric ID", "docuID", "mobile-centric identity", "real-time identity", "document access control", "AI-adaptive solutions", "next-gen security"],
+  description:
+    "Innovative identity solutions for modern security challenges. Protecting your digital future with advanced authentication technology.",
+  keywords: [
+    "iVALT",
+    "identity",
+    "authentication",
+    "security",
+    "biometrics",
+    "facial recognition",
+    "fingerprint",
+    "iris recognition",
+    "on-demand ID",
+    "universal biometric ID",
+    "docuID",
+    "mobile-centric identity",
+    "real-time identity",
+    "document access control",
+    "AI-adaptive solutions",
+    "next-gen security",
+  ],
   icons: {
     icon: "/favicon.ico",
   },
@@ -29,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-sans antialiased`}>
+      <body
+        className={`${poppins.variable} font-sans antialiased bg-[#FAF9F7]`}
+      >
         <Header />
         {children}
         <Footer />

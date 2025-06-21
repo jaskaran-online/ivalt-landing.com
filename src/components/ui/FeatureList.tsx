@@ -12,6 +12,7 @@ interface FeatureListProps {
   iconBackgroundClassName?: string;
   animateItems?: boolean;
   animationDelay?: number;
+  responsiveColumns?: boolean;
 }
 
 export function FeatureList({
@@ -23,9 +24,18 @@ export function FeatureList({
   iconBackgroundClassName = "bg-[#FAF9F7] rounded-full p-2 shadow-sm",
   animateItems = true,
   animationDelay = 2,
+  responsiveColumns = false,
 }: FeatureListProps) {
   return (
-    <div className={cn("space-y-2", className)}>
+    <div
+      className={cn(
+        "space-y-2",
+        responsiveColumns
+          ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full mx-auto max-w-4xl md:mt-4"
+          : "",
+        className
+      )}
+    >
       {features.map((feature, index) => {
         const itemContent = (
           <div
@@ -34,7 +44,12 @@ export function FeatureList({
               itemClassName
             )}
           >
-            <div className={cn("flex items-center justify-center", iconBackgroundClassName)}>
+            <div
+              className={cn(
+                "flex items-center justify-center",
+                iconBackgroundClassName
+              )}
+            >
               <Check className={iconClassName} width={24} height={24} />
             </div>
             <p
