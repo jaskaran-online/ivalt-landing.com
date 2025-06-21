@@ -24,6 +24,8 @@ pnpm start
 pnpm lint
 ```
 
+**Note**: Package manager is PNPM (not npm/yarn). Always use `pnpm` commands.
+
 ## Architecture
 
 ### App Router Structure
@@ -56,10 +58,11 @@ src/components/
 
 ## Configuration
 
-- **Next.js config**: `next.config.ts` with image domains, build settings
+- **Next.js config**: `next.config.ts` with image domains, build settings, ESLint/TypeScript ignored during builds
 - **Shadcn/ui**: New York style, Lucide icons (`components.json`)
 - **Path mapping**: `@/` alias for clean imports
 - **Package manager**: PNPM (lock file present)
+- **Font**: Poppins (Google Fonts) with weights 300-700
 
 ## Business Context
 
@@ -77,3 +80,30 @@ Components reference these business domains in naming and content structure.
 - Full TypeScript integration with strict typing
 - Mobile-centric design approach matching company positioning
 - Comprehensive existing documentation in `COMPONENT_USAGE_GUIDE.md`, `BRAND_COLORS.md`, `TYPOGRAPHY_GUIDE.md`
+
+## Important Development Patterns
+
+### Typography Usage
+Always use typography components instead of raw Tailwind classes:
+```tsx
+// ✅ Correct
+<Heading1>Title</Heading1>
+<BodyText>Content</BodyText>
+
+// ❌ Avoid
+<h1 className="text-4xl font-bold">Title</h1>
+```
+
+### Brand Colors
+Use brand color utilities from `globals.css`:
+```tsx
+// ✅ Correct - using brand colors
+<div className="bg-teal-primary text-white">
+<div className="text-navy-primary">
+
+// ❌ Avoid - custom hex values
+<div className="bg-[#30B68E]">
+```
+
+### Form Handling
+All forms use React Hook Form + Zod validation pattern (see `ContactForm.tsx` reference).
