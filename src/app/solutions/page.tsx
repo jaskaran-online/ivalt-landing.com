@@ -6,16 +6,20 @@ import {
   OnDemandID,
   DocuID,
   SolutionComponents,
+  DataSecurity,
+  ContextID,
 } from "@/components/solutions";
 
 export default function Solutions() {
   return (
     <Container className="bg-[#FAF9F7] md:py-16 py-6">
-      <SectionTitle title="Solutions" description=""/>
+      <SectionTitle title="Solutions" description="" />
       <TargetingContent />
       <Universal />
       <OnDemandID />
       <DocuID />
+      <DataSecurity />
+      <ContextID />
       <SolutionComponents />
     </Container>
   );
