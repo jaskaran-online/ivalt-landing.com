@@ -31,7 +31,7 @@ function ApplicationCard({
         <h3 className="text-xl font-semibold text-primary mb-2 transition-colors duration-300 group-hover:text-teal-700">
           {title}
         </h3>
-        <p className="text-gray-600 mb-2 text-sm">{subtitle}</p>
+        <p className="text-teal-primary mb-2 text-sm">{subtitle}</p>
         <p className="text-gray-600 mb-4">{description}</p>
         <div className="space-y-2 mb-4">
           {features.map((feature, index) => (
@@ -95,6 +95,7 @@ export default function KeyApplicationsSection() {
       features: [
         'When an employee logs in, iVALT "pings" their mobile',
         "Real-time biometric and contextual verification",
+        "1-Click user experience",
       ],
       delay: 0.2,
     },
@@ -110,7 +111,7 @@ export default function KeyApplicationsSection() {
           />
         </FadeInOnScroll>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:gap-12 md:grid-cols-2 lg:grid-cols-3">
           {applications.map((app, index) => (
             <ApplicationCard
               key={index}

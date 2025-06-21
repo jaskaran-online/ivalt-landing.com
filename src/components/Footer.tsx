@@ -8,9 +8,11 @@ import {
   SmallText,
   Caption,
 } from "@/components/ui/typography";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import { usePathname } from "next/navigation";
+import LinkedIn from "@/assets/linkedin.png";
+import { Button } from "./ui/button";
 
 const footerLinks = {
   products: [
@@ -154,20 +156,32 @@ export default function Footer() {
                         info@ivalt.com
                       </SmallText>
                     </div>
-                    
-                   
                   </div>
 
                   {/* social icons from linkedin, facebook, instagram, twitter */}
                   <div className="flex items-center space-x-3">
-                    <Link
-                      href="https://www.linkedin.com/company/ivalt-inc/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-navy-primary transition-colors duration-200 bg-navy-primary p-2 rounded-full"
+                    <Button
+                      variant="shiny"
+                      className="bg-slate-100 hover:bg-slate-200 border"
                     >
-                      <Linkedin className="h-5 w-5 text-white" />
-                    </Link>
+                      <Link
+                        href="https://www.linkedin.com/company/ivalt-inc/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="flex items-center justify-center gap-2 p-2 rounded-lg transition-colors">
+                          <Image
+                            src={LinkedIn}
+                            alt="LinkedIn"
+                            width={20}
+                            height={20}
+                          />
+                          <span className="text-sm text-gray-600">
+                            LinkedIn Profile
+                          </span>
+                        </span>
+                      </Link>
+                    </Button>
                   </div>
                 </div>
 
