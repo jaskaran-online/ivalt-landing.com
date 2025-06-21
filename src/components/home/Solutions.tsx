@@ -34,7 +34,7 @@ export default function Solutions() {
             description="Explore our range of AI-powered products designed to help your business thrive."
           />
         </FadeInOnScroll>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Feature 1 */}
           {solutions.map((solution, index) => (
             <FadeInOnScroll key={solution.title} delay={index * 0.1}>

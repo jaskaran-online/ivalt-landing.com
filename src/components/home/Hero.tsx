@@ -11,13 +11,13 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <FadeInOnScroll>
-            <h1 className="text-5xl font-bold tracking-tight text-primary mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-primary mb-6">
               <span className="underline decoration-teal-primary ">
                 AI-Adaptive{" "}
               </span>{" "}
               Solutions that Redefine Identity
             </h1>
-            <p className="mt-6 md:text-xl text-lg text-gray-600 max-w-3xl">
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl">
               Real-time Identity to Stop Social Engineering and AI Deepfakes.
               Next Generation Document Access Control. And Everything In
               Between.

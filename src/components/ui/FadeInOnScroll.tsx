@@ -38,7 +38,7 @@ export function FadeInOnScroll({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const timer = setTimeout(() => {
+            setTimeout(() => {
               setIsVisible(true);
             }, delay);
 

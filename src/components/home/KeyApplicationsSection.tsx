@@ -1,9 +1,10 @@
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
-import { FileText, Eye, Fingerprint, LucideIcon, Check } from "lucide-react";
+import { FileText, Eye, Fingerprint, LucideIcon } from "lucide-react";
 import AnimatedShinyCard from "@/components/ui/animated-shiny-card";
 import { Button } from "../ui/button";
+import { SimpleFeatureList } from "../ui/FeatureList";
 
 interface ApplicationCardProps {
   icon: LucideIcon;
@@ -33,20 +34,7 @@ export function ApplicationCard({
         </h3>
         <p className="text-teal-primary mb-2 text-sm">{subtitle}</p>
         <p className="text-gray-600 mb-4">{description}</p>
-        <div className="space-y-2 mb-4">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-3">
-              <div>
-                <Check className="w-4 h-4 text-teal-primary transition-all duration-300 group-hover:scale-125" />
-                {/* <div className="w-2 h-2 bg-teal-primary rounded-full transition-all duration-300 group-hover:scale-125" /> */}
-              </div>
-              <p
-                className="text-sm text-gray-600"
-                dangerouslySetInnerHTML={{ __html: feature }}
-              />
-            </div>
-          ))}
-        </div>
+        <SimpleFeatureList features={features} className="mb-4" />
         <Button
           variant="shiny"
           size="lg"

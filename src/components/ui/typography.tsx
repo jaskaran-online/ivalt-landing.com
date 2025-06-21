@@ -40,14 +40,14 @@ interface TypographyProps {
 }
 
 const variantStyles: Record<TypographyVariant, string> = {
-  h1: "text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight",
-  h2: "text-3xl lg:text-4xl xl:text-5xl leading-tight tracking-tight", 
-  h3: "text-2xl lg:text-3xl xl:text-4xl leading-snug tracking-tight",
-  h4: "text-xl lg:text-2xl xl:text-3xl leading-snug tracking-tight",
-  h5: "text-lg lg:text-xl xl:text-2xl leading-snug",
-  h6: "text-base lg:text-lg xl:text-xl leading-snug",
-  body1: "text-base leading-relaxed",
-  body2: "text-sm leading-relaxed",
+  h1: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight",
+  h2: "text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight tracking-tight", 
+  h3: "text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug tracking-tight",
+  h4: "text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-snug tracking-tight",
+  h5: "text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-snug",
+  h6: "text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl leading-snug",
+  body1: "text-sm sm:text-base leading-relaxed",
+  body2: "text-xs sm:text-sm leading-relaxed",
   caption: "text-xs leading-normal",
   overline: "text-xs uppercase tracking-wider leading-normal",
 };
