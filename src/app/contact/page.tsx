@@ -90,7 +90,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     <Label
                       htmlFor="subject"
                       className="text-navy-primary font-medium"
@@ -102,7 +102,7 @@ export default function Contact() {
                       placeholder="What's this about?"
                       className="border-gray-200 focus:border-teal-primary focus:ring-teal-primary/20"
                     />
-                  </div>
+                  </div> */}
 
                   <div className="space-y-2">
                     <Label

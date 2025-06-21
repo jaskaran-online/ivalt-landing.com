@@ -14,7 +14,7 @@ interface ApplicationCardProps {
   delay?: number;
 }
 
-function ApplicationCard({
+export function ApplicationCard({
   icon: Icon,
   title,
   subtitle,
