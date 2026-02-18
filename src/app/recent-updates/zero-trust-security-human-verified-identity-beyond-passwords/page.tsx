@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://ivalt.com/recent-updates/ivalt-openvpn-human-verified-zerotrust-webinar",
+      "https://ivalt.com/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords",
   },
   openGraph: {
     type: "article",
-    url: "https://ivalt.com/recent-updates/ivalt-openvpn-human-verified-zerotrust-webinar",
+    url: "https://ivalt.com/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords",
     title: "Zero Trust Security: Human-Verified Identity Beyond Passwords",
     description:
       "Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization. Learn how to move beyond passwords and tokens to ensure verified humans can access networks.",
