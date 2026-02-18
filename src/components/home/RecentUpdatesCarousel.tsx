@@ -17,6 +17,16 @@ interface Update {
 
 const recentUpdates: Update[] = [
   {
+    id: "openvpn-webinar",
+    title: "iVALT Partners with OpenVPN for Human-Verified Zero Trust Webinar",
+    date: "February 11, 2026",
+    summary:
+      "Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization, addressing AI deepfakes and impersonation threats.",
+    imageSrc:
+      "/press-release/images/ivalt-openvpn-webinar.png",
+    path: "/recent-updates/ivalt-openvpn-human-verified-zerotrust-webinar",
+  },
+  {
     id: "docuid",
     title: "iVALT Revolutionizes Document Security with Launch of DocuID®",
     date: "April 22, 2025",
