@@ -67,19 +67,19 @@ export const navItems = [
     badge: "New",
     dropdown: [
       {
-        label: "Download iVALT Brochure",
+        label: "iVALT Brochure",
         href: "/brochures/iVALT-brochure-final-version.pdf",
         icon: Download,
         description: "Company overview brochure",
       },
       {
-        label: "Download DocuID Brochure",
+        label: "DocuID Brochure",
         href: "/brochures/DocuID-Brochure.pdf",
         icon: FileText,
         description: "DocuID® solution brochure",
       },
       {
-        label: "Download Ondemandid Brochure",
+        label: "Ondemandid Brochure",
         href: "/brochures/On-DemandID-Brochure.pdf",
         icon: FileText,
         description: "On-Demand ID™ solution brochure",
@@ -153,12 +153,12 @@ export default function Header() {
                                 key={subItem.href}
                                 href={subItem.href}
                                 target={
-                                  item.label === "Brochure"
+                                  item.label === "Download Brochure"
                                     ? "_blank"
                                     : undefined
                                 }
                                 rel={
-                                  item.label === "Brochure"
+                                  item.label === "Download Brochure"
                                     ? "noopener noreferrer"
                                     : undefined
                                 }
@@ -264,12 +264,12 @@ export default function Header() {
                                   key={subItem.href}
                                   href={subItem.href}
                                   target={
-                                    item.label === "Brochure"
+                                    item.label === "Download Brochure"
                                       ? "_blank"
                                       : undefined
                                   }
                                   rel={
-                                    item.label === "Brochure"
+                                    item.label === "Download Brochure"
                                       ? "noopener noreferrer"
                                       : undefined
                                   }
