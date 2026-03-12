@@ -4,6 +4,7 @@ import {
   UserCheck,
   ExternalLink,
   Lock,
+  Download,
 } from "lucide-react";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -76,20 +77,35 @@ export default function DocuIdPage() {
             documents.
           </p>
 
-          {/* CTA Button */}
-          <a
-            href="https://www.docuid.net"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              size="lg"
-              className="bg-teal-primary hover:bg-teal-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-teal-primary/25 transition-all hover:shadow-xl hover:shadow-teal-primary/30 hover:-translate-y-0.5"
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.docuid.net"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Visit DocuID.net
-              <ExternalLink className="ml-2 w-5 h-5" />
-            </Button>
-          </a>
+              <Button
+                size="lg"
+                className="bg-teal-primary hover:bg-teal-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-teal-primary/25 transition-all hover:shadow-xl hover:shadow-teal-primary/30 hover:-translate-y-0.5"
+              >
+                Visit DocuID.net
+                <ExternalLink className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+            <a
+              href="/brochures/DocuID-Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="bg-white border border-teal-primary text-teal-primary hover:bg-teal-primary hover:text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+              >
+                Download DocuID Brochure
+                <Download className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
 

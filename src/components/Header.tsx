@@ -11,6 +11,7 @@ import {
   Smartphone,
   Fingerprint,
   Sparkles,
+  FileText,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,6 +62,31 @@ export const navItems = [
     badge: "New",
   },
   {
+    label: "Download Brochure",
+    href: "/brochures",
+    badge: "New",
+    dropdown: [
+      {
+        label: "Download iVALT Brochure",
+        href: "/brochures/iVALT-brochure-final-version.pdf",
+        icon: Download,
+        description: "Company overview brochure",
+      },
+      {
+        label: "Download DocuID Brochure",
+        href: "/brochures/DocuID-Brochure.pdf",
+        icon: FileText,
+        description: "DocuID® solution brochure",
+      },
+      {
+        label: "Download Ondemandid Brochure",
+        href: "/brochures/On-DemandID-Brochure.pdf",
+        icon: FileText,
+        description: "On-Demand ID™ solution brochure",
+      },
+    ],
+  },
+  {
     label: "About",
     href: "/about",
   },
@@ -69,7 +95,7 @@ export const navItems = [
 export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-lg shadow-gray-300/10">
@@ -101,8 +127,8 @@ export default function Header() {
                     <div
                       key={item.href}
                       className="relative"
-                      onMouseEnter={() => setDropdownOpen(true)}
-                      onMouseLeave={() => setDropdownOpen(false)}
+                      onMouseEnter={() => setOpenDropdown(item.href)}
+                      onMouseLeave={() => setOpenDropdown(null)}
                     >
                       <button
                         className={`inline-flex items-center px-1 py-5 border-b-2 text-md font-medium transition-colors ${
@@ -113,12 +139,12 @@ export default function Header() {
                       >
                         {item.label}
                         <ChevronDown
-                          className={`ml-1 w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+                          className={`ml-1 w-4 h-4 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
                         />
                       </button>
 
                       {/* Dropdown Menu */}
-                      {dropdownOpen && (
+                      {openDropdown === item.href && (
                         <div className="absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
                           {item.dropdown.map((subItem) => {
                             const Icon = subItem.icon;
@@ -126,6 +152,16 @@ export default function Header() {
                               <Link
                                 key={subItem.href}
                                 href={subItem.href}
+                                target={
+                                  item.label === "Brochure"
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  item.label === "Brochure"
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
                                 className="flex items-start gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
                               >
                                 <div className="w-10 h-10 rounded-lg bg-teal-primary/10 flex items-center justify-center flex-shrink-0">
@@ -173,21 +209,6 @@ export default function Header() {
             <div className="items-center gap-4 hidden md:flex">
               <Button variant="shiny" size="lg" className=" rounded-[15px]">
                 <Link href="/contact">Contact Us</Link>
-              </Button>
-              <Button
-                key={2}
-                size="lg"
-                variant="shiny"
-                className="h-10.5 rounded-xl bg-white px-5 border-primary border-1 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hidden md:block"
-              >
-                <Link
-                  href="/iVALT-brochure-final-version.pdf"
-                  className="flex items-center gap-2"
-                  target="_blank"
-                >
-                  <Download className="size-4 mr-2" />
-                  <span className="text-nowrap">Download iVALT Brochure</span>
-                </Link>
               </Button>
             </div>
           </div>
@@ -242,6 +263,16 @@ export default function Header() {
                                 <Link
                                   key={subItem.href}
                                   href={subItem.href}
+                                  target={
+                                    item.label === "Brochure"
+                                      ? "_blank"
+                                      : undefined
+                                  }
+                                  rel={
+                                    item.label === "Brochure"
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
                                   onClick={() => setIsOpen(false)}
                                   className={`flex items-center gap-2 py-2 px-4 rounded-sm transition-colors ${
                                     isSubActive
@@ -298,9 +329,10 @@ export default function Header() {
                         className="h-10.5 rounded-xl bg-white px-5 border-primary border-1 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm w-full"
                       >
                         <Link
-                          href="/iVALT-brochure-final-version.pdf"
+                          href="/brochures/iVALT-brochure-final-version.pdf"
                           className="flex items-center gap-2"
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <Download className="size-4 mr-2" />
                           <span className="text-nowrap">
