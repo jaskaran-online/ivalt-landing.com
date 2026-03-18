@@ -149,10 +149,7 @@ function RecentUpdatesFloating() {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-[#FAF9F7] overflow-hidden">
-      {/* Abstract geometric accent shapes */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-[#30B68E]/5 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1E4884]/5 rounded-full blur-3xl pointer-events-none -translate-x-1/2 translate-y-1/2" />
+    <section className="relative bg-[#FAF9F7] overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-24 lg:pt-32 pb-20">
         <motion.div
@@ -188,6 +185,13 @@ export function HeroSection() {
                 Before Execution.
               </span>
             </motion.h1>
+
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#1E4884] leading-[1.15] tracking-tight mb-4">
+              <span className="text-[#30B68E]">A New Foundation of Provable HUMAN TRUST</span>
+            </h2>
+            <p className="text-lg sm:text-xl lg:text-2xl font-bold text-[#1E4884] leading-[1.15] tracking-tight mb-5">
+              <span className="">1-Click to Zero Trust™</span>
+            </p>
 
             {/* Description */}
             <motion.p
@@ -315,7 +319,7 @@ export function HeroSection() {
                   </div>
 
                   {/* Mac-style Action Buttons */}
-                  <div className="flex items-center gap-2 mt-5 pt-4 border-t border-gray-100">
+                  {/* <div className="flex items-center gap-2 mt-5 pt-4 border-t border-gray-100">
                     <Button
                       size="sm"
                       className="flex-1 bg-[#1E4884] hover:bg-[#0F3366] text-white rounded-lg h-9 text-xs font-medium"
@@ -332,7 +336,7 @@ export function HeroSection() {
                     >
                       <Link href="/contact">Contact Sales</Link>
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
