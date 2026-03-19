@@ -1,28 +1,25 @@
-import Container from "../Container";
-import SectionTitle from "../SectionTitle";
+import Container from '../Container';
+import SectionTitle from '../SectionTitle';
 
-import Image from "next/image";
-import contextID from "@/assets/images/solutions/3.png";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import { Check } from "lucide-react";
+import Image from 'next/image';
+import contextID from '@/assets/images/solutions/3.png';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import { Check } from 'lucide-react';
 
 const Points = [
-  "Mobile-Centric",
-  "Mandated Biometrics",
-  "5+ Factors",
-  "Customizable",
-  "Risk and AI-Driven",
-  "Can Streamline IAM (RBAC and ABAC)",
+  'Mobile-Centric',
+  'Mandated Biometrics',
+  '5+ Factors',
+  'Customizable',
+  'Risk and AI-Driven',
+  'Can Streamline IAM (RBAC and ABAC)',
 ];
 
 export default function ContextID() {
   return (
     <FadeInOnScroll className="bg-[#FAF9F7] py-6 md:pt-12 pb-28">
       <Container className="max-w-7xl">
-        <SectionTitle
-          title="ContextID"
-          description="Strongest Enterprise Identity Protection"
-        />
+        <SectionTitle title="ContextID" description="Strongest Enterprise Identity Protection" />
         <div className="flex justify-center items-center my-4 mb-6 relative">
           <Image
             src={contextID}
@@ -33,20 +30,11 @@ export default function ContextID() {
           />
           <div className="flex flex-col items-start justify-center absolute -bottom-30 left-30">
             {Points.map((point, index) => (
-              <div
-                key={index}
-                className="flex rounded-full items-center gap-2 p-2 w-full"
-              >
+              <div key={index} className="flex rounded-full items-center gap-2 p-2 w-full">
                 <div className="flex items-center justify-center bg-[#FAF9F7] rounded-full p-2 shadow-sm">
-                  <Check
-                    className="text-navy-primary w-4 h-4"
-                    width={24}
-                    height={24}
-                  />
+                  <Check className="text-navy-primary w-4 h-4" width={24} height={24} />
                 </div>
-                <h1 className="text-base md:text-sm text-navy-primary text-left">
-                  {point}
-                </h1>
+                <h1 className="text-base md:text-sm text-navy-primary text-left">{point}</h1>
               </div>
             ))}
           </div>

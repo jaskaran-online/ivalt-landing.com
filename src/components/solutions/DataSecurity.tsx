@@ -1,10 +1,10 @@
-import Container from "../Container";
-import SectionTitle from "../SectionTitle";
+import Container from '../Container';
+import SectionTitle from '../SectionTitle';
 
-import Image from "next/image";
-import dataSecurity from "@/assets/images/solutions/4.png";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import cloudimage from "@/assets/images/solutions/cloud.png"
+import Image from 'next/image';
+import dataSecurity from '@/assets/images/solutions/4.png';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import cloudimage from '@/assets/images/solutions/cloud.png';
 
 export default function DataSecurity() {
   return (

@@ -1,25 +1,18 @@
-import {
-  FileLock,
-  ShieldCheck,
-  UserCheck,
-  ExternalLink,
-  Lock,
-  Download,
-} from "lucide-react";
-import { Metadata } from "next";
-import { Button } from "@/components/ui/button";
+import { FileLock, ShieldCheck, UserCheck, ExternalLink, Lock, Download } from 'lucide-react';
+import { Metadata } from 'next';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: "DocuID® - Secure Document Access Control",
+  title: 'DocuID® - Secure Document Access Control',
   description:
     "Learn how iVALT's DocuID empowers you to control who can access your sensitive documents with multi-factor authentication and full DRM protection.",
   openGraph: {
-    title: "DocuID® - Secure Document Access Control",
+    title: 'DocuID® - Secure Document Access Control',
     description:
       "Protect your documents from unauthorized access, forwarding, and screenshots with iVALT's DocuID.",
   },
   twitter: {
-    title: "DocuID® - Secure Document Access Control",
+    title: 'DocuID® - Secure Document Access Control',
     description:
       "Take control of your document security with iVALT's DocuID. Multi-factor authentication and DRM to prevent unauthorized access.",
   },
@@ -29,18 +22,18 @@ export default function DocuIdPage() {
   const features = [
     {
       icon: UserCheck,
-      title: "Identity Verification",
-      text: "Recipients verify identity via multi-factor authentication",
+      title: 'Identity Verification',
+      text: 'Recipients verify identity via multi-factor authentication',
     },
     {
       icon: FileLock,
-      title: "Digital Rights Management",
-      text: "Full Digital Rights Management (DRM) protection",
+      title: 'Digital Rights Management',
+      text: 'Full Digital Rights Management (DRM) protection',
     },
     {
       icon: ShieldCheck,
-      title: "Leak Prevention",
-      text: "Prevents forwarding, printing, and screenshots",
+      title: 'Leak Prevention',
+      text: 'Prevents forwarding, printing, and screenshots',
     },
   ];
 
@@ -73,17 +66,12 @@ export default function DocuIdPage() {
 
           {/* Description */}
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Authors embed authorized recipients (via mobile #) in encrypted
-            documents.
+            Authors embed authorized recipients (via mobile #) in encrypted documents.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://www.docuid.net"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.docuid.net" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="bg-teal-primary hover:bg-teal-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-teal-primary/25 transition-all hover:shadow-xl hover:shadow-teal-primary/30 hover:-translate-y-0.5"
@@ -92,11 +80,7 @@ export default function DocuIdPage() {
                 <ExternalLink className="ml-2 w-5 h-5" />
               </Button>
             </a>
-            <a
-              href="/brochures/DocuID-Brochure.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/brochures/DocuID-Brochure.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="bg-white border border-teal-primary text-teal-primary hover:bg-teal-primary hover:text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
@@ -123,9 +107,7 @@ export default function DocuIdPage() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-navy-primary mb-3">
-                {feature.title}
-              </h3>
+              <h3 className="text-xl font-bold text-navy-primary mb-3">{feature.title}</h3>
 
               {/* Description */}
               <p className="text-gray-600 leading-relaxed">{feature.text}</p>
@@ -140,17 +122,11 @@ export default function DocuIdPage() {
       {/* Bottom CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="bg-gradient-to-r from-navy-primary to-dark-navy rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Ready to Secure Your Documents?
-          </h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Secure Your Documents?</h3>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Experience the future of document security with DocuID®.
           </p>
-          <a
-            href="https://www.docuid.net"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.docuid.net" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-white text-navy-primary hover:bg-gray-100 px-8 py-6 text-lg font-semibold rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"

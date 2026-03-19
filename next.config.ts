@@ -1,27 +1,27 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "ivalt.com",
+        protocol: 'https',
+        hostname: 'ivalt.com',
       },
       {
-        protocol: "https",
-        hostname: "www.ivalt.com",
+        protocol: 'https',
+        hostname: 'www.ivalt.com',
       },
       {
-        protocol: "https",
-        hostname: "localhost",
+        protocol: 'https',
+        hostname: 'localhost',
       },
       {
-        protocol: "https",
-        hostname: "127.0.0.1",
+        protocol: 'https',
+        hostname: '127.0.0.1',
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
@@ -31,15 +31,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/:path*",
+        source: '/:path*',
         headers: [
           {
-            key: "X-Frame-Options",
-            value: "SAMEORIGIN",
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
           },
           {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
         ],
       },

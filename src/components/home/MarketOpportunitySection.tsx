@@ -1,5 +1,5 @@
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import SectionTitle from "@/components/SectionTitle";
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+import SectionTitle from '@/components/SectionTitle';
 import {
   Shield,
   Smartphone,
@@ -12,7 +12,7 @@ import {
   Zap,
   LucideIcon,
   ArrowDownCircle,
-} from "lucide-react";
+} from 'lucide-react';
 
 interface CompetitiveAdvantageProps {
   icon: LucideIcon;
@@ -30,9 +30,7 @@ function CompetitiveAdvantageCard({
   iconColor,
 }: CompetitiveAdvantageProps) {
   return (
-    <div
-      className={`bg-[#FAF9F7] rounded-xl px-6 py-4 ${borderColor}  cursor-pointer group`}
-    >
+    <div className={`bg-[#FAF9F7] rounded-xl px-6 py-4 ${borderColor}  cursor-pointer group`}>
       <div className="flex items-start gap-3">
         <Icon className={`h-6 w-6 ${iconColor} mt-1  duration-300`} />
         <div>
@@ -63,31 +61,31 @@ export default function MarketOpportunitySection() {
   const competitiveAdvantages = [
     {
       icon: ArrowDownCircle,
-      title: "1-Click to Zero Trust™",
-      description: "Mobile and Web Applications",
-      borderColor: "border-l-4 border-primary",
-      iconColor: "text-primary",
+      title: '1-Click to Zero Trust™',
+      description: 'Mobile and Web Applications',
+      borderColor: 'border-l-4 border-primary',
+      iconColor: 'text-primary',
     },
     {
       icon: Shield,
-      title: "One Identity for Everything",
-      description: "Customizable by risk and AI models",
-      borderColor: "border-l-4 border-teal-primary",
-      iconColor: "text-teal-primary",
+      title: 'One Identity for Everything',
+      description: 'Customizable by risk and AI models',
+      borderColor: 'border-l-4 border-teal-primary',
+      iconColor: 'text-teal-primary',
     },
     {
       icon: Lock,
-      title: "5-Factor Security",
-      description: "Combines biometrics, location, randomness",
-      borderColor: "border-l-4 border-primary",
-      iconColor: "text-primary",
+      title: '5-Factor Security',
+      description: 'Combines biometrics, location, randomness',
+      borderColor: 'border-l-4 border-primary',
+      iconColor: 'text-primary',
     },
     {
       icon: Bot,
-      title: "Future-Proof",
-      description: "Solves AI, IoT, Deepfake identity risks",
-      borderColor: "border-l-4 border-teal-primary",
-      iconColor: "text-teal-primary",
+      title: 'Future-Proof',
+      description: 'Solves AI, IoT, Deepfake identity risks',
+      borderColor: 'border-l-4 border-teal-primary',
+      iconColor: 'text-teal-primary',
     },
     // {
     //   icon: Smartphone,
@@ -98,33 +96,33 @@ export default function MarketOpportunitySection() {
     // },
     {
       icon: Zap,
-      title: "Fast Integration",
-      description: "OpenAPI, enterprise-ready",
-      borderColor: "border-l-4 border-primary",
-      iconColor: "text-primary",
+      title: 'Fast Integration',
+      description: 'OpenAPI, enterprise-ready',
+      borderColor: 'border-l-4 border-primary',
+      iconColor: 'text-primary',
     },
   ];
 
   const whyNowItems = [
     {
       icon: AlertTriangle,
-      text: "Legacy identity methods are failing at scale",
-      iconColor: "text-primary",
+      text: 'Legacy identity methods are failing at scale',
+      iconColor: 'text-primary',
     },
     {
       icon: TrendingUp,
-      text: "Exponential growth in AI and IoT deployments",
-      iconColor: "text-primary",
+      text: 'Exponential growth in AI and IoT deployments',
+      iconColor: 'text-primary',
     },
     {
       icon: Eye,
-      text: "Deepfake attacks becoming mainstream threat",
-      iconColor: "text-primary",
+      text: 'Deepfake attacks becoming mainstream threat',
+      iconColor: 'text-primary',
     },
     {
       icon: Globe,
-      text: "Need for universal identity standards",
-      iconColor: "text-primary",
+      text: 'Need for universal identity standards',
+      iconColor: 'text-primary',
     },
   ];
 
@@ -143,9 +141,7 @@ export default function MarketOpportunitySection() {
           </div>
         </FadeInOnScroll>
 
-        <h3 className="text-2xl font-bold text-primary mb-6">
-          iVALT Competitive Advantages
-        </h3>
+        <h3 className="text-2xl font-bold text-primary mb-6">iVALT Competitive Advantages</h3>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <FadeInOnScroll>
             <div>
@@ -166,9 +162,7 @@ export default function MarketOpportunitySection() {
 
           <FadeInOnScroll delay={0.2}>
             <div className="bg-gradient-to-br  from-teal-primary/20 to-primary/10 rounded-[30px] px-6 py-6 border-2 border-teal-primary/20">
-              <h3 className="text-2xl font-bold text-primary py-4">
-                Why iVALT Now?
-              </h3>
+              <h3 className="text-2xl font-bold text-primary py-4">Why iVALT Now?</h3>
               <div className="space-y-8">
                 {whyNowItems.map((item, index) => (
                   <WhyNowItem
@@ -181,8 +175,7 @@ export default function MarketOpportunitySection() {
               </div>
               <div className="mt-8 p-4 bg-white/50 rounded-xl shadow-sm">
                 <p className="text-primary font-semibold text-center">
-                  iVALT is positioned to become the global standard for identity
-                  validation
+                  iVALT is positioned to become the global standard for identity validation
                 </p>
               </div>
             </div>

@@ -1,26 +1,26 @@
-import Container from "@/components/Container";
-import SectionTitle from "@/components/SectionTitle";
-import { BodyText, Heading2 } from "@/components/ui/typography";
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ApiRequestForm from "@/components/ApiRequestForm";
-import { Metadata } from "next";
+import Container from '@/components/Container';
+import SectionTitle from '@/components/SectionTitle';
+import { BodyText, Heading2 } from '@/components/ui/typography';
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import ApiRequestForm from '@/components/ApiRequestForm';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Request API Access | iVALT",
+  title: 'Request API Access | iVALT',
   description:
     "Request API access to integrate iVALT's identity verification and biometric security solutions into your applications. Get your API key and start building.",
   keywords:
-    "iVALT API, API access, identity verification API, biometric authentication API, developer API, integration",
+    'iVALT API, API access, identity verification API, biometric authentication API, developer API, integration',
   openGraph: {
-    title: "Request API Access | iVALT",
+    title: 'Request API Access | iVALT',
     description:
       "Get API access to integrate iVALT's identity verification solutions into your applications.",
-    url: "https://ivalt.com/api-request",
-    type: "website",
+    url: 'https://ivalt.com/api-request',
+    type: 'website',
   },
   alternates: {
-    canonical: "https://ivalt.com/api-request",
+    canonical: 'https://ivalt.com/api-request',
   },
 };
 
@@ -67,12 +67,10 @@ export default function ApiRequest() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-navy-primary mb-1">
-                          API Key Access
-                        </h3>
+                        <h3 className="font-semibold text-navy-primary mb-1">API Key Access</h3>
                         <BodyText className="text-gray-600">
-                          Receive your unique API key to authenticate requests
-                          to our identity verification endpoints.
+                          Receive your unique API key to authenticate requests to our identity
+                          verification endpoints.
                         </BodyText>
                       </div>
                     </div>
@@ -98,8 +96,8 @@ export default function ApiRequest() {
                           Comprehensive Documentation
                         </h3>
                         <BodyText className="text-gray-600">
-                          Access detailed API documentation with code examples
-                          and integration guides.
+                          Access detailed API documentation with code examples and integration
+                          guides.
                         </BodyText>
                       </div>
                     </div>
@@ -121,12 +119,10 @@ export default function ApiRequest() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-navy-primary mb-1">
-                          Developer Support
-                        </h3>
+                        <h3 className="font-semibold text-navy-primary mb-1">Developer Support</h3>
                         <BodyText className="text-gray-600">
-                          Get dedicated support from our technical team to help
-                          you integrate and optimize your implementation.
+                          Get dedicated support from our technical team to help you integrate and
+                          optimize your implementation.
                         </BodyText>
                       </div>
                     </div>
@@ -137,13 +133,10 @@ export default function ApiRequest() {
               <FadeInOnScroll delay={0.6}>
                 <Card className="bg-gradient-to-br from-teal-primary to-navy-primary text-white shadow-none">
                   <CardContent className="p-8">
-                    <Heading2 className="text-white text-xl mb-4">
-                      Ready to Build?
-                    </Heading2>
+                    <Heading2 className="text-white text-xl mb-4">Ready to Build?</Heading2>
                     <BodyText className="text-white/90">
-                      Once you receive your API key, you can start integrating
-                      iVALT&apos;s identity verification solutions into your
-                      application within minutes.
+                      Once you receive your API key, you can start integrating iVALT&apos;s identity
+                      verification solutions into your application within minutes.
                     </BodyText>
                   </CardContent>
                 </Card>
@@ -158,44 +151,37 @@ export default function ApiRequest() {
                 API Capabilities
               </Heading2>
               <BodyText className="text-gray-600 max-w-2xl mx-auto">
-                Our API provides powerful endpoints for identity verification,
-                biometric authentication, and secure document access.
+                Our API provides powerful endpoints for identity verification, biometric
+                authentication, and secure document access.
               </BodyText>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <Card className="bg-white border-4 border-gray-100 shadow-none">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-navy-primary mb-3">
-                    Identity Verification
-                  </h3>
+                  <h3 className="font-bold text-navy-primary mb-3">Identity Verification</h3>
                   <BodyText className="text-gray-600">
-                    Verify user identities in real-time using advanced
-                    biometric matching and document validation.
+                    Verify user identities in real-time using advanced biometric matching and
+                    document validation.
                   </BodyText>
                 </CardContent>
               </Card>
 
               <Card className="bg-white border-4 border-gray-100 shadow-none">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-navy-primary mb-3">
-                    Biometric Authentication
-                  </h3>
+                  <h3 className="font-bold text-navy-primary mb-3">Biometric Authentication</h3>
                   <BodyText className="text-gray-600">
-                    Integrate face recognition and fingerprint authentication
-                    for secure user access.
+                    Integrate face recognition and fingerprint authentication for secure user
+                    access.
                   </BodyText>
                 </CardContent>
               </Card>
 
               <Card className="bg-white border-4 border-gray-100 shadow-none">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-navy-primary mb-3">
-                    Document Security
-                  </h3>
+                  <h3 className="font-bold text-navy-primary mb-3">Document Security</h3>
                   <BodyText className="text-gray-600">
-                    Secure document access and verification with DocuID
-                    integration endpoints.
+                    Secure document access and verification with DocuID integration endpoints.
                   </BodyText>
                 </CardContent>
               </Card>
@@ -206,4 +192,3 @@ export default function ApiRequest() {
     </>
   );
 }
-

@@ -1,9 +1,9 @@
-import Container from "@/components/Container";
-import SectionTitle from "@/components/SectionTitle";
-import { BodyText, Heading2 } from "@/components/ui/typography";
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ContactForm from "@/components/ContactForm";
+import Container from '@/components/Container';
+import SectionTitle from '@/components/SectionTitle';
+import { BodyText, Heading2 } from '@/components/ui/typography';
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import ContactForm from '@/components/ContactForm';
 
 export default function Contact() {
   return (
@@ -26,9 +26,7 @@ export default function Contact() {
               <FadeInOnScroll delay={0.4}>
                 <Card className="bg-white border-4 border-gray-100 shadow-none">
                   <CardHeader>
-                    <CardTitle className="text-xl text-navy-primary">
-                      Get in Touch
-                    </CardTitle>
+                    <CardTitle className="text-xl text-navy-primary">Get in Touch</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -48,15 +46,9 @@ export default function Contact() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-navy-primary mb-1">
-                          Email Us
-                        </h3>
-                        <BodyText className="text-gray-600">
-                          info@ivalt.com
-                        </BodyText>
-                        <BodyText className="text-gray-600">
-                          support@ivalt.com
-                        </BodyText>
+                        <h3 className="font-semibold text-navy-primary mb-1">Email Us</h3>
+                        <BodyText className="text-gray-600">info@ivalt.com</BodyText>
+                        <BodyText className="text-gray-600">support@ivalt.com</BodyText>
                       </div>
                     </div>
                   </CardContent>
@@ -66,12 +58,9 @@ export default function Contact() {
               <FadeInOnScroll delay={0.6}>
                 <Card className="bg-gradient-to-br from-teal-primary to-navy-primary text-white shadow-none">
                   <CardContent className="p-8">
-                    <Heading2 className="text-white text-xl mb-4">
-                      Ready to Get Started?
-                    </Heading2>
+                    <Heading2 className="text-white text-xl mb-4">Ready to Get Started?</Heading2>
                     <BodyText className="text-white/90">
-                      We will be in touch to talk about your needs and schedule
-                      a demo.
+                      We will be in touch to talk about your needs and schedule a demo.
                     </BodyText>
                   </CardContent>
                 </Card>
@@ -86,8 +75,7 @@ export default function Contact() {
                 Frequently Asked Questions
               </Heading2>
               <BodyText className="text-gray-600 max-w-2xl mx-auto">
-                Have questions? Here are some of the most common ones we
-                receive.
+                Have questions? Here are some of the most common ones we receive.
               </BodyText>
             </div>
 
@@ -98,20 +86,18 @@ export default function Contact() {
                     How quickly can we implement iVALT®?
                   </h3>
                   <BodyText className="text-gray-600">
-                    Implementation typically takes 2-4 weeks depending on your
-                    existing infrastructure and requirements.
+                    Implementation typically takes 2-4 weeks depending on your existing
+                    infrastructure and requirements.
                   </BodyText>
                 </CardContent>
               </Card>
 
               <Card className="bg-white border-4 border-gray-100 shadow-none">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-navy-primary mb-3">
-                    What support do you provide?
-                  </h3>
+                  <h3 className="font-bold text-navy-primary mb-3">What support do you provide?</h3>
                   <BodyText className="text-gray-600">
-                    We offer 24/7 technical support, comprehensive
-                    documentation, and dedicated customer success managers.
+                    We offer 24/7 technical support, comprehensive documentation, and dedicated
+                    customer success managers.
                   </BodyText>
                 </CardContent>
               </Card>
@@ -122,8 +108,7 @@ export default function Contact() {
                     Is iVALT® compliant with industry standards?
                   </h3>
                   <BodyText className="text-gray-600">
-                    Yes, iVALT® meets SOC 2, GDPR, HIPAA, and other major
-                    compliance requirements.
+                    Yes, iVALT® meets SOC 2, GDPR, HIPAA, and other major compliance requirements.
                   </BodyText>
                 </CardContent>
               </Card>
@@ -134,8 +119,8 @@ export default function Contact() {
                     Can we customize the solution?
                   </h3>
                   <BodyText className="text-gray-600">
-                    Absolutely! iVALT® can be customized to fit your specific
-                    security policies and user workflows.
+                    Absolutely! iVALT® can be customized to fit your specific security policies and
+                    user workflows.
                   </BodyText>
                 </CardContent>
               </Card>

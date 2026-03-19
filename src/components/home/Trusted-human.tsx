@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import trustHuman from "@/assets/images/home/trust-human.jpg";
+import Image from 'next/image';
+import React from 'react';
+import trustHuman from '@/assets/images/home/trust-human.jpg';
 
 export const TrustedHuman = () => {
   return (

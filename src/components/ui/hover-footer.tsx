@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useRef, useEffect, useState } from "react";
-import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
+import React, { useRef, useEffect, useState } from 'react';
+import { motion } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 export const TextHoverEffect = ({
   text,
@@ -17,7 +17,7 @@ export const TextHoverEffect = ({
   const svgRef = useRef<SVGSVGElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
-  const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
+  const [maskPosition, setMaskPosition] = useState({ cx: '50%', cy: '50%' });
 
   useEffect(() => {
     if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -40,17 +40,11 @@ export const TextHoverEffect = ({
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
-      className={cn("select-none uppercase cursor-pointer", className)}
+      onMouseMove={e => setCursor({ x: e.clientX, y: e.clientY })}
+      className={cn('select-none uppercase cursor-pointer', className)}
     >
       <defs>
-        <linearGradient
-          id="textGradient"
-          gradientUnits="userSpaceOnUse"
-          cx="50%"
-          cy="50%"
-          r="25%"
-        >
+        <linearGradient id="textGradient" gradientUnits="userSpaceOnUse" cx="50%" cy="50%" r="25%">
           {hovered && (
             <>
               <stop offset="0%" stopColor="#eab308" />
@@ -66,21 +60,15 @@ export const TextHoverEffect = ({
           id="revealMask"
           gradientUnits="userSpaceOnUse"
           r="20%"
-          initial={{ cx: "50%", cy: "50%" }}
+          initial={{ cx: '50%', cy: '50%' }}
           animate={maskPosition}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}
+          transition={{ duration: duration ?? 0, ease: 'easeOut' }}
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
         </motion.radialGradient>
         <mask id="textMask">
-          <rect
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-            fill="url(#revealMask)"
-          />
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#revealMask)" />
         </mask>
       </defs>
       <text
@@ -109,7 +97,7 @@ export const TextHoverEffect = ({
         }}
         transition={{
           duration: 4,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         {text}
@@ -135,8 +123,7 @@ export const FooterBackgroundGradient = () => {
     <div
       className="absolute inset-0 z-0"
       style={{
-        background:
-          "radial-gradient(125% 125% at 50% 10%, #0F0F1166 50%, #3ca2fa33 100%)",
+        background: 'radial-gradient(125% 125% at 50% 10%, #0F0F1166 50%, #3ca2fa33 100%)',
       }}
     />
   );

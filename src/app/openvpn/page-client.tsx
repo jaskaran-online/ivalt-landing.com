@@ -1,17 +1,12 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import openvpnHeroBg from "@/assets/openvpn-hero-bg.png";
-import openvpnLogo from "@/assets/openvpn-logo.png";
-import ivaltLogo from "@/assets/logo-transparent-bg.png";
-import {
-  Heading2,
-  Heading3,
-  BodyText,
-  Heading4,
-} from "@/components/ui/typography";
-import { CheckCircle2 } from "lucide-react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import Image from 'next/image';
+import openvpnHeroBg from '@/assets/openvpn-hero-bg.png';
+import openvpnLogo from '@/assets/openvpn-logo.png';
+import ivaltLogo from '@/assets/logo-transparent-bg.png';
+import { Heading2, Heading3, BodyText, Heading4 } from '@/components/ui/typography';
+import { CheckCircle2 } from 'lucide-react';
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 type YouTubePlayerProps = {
   videoId: string;
@@ -36,52 +31,43 @@ function YouTubePlayer({ videoId }: YouTubePlayerProps) {
 
 const benefits = [
   {
-    title: "Passwordless VPN Login",
+    title: 'Passwordless VPN Login',
     description:
       "Users authenticate instantly using iVALT's mobile app—no passwords, codes, or tokens",
   },
   {
-    title: "Human-Bound PKI Identity",
+    title: 'Human-Bound PKI Identity',
     description:
       "Every login is cryptographically tied to the individual user's device and biometrics",
   },
   {
-    title: "Stronger Zero Trust Access",
+    title: 'Stronger Zero Trust Access',
     description:
-      "Access decisions can include user authenticity, device binding, location, and time",
+      'Access decisions can include user authenticity, device binding, location, and time',
   },
   {
-    title: "Stops Social Engineering & AI Deepfakes",
-    description:
-      "Prevents impersonation attacks against VPN access and admin actions",
+    title: 'Stops Social Engineering & AI Deepfakes',
+    description: 'Prevents impersonation attacks against VPN access and admin actions',
   },
   {
-    title: "Reduced IT Overhead",
-    description:
-      "Eliminates password resets, MFA friction, and certificate-authority management",
+    title: 'Reduced IT Overhead',
+    description: 'Eliminates password resets, MFA friction, and certificate-authority management',
   },
   {
-    title: "Higher Assurance for Regulated Environments",
-    description:
-      "Ideal for enterprises with compliance or privileged-access requirements",
+    title: 'Higher Assurance for Regulated Environments',
+    description: 'Ideal for enterprises with compliance or privileged-access requirements',
   },
 ];
 
 function ParallaxHero() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], ["0%", "20%"]);
+  const y = useTransform(scrollY, [0, 500], ['0%', '20%']);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.9]);
 
   return (
     <section className="relative h-[650px] overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0">
-        <Image
-          src={openvpnHeroBg}
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
+        <Image src={openvpnHeroBg} alt="" fill className="object-cover" priority />
       </motion.div>
       <div className="absolute inset-0 bg-[#FAF9F7]/80" />
       <motion.div
@@ -97,27 +83,18 @@ function ParallaxHero() {
             className="object-contain"
           />
           <span className="text-navy-primary text-6xl">+</span>
-          <Image
-            src={ivaltLogo}
-            alt="iVALT"
-            width={150}
-            height={50}
-            className="object-contain"
-          />
+          <Image src={ivaltLogo} alt="iVALT" width={150} height={50} className="object-contain" />
         </div>
-        <h1 className="text-4xl font-bold text-navy-primary mb-6">
-          Integration
-        </h1>
+        <h1 className="text-4xl font-bold text-navy-primary mb-6">Integration</h1>
         <BodyText className="text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto text-gray-700">
-          iVALT and OpenVPN have partnered to deliver a next-generation secure
-          remote access solution by integrating OpenVPN Access Server with
-          iVALT's Human-Bound PKI™ identity platform.
+          iVALT and OpenVPN have partnered to deliver a next-generation secure remote access
+          solution by integrating OpenVPN Access Server with iVALT's Human-Bound PKI™ identity
+          platform.
         </BodyText>
         <BodyText className="text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto mt-6 text-gray-700">
-          This integration enables one-click, passwordless VPN authentication
-          that is cryptographically bound to a real, verified human.
-          Authentication is secured using device-bound PKI keys, mobile
-          biometrics, and contextual verification such as location and
+          This integration enables one-click, passwordless VPN authentication that is
+          cryptographically bound to a real, verified human. Authentication is secured using
+          device-bound PKI keys, mobile biometrics, and contextual verification such as location and
           time—removing reliance on passwords, OTPs, or hardware tokens.
         </BodyText>
       </motion.div>
@@ -173,9 +150,9 @@ export default function OpenVPNPageClient() {
                 Ready to Transform Your VPN Security?
               </Heading3>
               <BodyText className="text-lg text-gray-300 mb-8">
-                Join leading enterprises that are securing their remote access
-                with passwordless, human-bound authentication. Our integration
-                with OpenVPN Access Server makes deployment fast and seamless.
+                Join leading enterprises that are securing their remote access with passwordless,
+                human-bound authentication. Our integration with OpenVPN Access Server makes
+                deployment fast and seamless.
               </BodyText>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a

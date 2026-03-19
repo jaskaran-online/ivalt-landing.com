@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 const Points = [
   {
-    title: "Human-Bound Identity",
-    desc: "Extends IAM Security via PKI to AI & IOT Ecosystems and Document Control (No Boundaries)",
+    title: 'Human-Bound Identity',
+    desc: 'Extends IAM Security via PKI to AI & IOT Ecosystems and Document Control (No Boundaries)',
   },
   {
-    title: "Loop Backs",
-    desc: "Software Redirects (Loop-Backs) to Stop Potentially Damaging ACTIONS in IAM and for Continuous TRUST Verifications for AI Compute",
+    title: 'Loop Backs',
+    desc: 'Software Redirects (Loop-Backs) to Stop Potentially Damaging ACTIONS in IAM and for Continuous TRUST Verifications for AI Compute',
   },
   {
-    title: "AI Ecosystem Control and Compliance",
-    desc: "End-to-End PKI Chains for Proof of Human & Non-Human Identities, Full Audit Accountability",
+    title: 'AI Ecosystem Control and Compliance',
+    desc: 'End-to-End PKI Chains for Proof of Human & Non-Human Identities, Full Audit Accountability',
   },
   {
-    title: "Protection from Social Engineering and AI Deepfakes",
-    desc: "Force On-Demand ID Verifications to Stop Fake Call Impersonations, & Phishing",
+    title: 'Protection from Social Engineering and AI Deepfakes',
+    desc: 'Force On-Demand ID Verifications to Stop Fake Call Impersonations, & Phishing',
   },
 ];
 
@@ -33,9 +33,7 @@ export const PatentCapabilities = () => {
             <span className="font-bold text-primary text-lg sm:text-xl whitespace-normal sm:whitespace-nowrap">
               {point.title}
             </span>
-            <span className="hidden sm:inline text-primary font-semibold">
-              →
-            </span>
+            <span className="hidden sm:inline text-primary font-semibold">→</span>
             <span className="italic text-gray-800 text-base sm:text-lg md:text-xl flex-1">
               {point.desc}
             </span>

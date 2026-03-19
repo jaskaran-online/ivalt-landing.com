@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useCallback } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { Shield, Fingerprint, ArrowRight, Sparkles, ArrowBigRightDash } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import React, { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Shield, Fingerprint, ArrowRight, Sparkles, ArrowBigRightDash } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface Update {
   id: string;
@@ -15,28 +15,28 @@ interface Update {
 
 const recentUpdates: Update[] = [
   {
-    id: "openvpn-webinar",
-    title: "Zero Trust Security: Human-Verified Identity Beyond Passwords",
-    date: "Feb 11, 2026",
-    path: "/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords",
+    id: 'openvpn-webinar',
+    title: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
+    date: 'Feb 11, 2026',
+    path: '/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
   },
   {
-    id: "docuid",
-    title: "iVALT Revolutionizes Document Security with Launch of DocuID®",
-    date: "Apr 22, 2025",
-    path: "/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID",
+    id: 'docuid',
+    title: 'iVALT Revolutionizes Document Security with Launch of DocuID®',
+    date: 'Apr 22, 2025',
+    path: '/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
   },
   {
-    id: "ondemand-id",
-    title: "iVALT® Launches OnDemand ID™ with 5+ Factors of Identity Validation",
-    date: "Feb 10, 2025",
-    path: "/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation",
+    id: 'ondemand-id',
+    title: 'iVALT® Launches OnDemand ID™ with 5+ Factors of Identity Validation',
+    date: 'Feb 10, 2025',
+    path: '/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
   },
   {
-    id: "psono",
-    title: "Psono Selects iVALT for 5-Factor Authentication",
-    date: "Jan 10, 2025",
-    path: "/recent-updates/psono-selects-ivalt-5fa",
+    id: 'psono',
+    title: 'Psono Selects iVALT for 5-Factor Authentication',
+    date: 'Jan 10, 2025',
+    path: '/recent-updates/psono-selects-ivalt-5fa',
   },
 ];
 
@@ -58,7 +58,7 @@ const slideUpVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut" as const,
+      ease: 'easeOut' as const,
     },
   },
 };
@@ -70,7 +70,7 @@ const scaleInVariants = {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: "easeOut" as const,
+      ease: 'easeOut' as const,
     },
   },
 };
@@ -80,7 +80,7 @@ function RecentUpdatesFloating() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % recentUpdates.length);
+    setCurrentIndex(prev => (prev + 1) % recentUpdates.length);
   }, []);
 
   useEffect(() => {
@@ -92,7 +92,7 @@ function RecentUpdatesFloating() {
     <motion.div
       initial={{ opacity: 0, y: -10, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ delay: 1, duration: 0.5, type: "spring", stiffness: 200 }}
+      transition={{ delay: 1, duration: 0.5, type: 'spring', stiffness: 200 }}
       className="absolute -top-24 left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 w-72 z-10"
     >
       <div className="bg-white rounded-xl shadow-2xl shadow-[#1E4884]/20 border border-gray-100 overflow-hidden">
@@ -106,7 +106,7 @@ function RecentUpdatesFloating() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-[#30B68E] w-3" : "bg-gray-300 hover:bg-gray-400"
+                  index === currentIndex ? 'bg-[#30B68E] w-3' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to update ${index + 1}`}
               />
@@ -122,7 +122,7 @@ function RecentUpdatesFloating() {
               initial={{ y: 15, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -15, opacity: 0 }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
               className="absolute inset-0 p-3 flex flex-col justify-center"
             >
               <div className="flex items-center gap-2 mb-1">
@@ -150,7 +150,6 @@ function RecentUpdatesFloating() {
 export function HeroSection() {
   return (
     <section className="relative bg-[#FAF9F7] overflow-hidden">
-
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-24 lg:pt-32 pb-20">
         <motion.div
           variants={containerVariants}
@@ -163,8 +162,8 @@ export function HeroSection() {
             {/* Problem statement */}
             <motion.div variants={slideUpVariants} className="space-y-0.5 mb-6">
               <p className="text-base md:text-lg flex items-center gap-2 text-gray-500 font-medium tracking-tight">
-              <ArrowBigRightDash className="w-4 h-4 text-[#30B68E]" />
-                <span className="text-[#1E4884]">Attackers Impersonate.</span>  
+                <ArrowBigRightDash className="w-4 h-4 text-[#30B68E]" />
+                <span className="text-[#1E4884]">Attackers Impersonate.</span>
               </p>
               <p className="text-base md:text-lg flex items-center gap-2 text-[#1E4884] font-medium tracking-tight">
                 <ArrowBigRightDash className="w-4 h-4 text-[#30B68E]" />
@@ -181,9 +180,7 @@ export function HeroSection() {
               <br />
               Human Authority
               <br />
-              <span className="relative inline-block">
-                Before Execution.
-              </span>
+              <span className="relative inline-block">Before Execution.</span>
             </motion.h1>
 
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#1E4884] leading-[1.15] tracking-tight mb-4">
@@ -198,14 +195,12 @@ export function HeroSection() {
               variants={slideUpVariants}
               className="text-sm md:text-base text-gray-600 max-w-lg leading-relaxed mb-8"
             >
-            iVALT’s Identity Validation Platform® is a Revolutionary Approach to Stop Stolen Credentials for All Digital Interactions – Humans, AI Agents and IOT Devices
+              iVALT’s Identity Validation Platform® is a Revolutionary Approach to Stop Stolen
+              Credentials for All Digital Interactions – Humans, AI Agents and IOT Devices
             </motion.p>
 
             {/* CTA buttons */}
-            <motion.div
-              variants={slideUpVariants}
-              className="flex flex-wrap gap-4"
-            >
+            <motion.div variants={slideUpVariants} className="flex flex-wrap gap-4">
               <Button
                 size="lg"
                 className="bg-[#1E4884] hover:bg-[#0F3366] text-white rounded-lg px-8 py-6 text-base font-semibold group transition-all duration-300 shadow-lg shadow-[#1E4884]/25"
@@ -227,10 +222,7 @@ export function HeroSection() {
 
           {/* Right column - Visual elements */}
           <div className="lg:col-span-5 xl:col-span-6 relative">
-            <motion.div
-              variants={scaleInVariants}
-              className="relative"
-            >
+            <motion.div variants={scaleInVariants} className="relative">
               {/* Mac-style Window - Our Solutions */}
               <div className="relative bg-white rounded-xl shadow-2xl shadow-[#1E4884]/15 overflow-hidden border border-gray-200/60">
                 {/* Mac Title Bar */}
@@ -257,8 +249,18 @@ export function HeroSection() {
                     <Link href="/solutions/docuid" className="group block">
                       <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/80 border border-gray-100 group-hover:border-[#30B68E]/30 group-hover:bg-[#30B68E]/5 transition-all duration-200">
                         <div className="w-9 h-9 rounded-lg bg-[#30B68E]/10 flex items-center justify-center shrink-0 group-hover:bg-[#30B68E]/20 transition-colors">
-                          <svg className="w-4 h-4 text-[#30B68E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          <svg
+                            className="w-4 h-4 text-[#30B68E]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            />
                           </svg>
                         </div>
                         <div className="flex-1 min-w-0">
@@ -279,14 +281,22 @@ export function HeroSection() {
                     <Link href="/solutions/ondemandid" className="group block">
                       <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/80 border border-gray-100 group-hover:border-[#1E4884]/30 group-hover:bg-[#1E4884]/5 transition-all duration-200">
                         <div className="w-9 h-9 rounded-lg bg-[#1E4884]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1E4884]/20 transition-colors">
-                          <svg className="w-4 h-4 text-[#1E4884]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                          <svg
+                            className="w-4 h-4 text-[#1E4884]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                            />
                           </svg>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-[#1E4884] text-sm">
-                            OnDemand ID™
-                          </p>
+                          <p className="font-semibold text-[#1E4884] text-sm">OnDemand ID™</p>
                           <p className="text-[11px] text-gray-500 leading-tight">
                             Real-time identity verification
                           </p>

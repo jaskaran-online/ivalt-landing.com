@@ -1,9 +1,9 @@
-import Container from "@/components/Container";
-import { PlatformOverviewSection } from "@/components/home";
+import Container from '@/components/Container';
+import { PlatformOverviewSection } from '@/components/home';
 
-import { SolutionComponents, DataSecurity } from "@/components/solutions";
-import { DocuIdFile } from "@/components/solutions/DocuIdFile";
-import { OnDemand } from "@/components/solutions/On-Demand";
+import { SolutionComponents, DataSecurity } from '@/components/solutions';
+import { DocuIdFile } from '@/components/solutions/DocuIdFile';
+import { OnDemand } from '@/components/solutions/On-Demand';
 
 export default function Solutions() {
   return (

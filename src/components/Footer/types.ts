@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import { LucideIcon } from 'lucide-react';
 
 export interface FooterLink {
   label: string;
@@ -23,14 +23,14 @@ export interface ProductLinksProps {
 
 export const footerLinks = {
   company: [
-    { label: "Why iVALT?", href: "/why-ivalt" },
-    { label: "Solutions", href: "/solutions" },
-    { label: "About Us", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Recent Updates", href: "/recent-updates" },
+    { label: 'Why iVALT?', href: '/why-ivalt' },
+    { label: 'Solutions', href: '/solutions' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Recent Updates', href: '/recent-updates' },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-and-conditions" },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Service', href: '/terms-and-conditions' },
   ],
 };

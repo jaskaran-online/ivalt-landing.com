@@ -24,7 +24,7 @@ The 404 page is automatically displayed when:
 ### Manual Usage
 
 ```tsx
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
 
 // In any page or component
 if (!data) {
@@ -39,7 +39,7 @@ A flexible, reusable component for pages/features under development.
 ### Basic Usage
 
 ```tsx
-import ComingSoon from "@/components/ComingSoon";
+import ComingSoon from '@/components/ComingSoon';
 
 export default function ComingSoonPage() {
   return <ComingSoon />;
@@ -49,7 +49,7 @@ export default function ComingSoonPage() {
 ### Advanced Usage with Countdown
 
 ```tsx
-import ComingSoon from "@/components/ComingSoon";
+import ComingSoon from '@/components/ComingSoon';
 
 export default function ProductLaunch() {
   // Set launch date (30 days from now)
@@ -96,7 +96,7 @@ export default function ProductLaunch() {
   title="Universal Biometric ID® v2.0"
   subtitle="Next-gen security is almost here"
   description="Enhanced biometric recognition with AI-powered fraud detection. Pre-register now for early access."
-  launchDate={new Date("2024-06-01")}
+  launchDate={new Date('2024-06-01')}
 />
 ```
 
@@ -119,7 +119,7 @@ export default function ProductLaunch() {
   title="iVALT Security Summit 2024"
   subtitle="Join industry leaders in San Francisco"
   description="Connect with cybersecurity experts, learn about the latest threats, and discover cutting-edge solutions."
-  launchDate={new Date("2024-09-15")}
+  launchDate={new Date('2024-09-15')}
 />
 ```
 
@@ -149,7 +149,7 @@ export default function ProductLaunch() {
 ```tsx
 <ComingSoon
   showEmailSignup={false}
-  launchDate={new Date("2024-12-25")}
+  launchDate={new Date('2024-12-25')}
   title="Holiday Special"
   subtitle="Something special for the holidays"
 />
@@ -161,7 +161,7 @@ export default function ProductLaunch() {
 
 ```tsx
 // app/products/new-feature/page.tsx
-import ComingSoon from "@/components/ComingSoon";
+import ComingSoon from '@/components/ComingSoon';
 
 export default function NewFeaturePage() {
   return (
@@ -169,7 +169,7 @@ export default function NewFeaturePage() {
       title="DocuID® Enterprise"
       subtitle="Advanced document verification"
       description="AI-powered document authentication with real-time fraud detection for enterprise customers."
-      launchDate={new Date("2024-07-01")}
+      launchDate={new Date('2024-07-01')}
     />
   );
 }
@@ -193,19 +193,19 @@ export default function FeaturePage() {
 ### API Integration
 
 ```tsx
-"use client";
+'use client';
 
-import { useState } from "react";
-import ComingSoon from "@/components/ComingSoon";
+import { useState } from 'react';
+import ComingSoon from '@/components/ComingSoon';
 
 export default function BetaSignup() {
   const [launchDate, setLaunchDate] = useState<Date | undefined>();
 
   // Fetch launch date from API
   useEffect(() => {
-    fetch("/api/launch-date")
-      .then((res) => res.json())
-      .then((data) => setLaunchDate(new Date(data.date)));
+    fetch('/api/launch-date')
+      .then(res => res.json())
+      .then(data => setLaunchDate(new Date(data.date)));
   }, []);
 
   return <ComingSoon title="Beta Program" launchDate={launchDate} />;

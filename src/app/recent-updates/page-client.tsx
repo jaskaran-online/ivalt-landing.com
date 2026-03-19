@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, LayoutGrid, List } from "lucide-react";
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import SectionTitle from "@/components/SectionTitle";
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, LayoutGrid, List } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import SectionTitle from '@/components/SectionTitle';
 
 interface Update {
   id: string;
@@ -19,54 +19,50 @@ interface Update {
 
 const recentUpdates: Update[] = [
   {
-    id: "openvpn-webinar",
-    title:
-      "Zero Trust Security: Human-Verified Identity Beyond Passwords",
-    date: "February 11, 2026",
+    id: 'openvpn-webinar',
+    title: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
+    date: 'February 11, 2026',
     summary:
-      "Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization, addressing AI deepfakes and impersonation threats.",
-    imageSrc:
-      "/press-release/images/ivalt-openvpn-webinar.png",
-    imageAlt: "iVALT OpenVPN Webinar",
-    path: "/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords",
+      'Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization, addressing AI deepfakes and impersonation threats.',
+    imageSrc: '/press-release/images/ivalt-openvpn-webinar.png',
+    imageAlt: 'iVALT OpenVPN Webinar',
+    path: '/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
   },
   {
-    id: "docuid",
-    title: "iVALT Revolutionizes Document Security with Launch of DocuID®",
-    date: "April 22, 2025",
+    id: 'docuid',
+    title: 'iVALT Revolutionizes Document Security with Launch of DocuID®',
+    date: 'April 22, 2025',
     summary:
-      "iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.",
+      'iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     imageSrc:
-      "/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png",
-    imageAlt: "iVALT DocuID Launch",
-    path: "/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID",
+      '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+    imageAlt: 'iVALT DocuID Launch',
+    path: '/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
   },
   {
-    id: "ondemand-id",
-    title:
-      "iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation",
-    date: "February 10, 2025",
+    id: 'ondemand-id',
+    title: 'iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation',
+    date: 'February 10, 2025',
     summary:
-      "iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.",
+      'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     imageSrc:
-      "/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png",
-    imageAlt: "iVALT OnDemand ID Launch",
-    path: "/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation",
+      '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+    imageAlt: 'iVALT OnDemand ID Launch',
+    path: '/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
   },
   {
-    id: "psono",
-    title:
-      "Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication",
-    date: "January 10, 2025",
+    id: 'psono',
+    title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
+    date: 'January 10, 2025',
     summary:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
-    imageSrc: "/press-release/images/psono-collaborates-with-ivalt.png",
-    imageAlt: "Psono Selects iVALT 5FA",
-    path: "/recent-updates/psono-selects-ivalt-5fa",
+    imageSrc: '/press-release/images/psono-collaborates-with-ivalt.png',
+    imageAlt: 'Psono Selects iVALT 5FA',
+    path: '/recent-updates/psono-selects-ivalt-5fa',
   },
 ];
 
-type ViewMode = "list" | "grid";
+type ViewMode = 'list' | 'grid';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -85,7 +81,7 @@ const itemVariants = {
 };
 
 export default function RecentUpdatesClient() {
-  const [viewMode, setViewMode] = useState<ViewMode>("list");
+  const [viewMode, setViewMode] = useState<ViewMode>('list');
 
   return (
     <main className="mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-[#FAF9F7]">
@@ -98,22 +94,22 @@ export default function RecentUpdatesClient() {
           />
           <div className="flex items-center gap-2 bg-white rounded-lg p-1 shadow-sm self-start sm:self-auto">
             <button
-              onClick={() => setViewMode("list")}
+              onClick={() => setViewMode('list')}
               className={`p-2 rounded-md transition-all duration-200 ${
-                viewMode === "list"
-                  ? "bg-teal-primary text-white"
-                  : "text-gray-500 hover:bg-gray-100"
+                viewMode === 'list'
+                  ? 'bg-teal-primary text-white'
+                  : 'text-gray-500 hover:bg-gray-100'
               }`}
               aria-label="List view"
             >
               <List size={20} />
             </button>
             <button
-              onClick={() => setViewMode("grid")}
+              onClick={() => setViewMode('grid')}
               className={`p-2 rounded-md transition-all duration-200 ${
-                viewMode === "grid"
-                  ? "bg-teal-primary text-white"
-                  : "text-gray-500 hover:bg-gray-100"
+                viewMode === 'grid'
+                  ? 'bg-teal-primary text-white'
+                  : 'text-gray-500 hover:bg-gray-100'
               }`}
               aria-label="Grid view"
             >
@@ -123,7 +119,7 @@ export default function RecentUpdatesClient() {
         </div>
 
         <AnimatePresence mode="wait">
-          {viewMode === "list" ? (
+          {viewMode === 'list' ? (
             <motion.div
               key="list"
               variants={containerVariants}
@@ -132,7 +128,7 @@ export default function RecentUpdatesClient() {
               exit="hidden"
               className="space-y-16"
             >
-              {recentUpdates.map((update) => (
+              {recentUpdates.map(update => (
                 <motion.div
                   key={update.id}
                   variants={itemVariants}
@@ -153,12 +149,8 @@ export default function RecentUpdatesClient() {
                       <div className="text-sm text-teal-primary font-semibold mb-2">
                         {update.date}
                       </div>
-                      <h2 className="text-2xl font-bold text-navy-primary mb-4">
-                        {update.title}
-                      </h2>
-                      <p className="text-gray-600 mb-6 line-clamp-3">
-                        {update.summary}
-                      </p>
+                      <h2 className="text-2xl font-bold text-navy-primary mb-4">{update.title}</h2>
+                      <p className="text-gray-600 mb-6 line-clamp-3">{update.summary}</p>
                     </div>
                     <div>
                       <Link
@@ -182,7 +174,7 @@ export default function RecentUpdatesClient() {
               exit="hidden"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {recentUpdates.map((update) => (
+              {recentUpdates.map(update => (
                 <motion.div
                   key={update.id}
                   variants={itemVariants}
@@ -205,9 +197,7 @@ export default function RecentUpdatesClient() {
                     <h2 className="text-xl font-bold text-navy-primary mb-3 line-clamp-2">
                       {update.title}
                     </h2>
-                    <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">
-                      {update.summary}
-                    </p>
+                    <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">{update.summary}</p>
                     <Link
                       href={update.path}
                       className="inline-flex items-center px-4 py-2 bg-teal-primary hover:bg-teal-primary/80 text-white font-medium rounded-md transition-colors duration-200 text-sm self-start"

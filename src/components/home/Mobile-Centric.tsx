@@ -1,10 +1,10 @@
-import Container from "../Container";
-import SectionTitle from "../SectionTitle";
-import SectionTitleBottom from "../SectionTitleBottom";
+import Container from '../Container';
+import SectionTitle from '../SectionTitle';
+import SectionTitleBottom from '../SectionTitleBottom';
 
-import Image from "next/image";
-import mobileCentric from "@/assets/images/home/mobile-centric-identity.png";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
+import Image from 'next/image';
+import mobileCentric from '@/assets/images/home/mobile-centric-identity.png';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
 
 export default function MobileCentric() {
   return (

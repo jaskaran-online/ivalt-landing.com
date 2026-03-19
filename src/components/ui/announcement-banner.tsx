@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { X } from "lucide-react";
-import { useState, useEffect } from "react";
+import Link from 'next/link';
+import { X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export function AnnouncementBanner() {
   const [isVisible, setIsVisible] = useState(true);
 
   // Check if user has dismissed the banner
   useEffect(() => {
-    const dismissed = localStorage.getItem("webinar-banner-dismissed");
+    const dismissed = localStorage.getItem('webinar-banner-dismissed');
     if (dismissed) {
       setIsVisible(false);
     }
@@ -17,7 +17,7 @@ export function AnnouncementBanner() {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem("webinar-banner-dismissed", "true");
+    localStorage.setItem('webinar-banner-dismissed', 'true');
   };
 
   if (!isVisible) return null;
@@ -28,9 +28,9 @@ export function AnnouncementBanner() {
         <div className="flex items-center justify-between">
           <div className="flex-1 flex items-center justify-center">
             <p className="text-sm text-center">
-              <span className="font-semibold text-teal-primary">NEW:</span>{" "}
-              Zero Trust Security: Human-Verified Identity Beyond Passwords — Join
-              iVALT & OpenVPN for an Exclusive Webinar.{" "}
+              <span className="font-semibold text-teal-primary">NEW:</span> Zero Trust Security:
+              Human-Verified Identity Beyond Passwords — Join iVALT & OpenVPN for an Exclusive
+              Webinar.{' '}
               <Link
                 href="/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords"
                 className="inline-flex items-center text-teal-primary hover:text-teal-300 font-medium transition-colors"

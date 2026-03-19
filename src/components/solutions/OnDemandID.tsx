@@ -1,16 +1,16 @@
-import Container from "../Container";
-import SectionTitle from "../SectionTitle";
+import Container from '../Container';
+import SectionTitle from '../SectionTitle';
 
-import Image from "next/image";
-import ondemandidLogo from "@/assets/images/home/ondemandid.png";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import { Check } from "lucide-react";
+import Image from 'next/image';
+import ondemandidLogo from '@/assets/images/home/ondemandid.png';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import { Check } from 'lucide-react';
 
 const Points = [
-  "Real-Time Customer Identity",
-  "Proactive Agent Identity",
-  "Stops Social Engineering & Deepfakes",
-  "Highly Secure Account Access",
+  'Real-Time Customer Identity',
+  'Proactive Agent Identity',
+  'Stops Social Engineering & Deepfakes',
+  'Highly Secure Account Access',
 ];
 
 export default function OnDemandID() {
@@ -39,11 +39,7 @@ export default function OnDemandID() {
                 className="inline-flex items-center justify-start gap-4 mb-2 text-left"
               >
                 <div className="flex items-center justify-center bg-white rounded-full p-2 shadow-sm">
-                  <Check
-                    className="text-navy-primary w-6 h-6"
-                    width={24}
-                    height={24}
-                  />
+                  <Check className="text-navy-primary w-6 h-6" width={24} height={24} />
                 </div>
                 <h1 className="text-lg text-navy-primary text-left">{point}</h1>
               </FadeInOnScroll>

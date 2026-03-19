@@ -1,20 +1,20 @@
-import React from "react";
-import Image from "next/image";
-import Docuid from "@/assets/images/solutions/Douc-Id.jpg";
-import protectDocoId from "@/assets/images/solutions/docuId-protection.jpg";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, FileLock, ShieldCheck, UserCheck } from "lucide-react";
+import React from 'react';
+import Image from 'next/image';
+import Docuid from '@/assets/images/solutions/Douc-Id.jpg';
+import protectDocoId from '@/assets/images/solutions/docuId-protection.jpg';
+import { Button } from '@/components/ui/button';
+import { ExternalLink, FileLock, ShieldCheck, UserCheck } from 'lucide-react';
 
 export const DocuIdFile = () => {
   const features = [
     {
       icon: UserCheck,
-      text: "Recipients verify identity via multi-factor authentication",
+      text: 'Recipients verify identity via multi-factor authentication',
     },
-    { icon: FileLock, text: "Full Digital Rights Management (DRM)" },
+    { icon: FileLock, text: 'Full Digital Rights Management (DRM)' },
     {
       icon: ShieldCheck,
-      text: "Prevents forwarding, printing, and screenshots",
+      text: 'Prevents forwarding, printing, and screenshots',
     },
   ];
 
@@ -30,9 +30,7 @@ export const DocuIdFile = () => {
           </div>
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-primary mb-4">
-            DocuID®
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-primary mb-4">DocuID®</h2>
 
           {/* Subtitle */}
           <p className="text-xl text-teal-primary font-semibold mb-4">
@@ -41,17 +39,13 @@ export const DocuIdFile = () => {
 
           {/* Description */}
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Authors embed authorized recipients (via mobile #) in encrypted
-            documents. Control who can access your sensitive documents with
-            multi-factor authentication and full DRM protection.
+            Authors embed authorized recipients (via mobile #) in encrypted documents. Control who
+            can access your sensitive documents with multi-factor authentication and full DRM
+            protection.
           </p>
 
           {/* Visit Link Button */}
-          <a
-            href="https://www.docuid.net"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.docuid.net" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-teal-primary hover:bg-teal-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-teal-primary/25 transition-all hover:shadow-xl hover:shadow-teal-primary/30 hover:-translate-y-0.5"

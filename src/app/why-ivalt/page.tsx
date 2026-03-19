@@ -1,13 +1,13 @@
-import Container from "@/components/Container";
-import SectionTitle from "@/components/SectionTitle";
+import Container from '@/components/Container';
+import SectionTitle from '@/components/SectionTitle';
 import {
   // ComingSoon,
   // FactorsOfIdentity,
   PartnershipBenefits,
   PioneeringContent,
-} from "@/components/why-ivalt";
-import { PatentCapabilities } from "@/components/why-ivalt/Patent-Capabilities";
-import { UniqeBenifits } from "@/components/why-ivalt/Uniqe-Benifits";
+} from '@/components/why-ivalt';
+import { PatentCapabilities } from '@/components/why-ivalt/Patent-Capabilities';
+import { UniqeBenifits } from '@/components/why-ivalt/Uniqe-Benifits';
 
 export default function WhyIvalt() {
   return (
@@ -15,9 +15,9 @@ export default function WhyIvalt() {
       <SectionTitle title="Why iVALT ?" description="" />
       <PioneeringContent />
       {/* <FactorsOfIdentity /> */}
-      <PatentCapabilities/>
+      <PatentCapabilities />
       <PartnershipBenefits />
-      <UniqeBenifits/>
+      <UniqeBenifits />
       {/* <ComingSoon /> */}
     </Container>
   );

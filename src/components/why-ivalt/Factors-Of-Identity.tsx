@@ -1,40 +1,40 @@
-import { Check, CompassIcon, HandIcon, Shield } from "lucide-react";
-import Container from "../Container";
-import SectionTitle from "../SectionTitle";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import Image from "next/image";
-import mobileCentric from "@/assets/images/home/mobile-centric-identity.png";
+import { Check, CompassIcon, HandIcon, Shield } from 'lucide-react';
+import Container from '../Container';
+import SectionTitle from '../SectionTitle';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import Image from 'next/image';
+import mobileCentric from '@/assets/images/home/mobile-centric-identity.png';
 const Factors = [
   {
-    content: "Up to 25+ Factors",
+    content: 'Up to 25+ Factors',
     icon: (
       <span className="text-primary font-regular border rounded-full p-2 w-10 h-10 text-[14px] flex items-center justify-center">
         25+
       </span>
     ),
   },
-  { content: "1-Click UX", icon: <HandIcon className="w-6 h-6" /> },
-  { content: "Backward Compatible", icon: <CompassIcon className="w-6 h-6" /> },
+  { content: '1-Click UX', icon: <HandIcon className="w-6 h-6" /> },
+  { content: 'Backward Compatible', icon: <CompassIcon className="w-6 h-6" /> },
   {
-    content: "The Game Changing Approach to Security",
+    content: 'The Game Changing Approach to Security',
     icon: <Shield className="w-6 h-6" />,
   },
 ];
 
 const Points = [
-  "Stolen Credentials become worthless",
-  "Fake communication are stopped",
-  "User Can Control their Context to Set Geofencing and Time Factors",
+  'Stolen Credentials become worthless',
+  'Fake communication are stopped',
+  'User Can Control their Context to Set Geofencing and Time Factors',
 ];
 
 const SidePoints = [
-  "Enterprise Apps",
-  "IAM (CIBA)",
-  "Physical Access",
-  "In-Person ID",
-  "Communications",
-  "Documents Control",
-  "Many Others",
+  'Enterprise Apps',
+  'IAM (CIBA)',
+  'Physical Access',
+  'In-Person ID',
+  'Communications',
+  'Documents Control',
+  'Many Others',
 ];
 
 export default function FactorsOfIdentity() {
@@ -55,9 +55,7 @@ export default function FactorsOfIdentity() {
               <div className="flex items-center justify-center bg-[#F5F5F5] rounded-full p-2 w-12 h-12 md:w-14 md:h-14 text-navy-primary text-2xl">
                 {factor.icon}
               </div>
-              <h1 className="md:text-lg text-base text-navy-primary text-left">
-                {factor.content}
-              </h1>
+              <h1 className="md:text-lg text-base text-navy-primary text-left">{factor.content}</h1>
             </FadeInOnScroll>
           ))}
         </div>
@@ -80,15 +78,9 @@ export default function FactorsOfIdentity() {
                     className="inline-flex items-center justify-start gap-4 mb-2 text-left"
                   >
                     <div className="flex items-center justify-center bg-white rounded-full p-2 shadow-sm">
-                      <Check
-                        className="text-navy-primary w-6 h-6"
-                        width={24}
-                        height={24}
-                      />
+                      <Check className="text-navy-primary w-6 h-6" width={24} height={24} />
                     </div>
-                    <h1 className="md:text-lg text-base text-primary text-left">
-                      {point}
-                    </h1>
+                    <h1 className="md:text-lg text-base text-primary text-left">{point}</h1>
                   </FadeInOnScroll>
                 ))}
               </div>
@@ -106,15 +98,9 @@ export default function FactorsOfIdentity() {
                   className="inline-flex items-center justify-start gap-4 mb-2 text-left"
                 >
                   <div className="flex items-center justify-center bg-white rounded-full p-1 shadow-sm">
-                    <Check
-                      className="text-navy-primary w-6 h-6"
-                      width={20}
-                      height={20}
-                    />
+                    <Check className="text-navy-primary w-6 h-6" width={20} height={20} />
                   </div>
-                  <h1 className="md:text-lg text-base text-primary text-left">
-                    {point}
-                  </h1>
+                  <h1 className="md:text-lg text-base text-primary text-left">{point}</h1>
                 </FadeInOnScroll>
               ))}
             </div>

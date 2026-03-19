@@ -1,18 +1,12 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Heading1,
-  Heading2,
-  BodyText,
-  SmallText,
-  Caption,
-} from "@/components/ui/typography";
-import { Mail, Bell, CheckCircle, AlertCircle } from "lucide-react";
-import Image from "next/image";
-import { useRecaptcha } from "@/hooks/useRecaptcha";
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Heading1, Heading2, BodyText, SmallText, Caption } from '@/components/ui/typography';
+import { Mail, Bell, CheckCircle, AlertCircle } from 'lucide-react';
+import Image from 'next/image';
+import { useRecaptcha } from '@/hooks/useRecaptcha';
 
 interface ComingSoonProps {
   title?: string;
@@ -32,13 +26,13 @@ interface TimeLeft {
 }
 
 export default function ComingSoon({
-  title = "Coming Soon",
-  subtitle = "Something amazing is on the way",
+  title = 'Coming Soon',
+  subtitle = 'Something amazing is on the way',
   description = "We're working hard to bring you something special. Stay tuned for updates and be the first to know when we launch.",
   launchDate,
   showCountdown = false,
   showEmailSignup = false,
-  className = "",
+  className = '',
 }: ComingSoonProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -46,7 +40,7 @@ export default function ComingSoon({
     minutes: 0,
     seconds: 0,
   });
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -63,9 +57,7 @@ export default function ComingSoon({
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          ),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -79,7 +71,7 @@ export default function ComingSoon({
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email.trim()) {
       setErrorMessage('Please enter a valid email address');
       setSubmitStatus('error');
@@ -135,11 +127,9 @@ export default function ComingSoon({
   const CountdownBox = ({ value, label }: { value: number; label: string }) => (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
       <div className="text-3xl md:text-4xl font-bold text-white mb-1">
-        {value.toString().padStart(2, "0")}
+        {value.toString().padStart(2, '0')}
       </div>
-      <SmallText className="text-gray-200 uppercase tracking-wider">
-        {label}
-      </SmallText>
+      <SmallText className="text-gray-200 uppercase tracking-wider">{label}</SmallText>
     </div>
   );
 
@@ -162,9 +152,7 @@ export default function ComingSoon({
           <Heading2 color="teal-primary" className="mb-6 text-2xl">
             {subtitle}
           </Heading2>
-          <BodyText className="text-gray-800 max-w-2xl mx-auto mb-8">
-            {description}
-          </BodyText>
+          <BodyText className="text-gray-800 max-w-2xl mx-auto mb-8">{description}</BodyText>
         </div>
 
         {/* Countdown Timer */}
@@ -195,7 +183,7 @@ export default function ComingSoon({
                     type="email"
                     placeholder="Enter your email address"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={e => setEmail(e.target.value)}
                     required
                     className="bg-white/20 border-white/30 text-white placeholder:text-gray-300 focus:ring-teal-primary focus:border-teal-primary"
                   />
@@ -204,24 +192,30 @@ export default function ComingSoon({
                     disabled={isSubmitting || !isRecaptchaReady}
                     className="w-full bg-teal-primary hover:bg-light-teal disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold"
                   >
-                    {isSubmitting ? "Subscribing..." : "Notify Me"}
+                    {isSubmitting ? 'Subscribing...' : 'Notify Me'}
                     {!isSubmitting && <Mail className="ml-2 h-4 w-4" />}
                   </Button>
-                  
+
                   {submitStatus === 'error' && (
                     <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
                       <AlertCircle className="h-4 w-4" />
                       <span>{errorMessage}</span>
                     </div>
                   )}
-                  
+
                   <p className="text-xs text-gray-400 text-center">
                     This site is protected by reCAPTCHA and the Google{' '}
-                    <a href="https://policies.google.com/privacy" className="text-teal-primary hover:underline">
+                    <a
+                      href="https://policies.google.com/privacy"
+                      className="text-teal-primary hover:underline"
+                    >
                       Privacy Policy
                     </a>{' '}
                     and{' '}
-                    <a href="https://policies.google.com/terms" className="text-teal-primary hover:underline">
+                    <a
+                      href="https://policies.google.com/terms"
+                      className="text-teal-primary hover:underline"
+                    >
                       Terms of Service
                     </a>{' '}
                     apply.
@@ -240,8 +234,7 @@ export default function ComingSoon({
                   </SmallText>
                 </div>
                 <BodyText className="text-gray-300">
-                  We&apos;ll email you as soon as we launch. Thanks for your
-                  interest!
+                  We&apos;ll email you as soon as we launch. Thanks for your interest!
                 </BodyText>
               </div>
             )}

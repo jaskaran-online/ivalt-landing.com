@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import ivaultBridge from "@/assets/images/home/ivault-bridge.jpg";
+import React from 'react';
+import Image from 'next/image';
+import ivaultBridge from '@/assets/images/home/ivault-bridge.jpg';
 
 export const IvaultBridge = () => {
   return (

@@ -29,21 +29,24 @@ pnpm lint
 ## Architecture
 
 ### App Router Structure
+
 - **File-based routing** in `src/app/` with TypeScript pages
 - **Layout hierarchy**: Root layout (`layout.tsx`) includes Header/Footer globally
 - **Press releases**: Nested layout with dynamic routes in `press-release/[slug]/`
 
 ### Component Organization
+
 ```
 src/components/
 ├── Header.tsx, Footer.tsx, ContactForm.tsx  # Global components
 ├── home/                                    # Homepage sections
-├── solutions/                               # Solution-specific components  
+├── solutions/                               # Solution-specific components
 ├── why-ivalt/                              # Why iVALT page components
 └── ui/                                     # Shadcn/ui components + custom typography system
 ```
 
 ### Key Patterns
+
 - **Domain-driven folders**: Components grouped by page/feature area
 - **Custom typography system**: `src/components/ui/typography.tsx` with responsive components (`Heading1`, `BodyText`, etc.)
 - **Brand color integration**: CSS custom properties in `globals.css` (teal-primary: #30B68E, navy-primary: #1E4884)
@@ -52,6 +55,7 @@ src/components/
 ## Styling System
 
 **Tailwind CSS v4** with custom brand colors and typography scale. Components use:
+
 - Brand colors: `bg-teal-primary`, `text-navy-primary`, `bg-light-teal`, `bg-dark-navy`
 - Typography components instead of raw Tailwind classes
 - Responsive design with mobile-first approach
@@ -67,8 +71,9 @@ src/components/
 ## Business Context
 
 Identity verification solutions company with three main products:
+
 - **DocuID**: Document verification
-- **OnDemandID**: On-demand identity verification  
+- **OnDemandID**: On-demand identity verification
 - **Universal**: Biometric identity solutions
 
 Components reference these business domains in naming and content structure.
@@ -84,7 +89,9 @@ Components reference these business domains in naming and content structure.
 ## Important Development Patterns
 
 ### Typography Usage
+
 Always use typography components instead of raw Tailwind classes:
+
 ```tsx
 // ✅ Correct
 <Heading1>Title</Heading1>
@@ -95,7 +102,9 @@ Always use typography components instead of raw Tailwind classes:
 ```
 
 ### Brand Colors
+
 Use brand color utilities from `globals.css`:
+
 ```tsx
 // ✅ Correct - using brand colors
 <div className="bg-teal-primary text-white">
@@ -106,4 +115,5 @@ Use brand color utilities from `globals.css`:
 ```
 
 ### Form Handling
+
 All forms use React Hook Form + Zod validation pattern (see `ContactForm.tsx` reference).

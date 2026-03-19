@@ -1,6 +1,6 @@
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import AnimatedShinyCard from "../ui/animated-shiny-card";
-import { LucideIcon, Check } from "lucide-react";
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import AnimatedShinyCard from '../ui/animated-shiny-card';
+import { LucideIcon, Check } from 'lucide-react';
 
 interface PartnershipBenefitCardProps {
   icon: LucideIcon;
@@ -22,8 +22,7 @@ export function PartnershipBenefitCard({
   return (
     <FadeInOnScroll delay={delay}>
       <div className=" p-6 border-[0.4px] bg-gradient-to-br from-white to-gray-50/30 hover:from-teal-50/30 hover:to-white h-full">
-
-      {/* <AnimatedShinyCard className="border-[0.4px] bg-gradient-to-br from-white to-gray-50/30 hover:from-teal-50/30 hover:to-white h-full"> */}
+        {/* <AnimatedShinyCard className="border-[0.4px] bg-gradient-to-br from-white to-gray-50/30 hover:from-teal-50/30 hover:to-white h-full"> */}
         <div className="flex flex-col h-full min-h-[350px]">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-teal-primary/10 rounded-full">
@@ -33,9 +32,7 @@ export function PartnershipBenefitCard({
               <h3 className="text-xl font-bold text-primary mb-1 transition-colors duration-300 group-hover:text-teal-700">
                 {title}
               </h3>
-              <p className="text-teal-primary text-sm font-medium">
-                {subtitle}
-              </p>
+              <p className="text-teal-primary text-sm font-medium">{subtitle}</p>
             </div>
           </div>
 
@@ -47,9 +44,7 @@ export function PartnershipBenefitCard({
                 <div className="mt-1">
                   <Check className="w-5 h-5 text-teal-primary " />
                 </div>
-                <p className="text-gray-700 font-medium leading-relaxed">
-                  {feature}
-                </p>
+                <p className="text-gray-700 font-medium leading-relaxed">{feature}</p>
               </div>
             ))}
           </div>
