@@ -15,11 +15,11 @@ function MarketCard({ title, bullets, caption, delay = 0, className = '' }: Mark
   return (
     <FadeInOnScroll delay={delay}>
       <div
-        className={`relative z-10 h-full p-6 border-[0.4px] bg-gradient-to-br from-white to-gray-50/30 transition-colors duration-300 hover:from-teal-50/30 hover:to-white ${className}`}
+        className={`relative bg-white  z-10 h-full p-6 duration-300 hover:from-teal-50/30 hover:to-white border-[#1e4884] border-4 ${className}`}
       >
         <h3 className="mb-4 text-xl font-bold text-primary">{title}</h3>
-        <ul className="mb-4 space-y-3">
-          {bullets.map((line) => (
+        <ul className="mb-4 space-y-2">
+          {bullets.map(line => (
             <li key={line} className="flex items-start gap-3">
               <Check className="mt-0.5 h-5 w-5 shrink-0 text-teal-primary" aria-hidden />
               <span className="font-medium leading-relaxed text-gray-700">{line}</span>
@@ -38,7 +38,7 @@ function HubCore({ className = '' }: { className?: string }) {
   return (
     <FadeInOnScroll>
       <div
-        className={`relative z-10 mx-auto flex max-w-[280px] flex-col items-center justify-center rounded-2xl bg-primary px-8 py-10 text-center shadow-[0_20px_50px_-12px_rgba(15,51,102,0.45),0_0_40px_-8px_rgba(234,179,8,0.2)] ${className}`}
+        className={`relative z-10 mx-auto flex max-w-[280px] flex-col items-center justify-center rounded-bl-[40px] rounded-tr-[40px] bg-primary px-8 py-4 text-center ${className}`}
       >
         <Image
           src="/logo-transparent-bg.png"
@@ -47,7 +47,7 @@ function HubCore({ className = '' }: { className?: string }) {
           height={56}
           className="h-auto w-36 object-contain brightness-0 invert"
         />
-        <p className="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-white/95">
+        <p className="mt-2 text-sm font-bold uppercase tracking-[0.10em] text-white">
           Human-Bound Identity
         </p>
       </div>
@@ -88,13 +88,13 @@ const EARLY = {
  * Orthogonal “circuit” routes from hub (no diagonal shear). Uniform scale via `meet`.
  */
 function HubSpokeLines() {
-  const stroke = 'rgba(202, 138, 4, 0.65)';
+  const stroke = '#1e4884';
   const hx = 500;
-  const hy = 312;
+  const hy = 240;
   const routes = [
     `M ${hx} ${hy} L 132 ${hy} L 132 102`,
-    `M ${hx} ${hy} L 868 ${hy} L 868 102`,
-    `M ${hx} ${hy} L 132 ${hy} L 132 494`,
+    `M ${hx} ${hy} L 868 ${hy} L 868 80`,
+    `M ${hx} ${hy} L 132 ${hy} L 132 394`,
     `M ${hx} ${hy} L 868 ${hy} L 868 494`,
     `M ${hx} ${hy} L ${hx} 636`,
   ];
@@ -106,7 +106,13 @@ function HubSpokeLines() {
       preserveAspectRatio="xMidYMid meet"
       aria-hidden
     >
-      <g fill="none" stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.25}>
+      <g
+        fill="none"
+        stroke={stroke}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4.25}
+      >
         {routes.map((d, i) => (
           <path key={i} d={d} />
         ))}
@@ -121,15 +127,14 @@ export function IdentityMarketsHubSection() {
       className="relative z-20 overflow-hidden py-16 md:py-20"
       aria-labelledby="identity-markets-heading"
     >
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_45%,rgba(48,182,142,0.06),transparent_65%)]"
-        aria-hidden
-      />
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInOnScroll>
           <div className="mx-auto mb-12 max-w-3xl text-center md:mb-14">
-            <Heading2 id="identity-markets-heading" color="dark-navy" className="text-3xl font-bold md:text-4xl">
+            <Heading2
+              id="identity-markets-heading"
+              color="dark-navy"
+              className="text-3xl font-bold md:text-4xl"
+            >
               A Platform for Multiple Identity Markets
             </Heading2>
           </div>
