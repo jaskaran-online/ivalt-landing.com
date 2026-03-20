@@ -4,7 +4,7 @@ import Credential from '@/assets/images/home/credential.png';
 const CredentialFailExcecution = () => {
     return (
         <div className='text-center py-16 px-4'>
-            <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+            <h2 className='text-4xl md:text-5xl font-bold text-primary mb-6'>
                 Credential Fail at Execution
             </h2>
             <p className='text-xl md:text-2xl text-gray-600 mb-12 mx-auto'>
@@ -15,9 +15,9 @@ const CredentialFailExcecution = () => {
                     <Image 
                         src={Credential} 
                         alt="Credential Fail at Execution" 
-                        width={1500} 
+                        width={1000} 
                         height={700}
-                        className='w-full '
+                        className=' '
                     />
                 </div>
             </div>
