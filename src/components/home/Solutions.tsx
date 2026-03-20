@@ -17,7 +17,7 @@ const solutions = [
     icon: <UserIcon className="w-8 h-8 text-teal-primary" />,
   },
   {
-    title: "DocuID™",
+    title: "DocuID®",
     description:
       "Restricted access control through embedded identifiers that must be verified in real-time.",
     icon: <FileIcon className="w-8 h-8 text-teal-primary" />,

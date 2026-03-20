@@ -65,7 +65,7 @@ export default function KeyApplicationsSection() {
   const applications = [
     {
       icon: FileText,
-      title: "DocuID™",
+      title: "DocuID®",
       subtitle: "Secure Document Access Control",
       description:
         "Authors embed authorized recipients (via mobile #) in encrypted documents.",

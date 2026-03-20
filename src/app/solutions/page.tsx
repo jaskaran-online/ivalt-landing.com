@@ -1,34 +1,23 @@
 import Container from "@/components/Container";
 import { PlatformOverviewSection } from "@/components/home";
-import SectionTitle from "@/components/SectionTitle";
-import {
-  TargetingContent,
-  Universal,
-  OnDemandID,
-  DocuID,
-  SolutionComponents,
-  DataSecurity,
-  ContextID,
-} from "@/components/solutions";
+
+import { SolutionComponents, DataSecurity } from "@/components/solutions";
 import { DocuIdFile } from "@/components/solutions/DocuIdFile";
 import { OnDemand } from "@/components/solutions/On-Demand";
-import { ProtectionDocuId } from "@/components/solutions/ProtectionDocuId";
 
 export default function Solutions() {
   return (
     <Container className="bg-[#FAF9F7] md:py-16 py-6">
-      <PlatformOverviewSection/>
-      {/* <SectionTitle title="Solutions" description="" /> */}
-      {/* <TargetingContent /> */}
-      {/* <Universal /> */}
-      {/* <OnDemandID /> */}
-      <OnDemand/>
-      <DocuIdFile/>
-      <ProtectionDocuId/>
+      {/* DocuID Section - Moved to top with visit link */}
+      <DocuIdFile />
 
-      {/* <DocuID /> */}
-      {/* <ContextID /> */}
+      <PlatformOverviewSection />
+
+      {/* Other Solutions */}
+      <OnDemand />
+
       <DataSecurity />
+
       <SolutionComponents />
     </Container>
   );

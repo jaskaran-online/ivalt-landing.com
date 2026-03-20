@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://ivalt.com/press-release/ivalt-revolutionizes-document-security-with-launch-of-DocuID",
+      "https://ivalt.com/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID",
   },
   openGraph: {
     type: "article",
-    url: "https://ivalt.com/press-release/ivalt-revolutionizes-document-security-with-launch-of-DocuID",
+    url: "https://ivalt.com/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID",
     title: "iVALT Revolutionizes Document Security with Launch of DocuID",
     description:
       "iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   other: {
     "article:published_time": "2025-04-22T00:00:00+00:00",
     "article:author": "Baldev Krishan",
-    "article:section": "Press Release",
+    "article:section": "Recent Updates",
     "article:tag": ["Document Security", "DocuID", "Identity Verification"],
     "geo.region": "US-CA",
     "geo.placename": "Pleasanton",
@@ -78,28 +78,28 @@ export default function Page() {
           owners with unprecedented control over access to their critical
           information. DocuID utilizes a unique 1-click mobile-centric approach,
           embedding authorized user credentials directly into encrypted
-          documents and leveraging iVALT&apos;s advanced 5+ factor identity
+          documents and leveraging iVALT's advanced 5+ factor identity
           verification system to grant access, ensuring that only approved users
           can open and read the document. In addition, any document secured by
           DocuID cannot be opened if forwarded to an unapproved user.
         </p>
         <p className="mb-6 text-justify">
-          In today&apos;s digital landscape, ensuring the confidentiality and
+          In today's digital landscape, ensuring the confidentiality and
           integrity of sensitive documents is paramount. Traditional security
           measures often fall short, leaving valuable information vulnerable to
           unauthorized access. DocuID addresses this critical need by offering a
           revolutionary solution that combines robust encryption with granular
-          access control, all managed seamlessly through a user&apos;s mobile
+          access control, all managed seamlessly through a user's mobile
           device.
         </p>
         <p className="mb-6 text-justify">
-          &quot;We are thrilled to introduce{" "}
+          "We are thrilled to introduce{" "}
           <strong className="text-navy-primary">DocuID</strong>, a game-changer
-          in document security,&quot; said{" "}
+          in document security," said{" "}
           <strong className="text-navy-primary">
             Baldev Krishan Ph.D., CEO and Co-Founder of iVALT
           </strong>
-          . &quot;DocuID puts the power back in the hands of document owners,{" "}
+          . "DocuID puts the power back in the hands of document owners,{" "}
           <strong className="text-navy-primary">
             allowing them to define exactly who can access their sensitive
             information and under what conditions
@@ -109,16 +109,16 @@ export default function Page() {
           <strong className="text-navy-primary">
             (up to 25 AI-selected factors)
           </strong>
-          provide a very high level of security and convenience.&quot;
+          provide a very high level of security and convenience."
         </p>
         <p className="mb-6 text-justify">
-          DocuID leverages iVALT&apos;s unassailable identity verification
+          DocuID leverages iVALT's unassailable identity verification
           including biometrics, registered device ID, GPS geo-fencing, approved
           access time windows, as well as a wide variety of customizable dynamic
           variables that are only relevant to the ID owner. iVALT can be
           integrated easily through Open APIs and standard protocols into any
           IAM platform or application requiring real-time identity verification.
-          Real-time identity can also be demanded and proven via iVALT&apos;s
+          Real-time identity can also be demanded and proven via iVALT's
           mobile app to stop social engineering and AI- deepfake attacks.
         </p>
         <div className="mt-8 pt-8 border-t border-gray-200">

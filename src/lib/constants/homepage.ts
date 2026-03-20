@@ -46,7 +46,7 @@ export const IDENTITY_CRISIS_CONTENT = {
 export const APPLICATIONS_DATA = [
   {
     icon: FileText,
-    title: "DocuID™",
+    title: "DocuID®",
     subtitle: "Secure Document Access Control",
     description:
       "Authors embed authorized recipients (via mobile #) in encrypted documents.",

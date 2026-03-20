@@ -53,7 +53,7 @@ export default function ContextID() {
 
           <div className="absolute bottom-15 right-0">
             <h1 className="text-base font-semibold text-navy-primary text-left max-w-md mr-6">
-              Plus new services like DocuID™ and Others integrated with iVALT
+              Plus new services like DocuID® and Others integrated with iVALT
             </h1>
           </div>
 

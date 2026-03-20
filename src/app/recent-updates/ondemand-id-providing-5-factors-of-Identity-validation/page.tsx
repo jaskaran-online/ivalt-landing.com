@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://ivalt.com/press-release/ondemand-id-providing-5-factors-of-Identity-validation",
+      "https://ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation",
   },
   openGraph: {
     type: "article",
-    url: "https://ivalt.com/press-release/ondemand-id-providing-5-factors-of-Identity-validation",
+    url: "https://ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation",
     title:
       "iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation",
     description:
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   other: {
     "article:published_time": "2025-01-08T00:00:00+00:00",
     "article:author": "Baldev Krishan",
-    "article:section": "Press Release",
+    "article:section": "Recent Updates",
     "article:tag": ["5FA", "Security", "Password Management"],
     "geo.region": "US-CA",
     "geo.placename": "Pleasanton",
@@ -117,7 +117,7 @@ export default function Page() {
           </li>
           <li>
             <strong className="text-navy-primary">Device ID: </strong>
-            Uniquely identifies the user&apos;s mobile device, adding another
+            Uniquely identifies the user's mobile device, adding another
             layer of security.
           </li>
           <li>
@@ -142,18 +142,18 @@ export default function Page() {
         <p className="mb-6 text-justify">
           OnDemand ID seamlessly integrates with existing authentication
           platforms through a simple software redirect. This enables the use of
-          iVALT&apos;s technology for any use case, ranging from online
+          iVALT's technology for any use case, ranging from online
           authentication to IOT and physical access, as well as on-site
           real-time identity verification.
         </p>
         <p className="mb-6 text-justify">
-          Baldev Krishan Ph.D., CEO of iVALT summarizes the company&apos;s
-          market strategy, &quot;This is the start of a disruption toward
+          Baldev Krishan Ph.D., CEO of iVALT summarizes the company's
+          market strategy, "This is the start of a disruption toward
           de-centralized identity that is so necessary to stop the pervasive
           cybersecurity threats we hear about every day. Users can own and
           control their own identities instead of delegating control to all of
           their digital relationships, any of which can be easily
-          breached.&quot;
+          breached."
         </p>
         <h1 className="text-2xl font-bold text-navy-primary mb-4">
           About iVALT

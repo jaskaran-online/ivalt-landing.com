@@ -5,6 +5,7 @@
 The 404 page is automatically used by Next.js when a route is not found. It's located at `src/app/not-found.tsx`.
 
 ### Features
+
 - **Brand styling** with teal/navy color scheme
 - **Large 404 display** with gradient accent bar
 - **Action buttons** for navigation (Go Home, Go Back)
@@ -13,18 +14,21 @@ The 404 page is automatically used by Next.js when a route is not found. It's lo
 - **Responsive design** for all devices
 
 ### Automatic Usage
+
 The 404 page is automatically displayed when:
+
 - User navigates to a non-existent route
 - A page throws a `notFound()` error
 - Manual redirect to 404
 
 ### Manual Usage
+
 ```tsx
-import { notFound } from 'next/navigation'
+import { notFound } from "next/navigation";
 
 // In any page or component
 if (!data) {
-  notFound()
+  notFound();
 }
 ```
 
@@ -67,37 +71,37 @@ export default function ProductLaunch() {
 
 ### Props Reference
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | string | "Coming Soon" | Main heading text |
-| `subtitle` | string | "Something amazing is on the way" | Subheading text |
-| `description` | string | Default description | Body text explaining what's coming |
-| `launchDate` | Date | undefined | Target launch date for countdown |
-| `showCountdown` | boolean | true | Whether to show countdown timer |
-| `showEmailSignup` | boolean | true | Whether to show email signup form |
-| `className` | string | "" | Additional CSS classes |
+| Prop              | Type    | Default                           | Description                        |
+| ----------------- | ------- | --------------------------------- | ---------------------------------- |
+| `title`           | string  | "Coming Soon"                     | Main heading text                  |
+| `subtitle`        | string  | "Something amazing is on the way" | Subheading text                    |
+| `description`     | string  | Default description               | Body text explaining what's coming |
+| `launchDate`      | Date    | undefined                         | Target launch date for countdown   |
+| `showCountdown`   | boolean | true                              | Whether to show countdown timer    |
+| `showEmailSignup` | boolean | true                              | Whether to show email signup form  |
+| `className`       | string  | ""                                | Additional CSS classes             |
 
 ### Usage Examples
 
 #### Simple Coming Soon
+
 ```tsx
-<ComingSoon 
-  title="Feature Under Development"
-  showCountdown={false}
-/>
+<ComingSoon title="Feature Under Development" showCountdown={false} />
 ```
 
 #### Product Launch with Countdown
+
 ```tsx
 <ComingSoon
   title="Universal Biometric ID® v2.0"
   subtitle="Next-gen security is almost here"
   description="Enhanced biometric recognition with AI-powered fraud detection. Pre-register now for early access."
-  launchDate={new Date('2024-06-01')}
+  launchDate={new Date("2024-06-01")}
 />
 ```
 
 #### Service Maintenance
+
 ```tsx
 <ComingSoon
   title="Scheduled Maintenance"
@@ -109,18 +113,20 @@ export default function ProductLaunch() {
 ```
 
 #### Event Registration
+
 ```tsx
 <ComingSoon
   title="iVALT Security Summit 2024"
   subtitle="Join industry leaders in San Francisco"
   description="Connect with cybersecurity experts, learn about the latest threats, and discover cutting-edge solutions."
-  launchDate={new Date('2024-09-15')}
+  launchDate={new Date("2024-09-15")}
 />
 ```
 
 ### Customization Options
 
 #### Custom Styling
+
 ```tsx
 <ComingSoon
   className="min-h-[80vh]" // Custom height
@@ -129,6 +135,7 @@ export default function ProductLaunch() {
 ```
 
 #### Without Email Signup
+
 ```tsx
 <ComingSoon
   showEmailSignup={false}
@@ -138,10 +145,11 @@ export default function ProductLaunch() {
 ```
 
 #### Countdown Only
+
 ```tsx
 <ComingSoon
   showEmailSignup={false}
-  launchDate={new Date('2024-12-25')}
+  launchDate={new Date("2024-12-25")}
   title="Holiday Special"
   subtitle="Something special for the holidays"
 />
@@ -150,6 +158,7 @@ export default function ProductLaunch() {
 ## Page Integration Examples
 
 ### Product Page Coming Soon
+
 ```tsx
 // app/products/new-feature/page.tsx
 import ComingSoon from "@/components/ComingSoon";
@@ -157,28 +166,24 @@ import ComingSoon from "@/components/ComingSoon";
 export default function NewFeaturePage() {
   return (
     <ComingSoon
-      title="DocuID™ Enterprise"
+      title="DocuID® Enterprise"
       subtitle="Advanced document verification"
       description="AI-powered document authentication with real-time fraud detection for enterprise customers."
-      launchDate={new Date('2024-07-01')}
+      launchDate={new Date("2024-07-01")}
     />
   );
 }
 ```
 
 ### Conditional Rendering
+
 ```tsx
 // Show coming soon until feature is ready
 export default function FeaturePage() {
   const isFeatureReady = false; // Your feature flag logic
 
   if (!isFeatureReady) {
-    return (
-      <ComingSoon
-        title="Feature In Development"
-        showCountdown={false}
-      />
-    );
+    return <ComingSoon title="Feature In Development" showCountdown={false} />;
   }
 
   return <YourActualFeature />;
@@ -186,6 +191,7 @@ export default function FeaturePage() {
 ```
 
 ### API Integration
+
 ```tsx
 "use client";
 
@@ -197,17 +203,12 @@ export default function BetaSignup() {
 
   // Fetch launch date from API
   useEffect(() => {
-    fetch('/api/launch-date')
-      .then(res => res.json())
-      .then(data => setLaunchDate(new Date(data.date)));
+    fetch("/api/launch-date")
+      .then((res) => res.json())
+      .then((data) => setLaunchDate(new Date(data.date)));
   }, []);
 
-  return (
-    <ComingSoon
-      title="Beta Program"
-      launchDate={launchDate}
-    />
-  );
+  return <ComingSoon title="Beta Program" launchDate={launchDate} />;
 }
 ```
 
@@ -227,4 +228,4 @@ Both components use your established design system:
 2. **Analytics**: Track email signups and user engagement
 3. **Performance**: Components are optimized for fast loading
 4. **Accessibility**: All interactive elements are keyboard accessible
-5. **Mobile**: Test on various screen sizes for optimal UX 
+5. **Mobile**: Test on various screen sizes for optimal UX

@@ -52,7 +52,7 @@ const trademarks = [
   "IDENTITY Validation Platform®",
   "1-Click to Zero Trust™",
   "On-Demand ID™",
-  "DocuID™",
+  "DocuID®",
 ];
 
 export default function IntellectualProperty() {

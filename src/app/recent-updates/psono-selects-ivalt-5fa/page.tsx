@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   authors: [{ name: "iVALT" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://ivalt.com/press-release/psono-selects-ivalt-5fa",
+    canonical: "https://ivalt.com/recent-updates/psono-selects-ivalt-5fa",
   },
   openGraph: {
     type: "article",
-    url: "https://ivalt.com/press-release/psono-selects-ivalt-5fa",
+    url: "https://ivalt.com/recent-updates/psono-selects-ivalt-5fa",
     title:
       "Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication",
     description:
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   other: {
     "article:published_time": "2025-01-10T00:00:00+00:00",
     "article:author": "Baldev Krishan",
-    "article:section": "Press Release",
+    "article:section": "Recent Updates",
     "article:tag": ["5FA", "Password Management", "Cybersecurity"],
     "geo.region": "US-CA",
     "geo.placename": "Pleasanton",
@@ -75,22 +75,22 @@ export default function PsonoSelectsIvalt5fa() {
           </strong>{" "}
           Psono, a leader in secure password management using end-to-end
           encryption, chose iVALT to dramatically upgrade digital security using
-          iVALT&apos;s biometric and industry-leading 5 factor authentication
+          iVALT's biometric and industry-leading 5 factor authentication
           (5FA). The collaboration offers an advanced ultra secure way to combat
-          cyber threats. Integrating iVALT&apos;s unique 5FA system into
-          Psono&apos;s enterprise-grade platform.
+          cyber threats. Integrating iVALT's unique 5FA system into
+          Psono's enterprise-grade platform.
         </p>
         <p className="mb-6 text-justify">
           While most of us are familiar with Two-factor authentication (2FA) it
           is clear that this system has vulnerabilities. 2FA offers limited
           deterrence against hackers who can bypass its protections through
           methods like phishing, SIM cloning, or social engineering attacks.
-          2FA&apos;s device-centric approach creates a system that still has
+          2FA's device-centric approach creates a system that still has
           major vulnerabilities since it focuses on authenticating devices
-          rather than a user&apos;s identity. iVALT changes that.
+          rather than a user's identity. iVALT changes that.
         </p>
         <h2 className="text-2xl font-bold text-navy-primary mb-4">
-          iVALT&apos;s 5-Factor Authentication
+          iVALT's 5-Factor Authentication
         </h2>
         <p className="mb-4 text-justify">
           iVALT offers the most secure identity management in the world by
@@ -111,30 +111,30 @@ export default function PsonoSelectsIvalt5fa() {
           <li>Dynamic User Variables for tailored security.</li>
         </ul>
         <p className="mb-6 text-justify">
-          iValt&apos;s fully integrated solution is designed to offer businesses
+          iValt's fully integrated solution is designed to offer businesses
           and individuals unprecedented levels of security by minimizing the
           risks associated with compromised credentials and unauthorized access.
-          The company&apos;s collaboration with Psono offers a security solution
-          that will add 5FA to Psono&apos;s password management giving Psono the
+          The company's collaboration with Psono offers a security solution
+          that will add 5FA to Psono's password management giving Psono the
           most advanced identity management available.
         </p>
         <p className="mb-6 text-justify">
-          &quot;Our 5FA system was designed to address vulnerabilities beyond
-          traditional methods,&quot; says iVALT CEO & Co-Founder, Baldev
-          Krishan, Ph.D. &quot;Ransomware, social engineering, deepfakes and
+          "Our 5FA system was designed to address vulnerabilities beyond
+          traditional methods," says iVALT CEO & Co-Founder, Baldev
+          Krishan, Ph.D. "Ransomware, social engineering, deepfakes and
           phishing are out of control and will only increase in volume and
-          velocity. By applying 5FA to Psono&apos;s, password management system,
-          we&apos;re setting a new standard for trust in digital security.&quot;
+          velocity. By applying 5FA to Psono's, password management system,
+          we're setting a new standard for trust in digital security."
         </p>
         <p className="mb-6 text-justify">
-          It&apos;s a perspective that&apos;s echoed by Sascha Pfeiffer, CEO of
-          Psono. &quot;We&apos;ve always believed that security should be
+          It's a perspective that's echoed by Sascha Pfeiffer, CEO of
+          Psono. "We've always believed that security should be
           uncompromising yet user-friendly. Partnering with iVALT allows us to
           bring next-generation authentication to our customers, making their
-          digital experiences both safer and seamless.&quot;
+          digital experiences both safer and seamless."
         </p>
         <p className="mb-6 text-justify">
-          A welcome solution that&apos;s going to make us all much safer online,
+          A welcome solution that's going to make us all much safer online,
           the iVALT app is easy to use, takes only three minutes to register,
           and is available to download now from the App Store or Google Play.
         </p>
@@ -147,7 +147,7 @@ export default function PsonoSelectsIvalt5fa() {
             identity management charge by creating the leading user
             authentication system using 5 Factor Authentication to securely
             validate the user, preventing spoofing and impersonation. The
-            company&apos;s innovations, including its 1-Click to Zero Trust™
+            company's innovations, including its 1-Click to Zero Trust™
             approach and Universal Biometric ID, are transforming identity
             verification across numerous industries.
           </p>

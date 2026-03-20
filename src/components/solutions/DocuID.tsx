@@ -18,7 +18,7 @@ export default function DocuID() {
     <FadeInOnScroll className="bg-white py-6 md:py-12">
       <Container className="max-w-7xl">
         <SectionTitle
-          title="DocuID™"
+          title="DocuID®"
           description="Highly Restrictive Access Control for Documents & Media."
         />
         <div className="flex justify-center items-center my-4 mb-6">
