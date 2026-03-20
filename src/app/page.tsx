@@ -13,6 +13,8 @@ import { TrustedHuman } from '@/components/home/Trusted-human';
 import { IvaultBridge } from '@/components/home/IvaultBridge';
 import { UserExperience } from '@/components/home/User-Experience';
 import { RecentUpdatesCarousel } from '@/components/home/RecentUpdatesCarousel';
+import { CyberThreatsSection } from '@/components/home/CyberThreatsSection';
+import { IdentityMarketsHubSection } from '@/components/home/IdentityMarketsHubSection';
 
 export const metadata: Metadata = {
   title: 'iVALT Home - Identity Validation Platform',
@@ -26,6 +28,8 @@ export default function Homepage2() {
       <AnnouncementBanner />
       <HeroSection />
       <RecentUpdatesCarousel />
+      <CyberThreatsSection />
+      <IdentityMarketsHubSection />
       <IdentityCrisisSection />
       <HumanIdentity />
       <TrustedHuman />
