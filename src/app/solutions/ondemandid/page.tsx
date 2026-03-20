@@ -1,6 +1,8 @@
-import { Smartphone, ShieldAlert, Bot, Download } from 'lucide-react';
+import { Smartphone, ShieldAlert, Bot, Download, ExternalLink, Lock } from 'lucide-react';
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import onDemandId from '@/assets/images/solutions/solutions-4.jpg';
 
 export const metadata: Metadata = {
   title: 'On-Demand ID™ - Combat Deepfakes & Social Engineering',
@@ -19,49 +21,57 @@ export const metadata: Metadata = {
 };
 
 export default function OnDemandIdPage() {
-  const features = [
-    {
-      icon: Smartphone,
-      text: 'Instantly verify identity of suspicious calls/messages',
-    },
-    { icon: ShieldAlert, text: 'Biometrics, registered device and location' },
-    {
-      icon: Bot,
-      text: 'The only solution worldwide to truly defeat deepfake & social engineering attacks',
-    },
-  ];
-
   return (
-    <section className="min-h-screen bg-background py-24">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl font-extrabold text-navy-primary mb-4">On-Demand ID™</h1>
-        <h2 className="text-2xl font-semibold text-teal-primary mb-12">
-          Combatting Social Engineering & Deepfakes
-        </h2>
+    <section className="min-h-screen bg-background pb-24">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-primary/10 text-teal-primary text-sm font-medium mb-8">
+            <Lock className="w-4 h-4" />
+            <span>On-Demand ID®</span>
+          </div>
 
-        <p className="text-xl text-gray-700 mb-16 leading-relaxed">
-          Real-time identity verification within our mobile app.
-        </p>
+          {/* Title */}
+          <h1 className="text-5xl md:text-6xl font-extrabold text-navy-primary mb-6 tracking-tight">
+            On-Demand ID®
+          </h1>
 
-        <div className="space-y-10">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <feature.icon className="w-12 h-12 text-teal-primary mb-4" />
-              <p className="text-xl text-gray-800 font-medium max-w-md">{feature.text}</p>
-            </div>
-          ))}
+          {/* Subtitle */}
+          <h2 className="text-2xl md:text-3xl font-semibold text-teal-primary mb-8">
+            Exposing False Trust – At AI Speed
+          </h2>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://www.ondemandid.com" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-teal-primary hover:bg-teal-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-teal-primary/25 transition-all hover:shadow-xl hover:shadow-teal-primary/30 hover:-translate-y-0.5"
+              >
+                Visit OnDemandId.com
+                <ExternalLink className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+            <a href="/brochures/On-DemandID-Brochure.pdf" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-white border border-teal-primary text-teal-primary hover:bg-teal-primary hover:text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+              >
+                Download OnDemandID Brochure
+                <Download className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+          </div>
         </div>
-
-        <div className="mt-14">
-          <a href="/brochures/On-DemandID-Brochure.pdf" target="_blank" rel="noopener noreferrer">
-            <Button
-              size="lg"
-              className="bg-teal-primary hover:bg-teal-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg shadow-teal-primary/25 transition-all hover:shadow-xl hover:shadow-teal-primary/30 hover:-translate-y-0.5"
-            >
-              Download Ondemandid Brochure
-              <Download className="ml-2 w-5 h-5" />
-            </Button>
-          </a>
+        <div className="flex justify-center items-center my-4 mb-6">
+          <Image
+            src={onDemandId}
+            alt="On-Demand ID"
+            width={1500}
+            height={1500}
+            className="w-full md:w-[50%] h-full object-cover mb-3"
+          />
         </div>
       </div>
     </section>

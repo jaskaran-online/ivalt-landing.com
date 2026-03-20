@@ -9,7 +9,7 @@ import {
   ChevronDown,
   FileLock,
   Smartphone,
-  Fingerprint,
+  ShieldCheck,
   Sparkles,
   FileText,
 } from 'lucide-react';
@@ -49,10 +49,10 @@ export const navItems = [
         description: 'Combat Deepfakes & Social Engineering',
       },
       {
-        label: 'Universal Biometric ID®',
-        href: '/solutions/universalid',
-        icon: Fingerprint,
-        description: 'Enterprise Security Solution',
+        label: 'Human-Bound Authority',
+        href: '/solutions/human-bound-authority',
+        icon: ShieldCheck,
+        description: 'Provable at Execution',
       },
     ],
   },
@@ -128,18 +128,36 @@ export default function Header() {
                       onMouseEnter={() => setOpenDropdown(item.href)}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <button
-                        className={`inline-flex items-center px-1 py-5 border-b-2 text-md font-medium transition-colors ${
+                      <div
+                        className={`group inline-flex items-center border-b-2 transition-colors ${
                           isActive
-                            ? 'border-navy-primary text-navy-primary'
-                            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                            ? 'border-navy-primary'
+                            : 'border-transparent hover:border-gray-300'
                         }`}
                       >
-                        {item.label}
-                        <ChevronDown
-                          className={`ml-1 w-4 h-4 transition-transform ${openDropdown === item.href ? 'rotate-180' : ''}`}
-                        />
-                      </button>
+                        <Link
+                          href={item.href}
+                          className={`inline-flex items-center py-5 pl-1 pr-0.5 text-md font-medium ${
+                            isActive
+                              ? 'text-navy-primary'
+                              : 'text-gray-500 group-hover:text-gray-700'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                        <span
+                          className={`inline-flex items-center py-5 pr-1 ${
+                            isActive
+                              ? 'text-navy-primary'
+                              : 'text-gray-500 group-hover:text-gray-700'
+                          }`}
+                          aria-hidden
+                        >
+                          <ChevronDown
+                            className={`ml-0.5 h-4 w-4 shrink-0 transition-transform ${openDropdown === item.href ? 'rotate-180' : ''}`}
+                          />
+                        </span>
+                      </div>
 
                       {/* Dropdown Menu */}
                       {openDropdown === item.href && (
@@ -237,13 +255,17 @@ export default function Header() {
                     if (item.dropdown) {
                       return (
                         <div key={item.href} className="space-y-2">
-                          <div
-                            className={`text-lg font-medium py-2 px-4 rounded-sm ${
-                              isActive ? 'bg-primary text-white' : 'text-gray-600'
+                          <Link
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className={`block text-lg font-medium py-2 px-4 rounded-sm transition-colors ${
+                              isActive
+                                ? 'bg-primary text-white'
+                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                             }`}
                           >
                             {item.label}
-                          </div>
+                          </Link>
                           <div className="pl-4 space-y-1">
                             {item.dropdown.map(subItem => {
                               const Icon = subItem.icon;
