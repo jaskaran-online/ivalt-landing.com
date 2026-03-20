@@ -16,6 +16,7 @@ import { RecentUpdatesCarousel } from '@/components/home/RecentUpdatesCarousel';
 import { CyberThreatsSection } from '@/components/home/CyberThreatsSection';
 import { IdentityMarketsHubSection } from '@/components/home/IdentityMarketsHubSection';
 import CredentialFailExcecution from '@/components/home/CredentialFailExcecution';
+import HumanAuthorityEnforce from '@/components/home/HumanAuthorityEnforce';
 
 export const metadata: Metadata = {
   title: 'iVALT Home - Identity Validation Platform',
@@ -31,6 +32,7 @@ export default function Homepage2() {
       <RecentUpdatesCarousel />
       <CyberThreatsSection />
       <CredentialFailExcecution/>
+      <HumanAuthorityEnforce/>
       <IdentityMarketsHubSection />
       <IdentityCrisisSection />
       <HumanIdentity />
