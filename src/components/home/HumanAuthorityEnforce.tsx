@@ -10,7 +10,7 @@ const HumanAuthorityEnforce = () => {
                 Identity Compromise No Longer Becomes Catastrophic
             </p>
             <div className='flex justify-center py-4'>
-                <div className='relative rounded-lg overflow-hidden shadow'>
+                <div className='relative rounded-lg overflow-hidden'>
                     <Image 
                         src={humanBounded} 
                         alt="Human Authority Enforce" 

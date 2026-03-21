@@ -11,7 +11,7 @@ const CredentialFailExcecution = () => {
                 AI Exponentially Amplifies this Proven Weakness
             </p>
             <div className='flex justify-center'>
-                <div className=' rounded-lg overflow-hidden shadow'>
+                <div className=' rounded-lg overflow-hidden'>
                     <Image 
                         src={Credential} 
                         alt="Credential Fail at Execution" 

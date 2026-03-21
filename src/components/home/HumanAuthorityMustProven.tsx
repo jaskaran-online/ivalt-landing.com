@@ -11,7 +11,7 @@ const HumanAuthorityMustProven = () => {
                 From Identity to Provable (and Trusted) Authority
             </p>
             <div className='flex justify-center py-4'>
-                <div className='relative rounded-lg overflow-hidden shadow'>
+                <div className='relative rounded-lg overflow-hidden '>
                     <Image 
                         src={ProvenAuthorityImage} 
                         alt="Human Authority Must be Proven at Execution"
