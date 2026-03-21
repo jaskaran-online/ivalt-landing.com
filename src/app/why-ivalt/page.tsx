@@ -9,6 +9,7 @@ import {
 import GovernanceIdentity from '@/components/why-ivalt/GovernanceIdentity';
 import { PatentCapabilities } from '@/components/why-ivalt/Patent-Capabilities';
 import { UniqeBenifits } from '@/components/why-ivalt/Uniqe-Benifits';
+import WhyNow from '@/components/why-ivalt/WhyNow';
 
 export default function WhyIvalt() {
   return (
@@ -18,6 +19,7 @@ export default function WhyIvalt() {
       {/* <FactorsOfIdentity /> */}
       <PatentCapabilities />
       <GovernanceIdentity/>
+      <WhyNow/>
       <PartnershipBenefits />
       <UniqeBenifits />
       {/* <ComingSoon /> */}
