@@ -7,6 +7,7 @@ import {
   PioneeringContent,
 } from '@/components/why-ivalt';
 import GovernanceIdentity from '@/components/why-ivalt/GovernanceIdentity';
+import HumanAutSecurity from '@/components/why-ivalt/HumanAutSecurity';
 import { PatentCapabilities } from '@/components/why-ivalt/Patent-Capabilities';
 import { UniqeBenifits } from '@/components/why-ivalt/Uniqe-Benifits';
 import WhyNow from '@/components/why-ivalt/WhyNow';
@@ -20,6 +21,7 @@ export default function WhyIvalt() {
       <PatentCapabilities />
       <GovernanceIdentity/>
       <WhyNow/>
+      <HumanAutSecurity/>
       <PartnershipBenefits />
       <UniqeBenifits />
       {/* <ComingSoon /> */}
