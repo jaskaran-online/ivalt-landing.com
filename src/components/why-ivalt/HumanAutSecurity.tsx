@@ -26,7 +26,7 @@ const HumanAutSecurity = () => {
                         <p className='text-lg font-semibold'>Access & Governance Layer — Access Mgmt | AI Governance</p>
                     </div>
 
-                    <div className='relative w-full max-w-2xl bg-[#4CAF50] text-white p-4 rounded-lg shadow-md'>
+                    <div className='relative w-full max-w-2xl bg-[#20B2AA] text-white p-4 rounded-lg shadow-md'>
                        
                         <p className='text-lg font-semibold'>Human Authority Layer (NEW) — Provable Human-Bound Authority — iVALT</p>
                     </div>
