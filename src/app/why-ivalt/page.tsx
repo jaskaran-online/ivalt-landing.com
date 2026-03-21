@@ -6,6 +6,7 @@ import {
   PartnershipBenefits,
   PioneeringContent,
 } from '@/components/why-ivalt';
+import GovernanceIdentity from '@/components/why-ivalt/GovernanceIdentity';
 import { PatentCapabilities } from '@/components/why-ivalt/Patent-Capabilities';
 import { UniqeBenifits } from '@/components/why-ivalt/Uniqe-Benifits';
 
@@ -13,9 +14,10 @@ export default function WhyIvalt() {
   return (
     <Container className="bg-[#FAF9F7] md:py-12 py-6">
       <SectionTitle title="Why iVALT ?" description="" />
-      <PioneeringContent />
+      {/* <PioneeringContent /> */}
       {/* <FactorsOfIdentity /> */}
       <PatentCapabilities />
+      <GovernanceIdentity/>
       <PartnershipBenefits />
       <UniqeBenifits />
       {/* <ComingSoon /> */}
