@@ -88,7 +88,7 @@ const EARLY = {
  * Orthogonal “circuit” routes from hub (no diagonal shear). Uniform scale via `meet`.
  */
 function HubSpokeLines() {
-  const stroke = '#1e4884';
+  const stroke = '#30b68e';
   const hx = 500;
   const hy = 240;
   const routes = [
@@ -124,7 +124,7 @@ function HubSpokeLines() {
 export function IdentityMarketsHubSection() {
   return (
     <section
-      className="relative z-20 overflow-hidden py-16 md:py-20"
+      className="relative z-20 overflow-hidden py-6 md:py-16 bg-[#FAF9F7]"
       aria-labelledby="identity-markets-heading"
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
