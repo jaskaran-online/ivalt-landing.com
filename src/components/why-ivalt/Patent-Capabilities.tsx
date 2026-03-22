@@ -20,8 +20,8 @@ const Points = [
 
 export const PatentCapabilities = () => {
   return (
-    <div className="bg-white p-4 sm:p-6 md:py-11 mt-8 sm:mt-12 md:mt-16  max-w-6xl mx-auto mb-4 md:mb-16">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6 text-center">
+    <div className="p-4 sm:p-6 md:py-11 mt-8 sm:mt-12 md:mt-16  max-w-6xl mx-auto mb-4 md:mb-16">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6 text-center md:mb-12">
         iVALT&apos;s Patented Capabilities
       </h1>
       <ul className="list-disc pl-3 sm:pl-4 md:pl-5 space-y-4 sm:space-y-5 md:space-y-7 text-gray-800">

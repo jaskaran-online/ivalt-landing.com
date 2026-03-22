@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import EasyOverlayImplementationImage from '@/assets/images/home/easy-overlay-implementation.png';
 
-const EasyOverlayImplementation = () => {
+const EasyOverlayImplementation = ({ bgColor = 'bg-white' }: { bgColor?: string }) => {
   return (
-    <div className="text-center py-16 px-4">
+    <div className={`text-center py-16 px-4 ${bgColor}`}>
       <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
         Easy Overlay Implementation
       </h2>

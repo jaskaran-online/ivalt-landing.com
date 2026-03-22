@@ -1,5 +1,8 @@
 import Container from '@/components/Container';
+import EasyOverlayImplementation from '@/components/home/EasyOverlayImplementation';
 import SectionTitle from '@/components/SectionTitle';
+import SimpleUserExperience from '@/components/why-ivalt/SimpleUserExperience';
+import TheConvergenceofAI from '@/components/why-ivalt/TheConvergenceofAI';
 import {
   // ComingSoon,
   // FactorsOfIdentity,
@@ -18,12 +21,15 @@ export default function WhyIvalt() {
       <SectionTitle title="Why iVALT ?" description="" />
       {/* <PioneeringContent /> */}
       {/* <FactorsOfIdentity /> */}
+      <GovernanceIdentity />
+      <TheConvergenceofAI />
+      <WhyNow />
+      <HumanAutSecurity />
+      <EasyOverlayImplementation bgColor="bg-white" />
+      <SimpleUserExperience />
       <PatentCapabilities />
-      <GovernanceIdentity/>
-      <WhyNow/>
-      <HumanAutSecurity/>
       <PartnershipBenefits />
-      <UniqeBenifits />
+      {/* <UniqeBenifits /> */}
       {/* <ComingSoon /> */}
     </Container>
   );
