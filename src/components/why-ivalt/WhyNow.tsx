@@ -8,7 +8,7 @@ const WhyNow = () => {
 
       <div className="flex flex-col lg:flex-row justify-center items-start gap-8 max-w-7xl mx-auto mb-12">
         {/* Force 1 */}
-        <div className="flex-1 max-w-md bg-white border-2 border-gray-300 rounded-lg p-6 ">
+        <div className="flex-1 mx-auto md:max-w-md bg-white border-2 border-gray-300 rounded-lg p-6 ">
           <h3 className="text-xl font-bold text-[#2A3F6C] mb-4">Credential Identity Has Failed</h3>
           <ul className="text-left text-gray-700 space-y-2 mb-4">
             <li className="flex items-start">
@@ -33,7 +33,7 @@ const WhyNow = () => {
           </p>
         </div>
 
-        <div className="flex-1 max-w-md bg-white border-2 border-gray-300 rounded-lg p-6 ">
+        <div className="flex-1 mx-auto md:max-w-md bg-white border-2 border-gray-300 rounded-lg p-6 ">
           <h3 className="text-xl font-bold text-[#2A3F6C] mb-4">
             AI Is Starting to Execute Actions
           </h3>
@@ -57,7 +57,7 @@ const WhyNow = () => {
         </div>
 
         {/* Force 3 */}
-        <div className="flex-1 max-w-md bg-white border-2 border-gray-300 rounded-lg p-6 ">
+        <div className="flex-1 mx-auto md:max-w-md bg-white border-2 border-gray-300 rounded-lg p-6 ">
           <h3 className="text-xl font-bold text-[#2A3F6C] mb-4">Deepfakes Break Human Trust</h3>
           <ul className="text-left text-gray-700 space-y-2 mb-4">
             <li className="flex items-start">
