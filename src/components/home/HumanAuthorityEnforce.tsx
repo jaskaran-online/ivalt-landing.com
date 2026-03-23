@@ -4,9 +4,9 @@ const HumanAuthorityEnforce = () => {
     return (
       <div className="text-center py-16 px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-          Human Authority Enforce at Execution
+          Human Authority Enforced at Execution
         </h2>
-        <p className="mx-auto mt-4 max-w-3xl text-xl font-bold italic text-teal-primary sm:text-2xl">
+        <p className="mx-auto mt-4 max-w-4xl text-xl font-bold italic text-teal-primary sm:text-3xl mb-4 md:mb-8">
           Identity Compromise No Longer Becomes Catastrophic
         </p>
         <div className="flex justify-center py-4">
