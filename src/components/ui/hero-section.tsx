@@ -3,7 +3,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Fingerprint, ArrowRight, Sparkles, ArrowBigRightDash } from 'lucide-react';
+import {
+  Shield,
+  Fingerprint,
+  ArrowRight,
+  Sparkles,
+  ArrowBigRightDash,
+  ShieldCheck,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Update {
@@ -307,21 +314,21 @@ export function HeroSection() {
                       </div>
                     </Link>
 
-                    {/* Universal Biometric ID */}
-                    <Link href="/solutions/universalid" className="group block">
-                      <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/80 border border-gray-100 group-hover:border-[#30B68E]/30 group-hover:bg-[#30B68E]/5 transition-all duration-200">
-                        <div className="w-9 h-9 rounded-lg bg-[#30B68E]/10 flex items-center justify-center shrink-0 group-hover:bg-[#30B68E]/20 transition-colors">
-                          <Fingerprint className="w-4 h-4 text-[#30B68E]" />
+                    {/* human-bound-authority */}
+                    <Link href="/human-bound-authority" className="group block">
+                      <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/80 border border-gray-100 group-hover:border-[#1E4884]/30 group-hover:bg-[#1E4884]/5 transition-all duration-200">
+                        <div className="w-9 h-9 rounded-lg bg-[#1E4884]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1E4884]/20 transition-colors">
+                          <ShieldCheck className="w-4 h-4 text-[#1E4884]" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-[#1E4884] text-sm group-hover:text-[#30B68E] transition-colors">
-                            Universal ID®
+                          <p className="font-semibold text-[#1E4884] text-sm group-hover:text-[#1E4884] transition-colors">
+                            Human-Bound Authority
                           </p>
                           <p className="text-[11px] text-gray-500 leading-tight">
-                            Biometric identity anywhere, anytime
+                            Provable at Execution
                           </p>
                         </div>
-                        <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#30B68E] transition-colors">
+                        <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#1E4884] transition-colors">
                           <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-white transition-colors" />
                         </div>
                       </div>

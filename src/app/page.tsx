@@ -32,9 +32,9 @@ export const metadata: Metadata = {
 export default function Homepage2() {
   return (
     <>
-      <AnnouncementBanner />
+      {/* <AnnouncementBanner /> */}
       <HeroSection />
-      <RecentUpdatesCarousel />
+      {/* <RecentUpdatesCarousel /> */}
       <CyberThreatsSection />
       <CredentialFailExcecution />
       <HumanAuthorityMustProven />

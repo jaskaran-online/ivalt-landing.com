@@ -56,36 +56,36 @@ export const navItems = [
       },
     ],
   },
-  {
-    label: 'Recent Updates',
-    href: '/recent-updates',
-    badge: 'New',
-  },
-  {
-    label: 'Download Brochure',
-    href: '/brochures',
-    badge: 'New',
-    dropdown: [
-      {
-        label: 'iVALT Brochure',
-        href: '/brochures/iVALT-brochure-final-version.pdf',
-        icon: Download,
-        description: 'Company overview brochure',
-      },
-      {
-        label: 'DocuID Brochure',
-        href: '/brochures/DocuID-Brochure.pdf',
-        icon: FileText,
-        description: 'DocuID® solution brochure',
-      },
-      {
-        label: 'Ondemandid Brochure',
-        href: '/brochures/On-DemandID-Brochure.pdf',
-        icon: FileText,
-        description: 'On-Demand ID™ solution brochure',
-      },
-    ],
-  },
+  // {
+  //   label: 'Recent Updates',
+  //   href: '/recent-updates',
+  //   badge: 'New',
+  // },
+  // {
+  //   label: 'Download Brochure',
+  //   href: '/brochures',
+  //   badge: 'New',
+  //   dropdown: [
+  //     {
+  //       label: 'iVALT Brochure',
+  //       href: '/brochures/iVALT-brochure-final-version.pdf',
+  //       icon: Download,
+  //       description: 'Company overview brochure',
+  //     },
+  //     {
+  //       label: 'DocuID Brochure',
+  //       href: '/brochures/DocuID-Brochure.pdf',
+  //       icon: FileText,
+  //       description: 'DocuID® solution brochure',
+  //     },
+  //     {
+  //       label: 'Ondemandid Brochure',
+  //       href: '/brochures/On-DemandID-Brochure.pdf',
+  //       icon: FileText,
+  //       description: 'On-Demand ID™ solution brochure',
+  //     },
+  //   ],
+  // },
   {
     label: 'About',
     href: '/about',
