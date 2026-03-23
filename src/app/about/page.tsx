@@ -2,6 +2,7 @@ import Container from '@/components/Container';
 import SectionTitle from '@/components/SectionTitle';
 import { BodyText, Heading2 } from '@/components/ui/typography';
 import IntellectualProperty from '@/components/IntellectualProperty';
+import { Metadata } from 'next';
 
 import Image, { StaticImageData } from 'next/image';
 import Baldev from '@/assets/images/about/baldev.png';
@@ -9,6 +10,15 @@ import Brian from '@/assets/images/about/Brian.png';
 import Marc from '@/assets/images/about/Marc.jpg';
 import LinkedIn from '@/assets/linkedin.png';
 import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+
+export const metadata: Metadata = {
+  title: 'About iVALT',
+  description:
+    "Learn about iVALT's mission to revolutionize identity verification. Founded in Silicon Valley, iVALT pioneers 5-Factor Authentication and biometric security solutions.",
+  alternates: {
+    canonical: '/about',
+  },
+};
 
 type Founder = {
   name: string;

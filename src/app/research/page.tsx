@@ -1,5 +1,15 @@
 import ComingSoon from '@/components/ComingSoon';
 import Container from '@/components/Container';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Research',
+  description:
+    'iVALT research on identity verification, biometric security, and Zero Trust authentication. Explore our latest findings and innovations.',
+  alternates: {
+    canonical: '/research',
+  },
+};
 
 export default function Research() {
   return (
