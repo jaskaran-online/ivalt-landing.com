@@ -3,14 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Heading4, SmallText } from '@/components/ui/typography';
-import { Fingerprint, Smartphone, FileLock, ChevronRight } from 'lucide-react';
+import { Smartphone, FileLock, ChevronRight, ShieldCheck } from 'lucide-react';
+
 
 const productLinks = [
   {
-    label: 'Universal Biometric ID®',
-    href: '/solutions/universalid',
-    icon: Fingerprint,
-    description: 'Enterprise Security Solution',
+    label: 'Human-Bound Authority',
+    href: '/solutions/human-bound-authority',
+    icon: ShieldCheck,
+    description: 'Provable at Execution',
   },
   {
     label: 'On-Demand ID™',
