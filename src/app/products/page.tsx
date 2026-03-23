@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/products',
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Products() {

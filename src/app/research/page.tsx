@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/research',
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Research() {

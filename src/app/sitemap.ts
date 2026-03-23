@@ -39,12 +39,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'https://www.ivalt.com/products',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
       url: 'https://www.ivalt.com/why-ivalt',
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -96,12 +90,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://www.ivalt.com/recent-updates/psono-selects-ivalt-5fa',
       lastModified: new Date('2025-01-10'),
       changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://www.ivalt.com/research',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
