@@ -315,7 +315,7 @@ export function HeroSection() {
                     </Link>
 
                     {/* human-bound-authority */}
-                    <Link href="/human-bound-authority" className="group block">
+                    <Link href="/solutions/human-bound-authority" className="group block">
                       <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/80 border border-gray-100 group-hover:border-[#1E4884]/30 group-hover:bg-[#1E4884]/5 transition-all duration-200">
                         <div className="w-9 h-9 rounded-lg bg-[#1E4884]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1E4884]/20 transition-colors">
                           <ShieldCheck className="w-4 h-4 text-[#1E4884]" />
