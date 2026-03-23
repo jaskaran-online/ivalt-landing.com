@@ -80,7 +80,7 @@ export default function PsonoSelectsIvalt5fa() {
         </h1>
         <Image
           src="/press-release/images/psono-collaborates-with-ivalt.png"
-          alt=""
+          alt="Psono partners with iVALT for 5-Factor Authentication"
           width={1200}
           height={630}
           className="w-full h-auto mx-auto"

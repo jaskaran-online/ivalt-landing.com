@@ -85,7 +85,7 @@ export default function Page() {
         </h1>
         <Image
           src="/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png"
-          alt=""
+          alt="iVALT launches DocuID document security solution"
           width={1200}
           height={630}
           className="w-full h-auto mx-auto"

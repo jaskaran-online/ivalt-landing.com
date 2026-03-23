@@ -84,7 +84,7 @@ export default function Page() {
         </h1>
         <Image
           src="/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png"
-          alt=""
+          alt="iVALT launches OnDemand ID with 5+ factors of identity validation"
           width={1200}
           height={630}
           className="w-full h-auto mx-auto"
