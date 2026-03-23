@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: 'iVALT Solutions',
     description: `Human-bound authority, ${solutionsDocuId.title}, and ${solutionsOnDemandId.title} on one platform.`,
   },
+  alternates: {
+    canonical: '/solutions',
+  },
 };
 
 export default function Solutions() {

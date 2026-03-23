@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     description:
       'iVALT and OpenVPN have partnered to deliver a next-generation secure remote access solution.',
   },
+  alternates: {
+    canonical: '/openvpn',
+  },
 };
 
 export default function OpenVPNPage() {

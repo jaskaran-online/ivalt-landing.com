@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description:
       "Take control of your document security with iVALT's DocuID. Multi-factor authentication and DRM to prevent unauthorized access.",
   },
+  alternates: {
+    canonical: '/solutions/docuid',
+  },
 };
 
 export default function DocuIdPage() {

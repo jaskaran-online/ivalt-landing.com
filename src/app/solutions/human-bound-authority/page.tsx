@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description:
       "Enhance your corporate security with iVALT's Human-Bound Authority. A seamless, 1-click user experience with real-time biometric and contextual verification.",
   },
+  alternates: {
+    canonical: '/solutions/human-bound-authority',
+  },
 };
 
 export default function HumanBoundAuthorityPage() {
