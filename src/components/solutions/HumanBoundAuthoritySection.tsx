@@ -50,14 +50,26 @@ export function HumanBoundAuthoritySection() {
           </Button>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-between max-w-7xl mx-auto items-center my-4 mb-6 gap-4 md:gap-16 px-8">
           <Image
             src={HumanBoundAuthorityImage}
             alt={title}
             width={1500}
             height={1500}
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full md:w-[60%] h-full object-cover mb-3"
           />
+          <div className="flex flex-col justify-between gap-2 md:gap-8 h-[250px] md:h-[400px]">
+            <div className="border-4 p-2 md:p-8 rounded-lg">
+              <h3 className="text-lg md:text-2xl font-semibold md:font-bold text-navy-primary text-center">
+                IAM Extended to AI with PKI as for Cryptographic User Identity
+              </h3>
+            </div>
+            <div className="border-4 p-2 md:p-8 rounded-lg">
+              <h3 className="text-lg md:text-2xl font-semibold md:font-bold text-navy-primary text-center">
+                Human-Bound Authority Verified Before Execution
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>
