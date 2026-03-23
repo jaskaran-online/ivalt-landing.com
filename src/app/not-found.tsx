@@ -1,12 +1,7 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import {
-  Heading1,
-  Heading2,
-  BodyText,
-  SmallText,
-} from "@/components/ui/typography";
-import { Home, ArrowLeft, Search, Mail } from "lucide-react";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Heading1, Heading2, BodyText, SmallText } from '@/components/ui/typography';
+import { Home, ArrowLeft, Search, Mail } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -29,18 +24,15 @@ export default function NotFound() {
             Page Not Found
           </Heading2>
           <BodyText color="muted" className="mb-6 max-w-md mx-auto">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for. The
-            page might have been moved, deleted, or you entered the wrong URL.
+            Sorry, we couldn&apos;t find the page you&apos;re looking for. The page might have been
+            moved, deleted, or you entered the wrong URL.
           </BodyText>
         </div>
 
         {/* Action Buttons */}
         <div className="space-y-4 mb-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              className="bg-teal-primary hover:bg-teal-primary/90 text-white"
-            >
+            <Button asChild className="bg-teal-primary hover:bg-teal-primary/90 text-white">
               <Link href="/" className="inline-flex items-center">
                 <Home className="mr-2 h-4 w-4" />
                 Go Home
@@ -52,10 +44,7 @@ export default function NotFound() {
               asChild
               className="border-navy-primary text-navy-primary hover:bg-navy-primary hover:text-white"
             >
-              <Link
-                href="javascript:history.back()"
-                className="inline-flex items-center"
-              >
+              <Link href="javascript:history.back()" className="inline-flex items-center">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Go Back
               </Link>

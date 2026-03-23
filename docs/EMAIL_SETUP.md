@@ -10,6 +10,7 @@ This guide explains how to set up email sending functionality and Google reCAPTC
 ## Environment Variables Setup
 
 1. Copy `.env.example` to `.env.local`:
+
    ```bash
    cp .env.example .env.local
    ```
@@ -60,7 +61,8 @@ For the API request feature, you need to set an API key that will be sent to use
 API_KEY=your-api-key-here  # The API key to send to users requesting access
 ```
 
-**Important**: 
+**Important**:
+
 - This should be a secure, randomly generated API key
 - Never commit this key to version control
 - Use a different key for production than development
@@ -79,6 +81,7 @@ For Gmail SMTP, you need to use an App Password instead of your regular password
 ## Testing the Setup
 
 1. Start the development server:
+
    ```bash
    npm run dev
    # or
@@ -102,6 +105,7 @@ The following API endpoints handle form submissions:
 - `/api/api-request` - API access requests
 
 All endpoints:
+
 - Validate input using Zod schemas
 - Verify reCAPTCHA v3 tokens
 - Send emails using Nodemailer
@@ -117,6 +121,7 @@ Both API endpoints now support sending emails to multiple recipients:
 - **ADMIN_EMAILS**: Comma-separated list of emails for newsletter signup notifications
 
 Example:
+
 ```env
 CONTACT_EMAILS=contact@company.com,support@company.com,sales@company.com
 ADMIN_EMAILS=admin@company.com,manager@company.com
@@ -125,6 +130,7 @@ ADMIN_EMAILS=admin@company.com,manager@company.com
 ### Fallback Support
 
 For backward compatibility, the system falls back to:
+
 1. `CONTACT_EMAILS` → `CONTACT_EMAIL` → `info@ivalt.com`
 2. `ADMIN_EMAILS` → `CONTACT_EMAILS` → `CONTACT_EMAIL` → `info@ivalt.com`
 
@@ -185,6 +191,7 @@ Check the browser console and server logs for detailed error messages.
 ## Support
 
 If you encounter issues, check:
+
 1. Environment variables are set correctly
 2. Gmail App Password is configured
 3. reCAPTCHA keys are valid for your domain

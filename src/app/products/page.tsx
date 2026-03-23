@@ -1,5 +1,5 @@
-import Container from "@/components/Container";
-import ComingSoon from "@/components/ComingSoon";
+import Container from '@/components/Container';
+import ComingSoon from '@/components/ComingSoon';
 
 export default function Products() {
   return (
@@ -7,7 +7,7 @@ export default function Products() {
       <ComingSoon
         title="Products"
         subtitle="Next-gen security is almost here"
-        launchDate={new Date("2024-06-01")}
+        launchDate={new Date('2024-06-01')}
       />
     </Container>
   );

@@ -1,4 +1,4 @@
-import { Heading2 } from "./ui/typography";
+import { Heading2 } from './ui/typography';
 
 type SectionTitleProps = {
   title: string;
@@ -9,16 +9,14 @@ type SectionTitleProps = {
 export default function SectionTitle({
   title,
   description,
-  textAlign = "text-center",
+  textAlign = 'text-center',
 }: SectionTitleProps) {
   return (
-    <div className={textAlign + " mb-8"}>
+    <div className={textAlign + ' mb-8'}>
       <Heading2 color="dark-navy" className="text-3xl font-bold">
         {title}
       </Heading2>
-      <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-        {description}
-      </p>
+      <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
     </div>
   );
 }

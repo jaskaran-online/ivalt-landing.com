@@ -1,6 +1,6 @@
-import { Heading4, SmallText } from "@/components/ui/typography";
-import { Mail } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
+import { Heading4, SmallText } from '@/components/ui/typography';
+import { Mail } from 'lucide-react';
+import ContactForm from '@/components/ContactForm';
 
 export default function FooterContact() {
   return (

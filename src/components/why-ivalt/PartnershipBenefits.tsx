@@ -1,6 +1,6 @@
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import SectionTitle from "../SectionTitle";
-import { PartnershipBenefitCard } from "./PartnershipBenefitCard";
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import SectionTitle from '../SectionTitle';
+import { PartnershipBenefitCard } from './PartnershipBenefitCard';
 import {
   Shield,
   MousePointer,
@@ -9,85 +9,75 @@ import {
   DollarSign,
   BarChart3,
   ArrowRight,
-} from "lucide-react";
-import { Button } from "../ui/button";
-import Link from "next/link";
+} from 'lucide-react';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const Benefits = [
   {
     icon: Shield,
-    title: "Fraud Reduction",
-    subtitle: "Across the Board",
+    title: 'Fraud Reduction',
+    subtitle: 'Across the Board',
     description:
-      "Comprehensive security through multiple authentication factors that make stolen credentials worthless.",
+      'Comprehensive security through multiple authentication factors that make stolen credentials worthless.',
     features: [
-      "Biometric authentication with face and fingerprint recognition",
-      "25+ security factors for maximum protection",
-      "Real-time verification and threat detection",
+      'Biometric authentication with face and fingerprint recognition',
+      '25+ security factors for maximum protection',
+      'Real-time verification and threat detection',
     ],
     delay: 0,
   },
   {
     icon: MousePointer,
-    title: "Frictionless UX",
-    subtitle: "User Experience",
+    title: 'Frictionless UX',
+    subtitle: 'User Experience',
     description:
-      "Simplified authentication process that enhances user satisfaction while maintaining security.",
+      'Simplified authentication process that enhances user satisfaction while maintaining security.',
     features: [
-      "1-Click authentication",
-      "No passwords or complex procedures required",
-      "Seamless integration",
+      '1-Click authentication',
+      'No passwords or complex procedures required',
+      'Seamless integration',
     ],
     delay: 0.1,
   },
   {
     icon: TrendingUp,
-    title: "New Revenue Opportunities",
-    subtitle: "Business Growth",
+    title: 'New Revenue Opportunities',
+    subtitle: 'Business Growth',
     description:
-      "Unlock new revenue streams with premium identity services and advanced security solutions.",
-    features: [
-      "Premium Identity-as-a-Service offerings",
-      "Advanced Document Security solutions",
-    ],
+      'Unlock new revenue streams with premium identity services and advanced security solutions.',
+    features: ['Premium Identity-as-a-Service offerings', 'Advanced Document Security solutions'],
     delay: 0.2,
   },
   {
     icon: Users,
-    title: "All Key Use Cases",
-    subtitle: "Comprehensive Coverage",
-    description:
-      "Support for all critical business operations and customer interaction workflows.",
-    features: [
-      "Alert responses",
-      "User actions",
-      "Customer service",
-      "Data access",
-    ],
+    title: 'All Key Use Cases',
+    subtitle: 'Comprehensive Coverage',
+    description: 'Support for all critical business operations and customer interaction workflows.',
+    features: ['Alert responses', 'User actions', 'Customer service', 'Data access'],
     delay: 0.3,
   },
   {
     icon: DollarSign,
-    title: "Simple Business Model",
-    subtitle: "Transparent Pricing",
-    description:
-      "Straightforward pricing structure that makes budgeting and scaling predictable.",
+    title: 'Simple Business Model',
+    subtitle: 'Transparent Pricing',
+    description: 'Straightforward pricing structure that makes budgeting and scaling predictable.',
     features: [
-      "Per user per month transparent pricing",
-      "No hidden fees or complex licensing",
-      "Scalable plans for businesses of all sizes",
+      'Per user per month transparent pricing',
+      'No hidden fees or complex licensing',
+      'Scalable plans for businesses of all sizes',
     ],
     delay: 0.4,
   },
   {
     icon: BarChart3,
-    title: "Constant Optimization",
-    subtitle: "AI-Driven Enhancement",
+    title: 'Constant Optimization',
+    subtitle: 'AI-Driven Enhancement',
     description:
-      "Continuous improvement through machine learning algorithms that adapt to your business needs.",
+      'Continuous improvement through machine learning algorithms that adapt to your business needs.',
     features: [
-      "Per use case optimization and customization",
-      "AI/ML models that learn and improve over time",
+      'Per use case optimization and customization',
+      'AI/ML models that learn and improve over time',
     ],
     delay: 0.5,
   },
@@ -124,8 +114,8 @@ export default function PartnershipBenefits() {
               7 Patents Granted, 10+ Patents Pending, 4 Registered Trademarks
             </h3>
             <p className="text-gray-700 text-lg mb-6 max-w-3xl mx-auto">
-              iVALT is a leader in the field of identity verification, with a
-              strong portfolio of patents and trademarks.
+              iVALT is a leader in the field of identity verification, with a strong portfolio of
+              patents and trademarks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

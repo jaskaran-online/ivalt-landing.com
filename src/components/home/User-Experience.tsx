@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import userExperience from "@/assets/images/home/id-verify.jpg";
+import React from 'react';
+import Image from 'next/image';
+import userExperience from '@/assets/images/home/id-verify.jpg';
 
 export const UserExperience = () => {
   return (

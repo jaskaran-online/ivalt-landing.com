@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,10 +13,10 @@
           rgba(0, 61, 116, 1) 62%,
           rgba(0, 181, 202, 1) 100%
         );
-        font-family: "Noto Sans", sans-serif;
+        font-family: 'Noto Sans', sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
-        font-variation-settings: "wdth" 100;
+        font-variation-settings: 'wdth' 100;
       }
 
       .glass-effect {
@@ -49,18 +49,13 @@
       }
 
       .button:before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          120deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
         transition: all 0.6s;
       }
 
@@ -78,22 +73,11 @@
       }
 
       .bg-grid {
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 1px
-          );
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 20px 20px;
-        mask-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 1),
-          rgba(0, 0, 0, 0)
-        );
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         opacity: 0.7;
       }
       .text-ivalt {
@@ -155,9 +139,7 @@
   <body>
     <div class="bg-grid absolute inset-0"></div>
     <div class="min-h-screen flex items-center justify-center p-4">
-      <div
-        class="max-w-xl w-full glass-effect text-white rounded-2xl shadow-xl p-8 space-y-8"
-      >
+      <div class="max-w-xl w-full glass-effect text-white rounded-2xl shadow-xl p-8 space-y-8">
         <!-- Success Icon -->
         <div class="flex justify-center">
           <div class="bg-green-100 p-3 rounded-full">
@@ -202,9 +184,8 @@
             <h2 class="text-lg font-semibold text-white">Verify Your Email</h2>
           </div>
           <p class="text-gray-100">
-            We've sent a verification email to your registered email address.
-            Please check your inbox and follow the instructions to complete your
-            registration.
+            We've sent a verification email to your registered email address. Please check your
+            inbox and follow the instructions to complete your registration.
           </p>
         </div>
 
@@ -242,8 +223,8 @@
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
               <span class="text-gray-100"
-                >Check your email for your login credentials and important
-                security information</span
+                >Check your email for your login credentials and important security
+                information</span
               >
             </li>
             <li class="flex items-start gap-2">
@@ -261,8 +242,7 @@
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
               <span class="text-gray-100"
-                >Complete your profile setup using the link provided in the
-                email</span
+                >Complete your profile setup using the link provided in the email</span
               >
             </li>
             <li class="flex items-start gap-2">

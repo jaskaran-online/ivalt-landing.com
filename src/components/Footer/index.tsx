@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { TextHoverEffect } from "@/components/ui/hover-footer";
-import FooterCompanyInfo from "./FooterCompanyInfo";
-import FooterProductLinks from "./FooterProductLinks";
-import FooterLinkSection from "./FooterLinkSection";
-import FooterContact from "./FooterContact";
-import FooterBottomBar from "./FooterBottomBar";
-import { footerLinks } from "./types";
+import { usePathname } from 'next/navigation';
+import { TextHoverEffect } from '@/components/ui/hover-footer';
+import FooterCompanyInfo from './FooterCompanyInfo';
+import FooterProductLinks from './FooterProductLinks';
+import FooterLinkSection from './FooterLinkSection';
+import FooterContact from './FooterContact';
+import FooterBottomBar from './FooterBottomBar';
+import { footerLinks } from './types';
 
 export default function Footer() {
   const currentPath = usePathname();
-  const isHome = currentPath === "/";
+  const isHome = currentPath === '/';
 
   return (
     <footer className="bg-white border-t border-[#E5E7EB]">
@@ -33,10 +33,7 @@ export default function Footer() {
                 <FooterProductLinks />
 
                 {/* Company */}
-                <FooterLinkSection
-                  title="Company"
-                  links={footerLinks.company}
-                />
+                <FooterLinkSection title="Company" links={footerLinks.company} />
 
                 {/* Legal */}
                 <FooterLinkSection title="Legal" links={footerLinks.legal} />
@@ -57,4 +54,4 @@ export { FooterProductLinks };
 export { FooterLinkSection };
 export { FooterContact };
 export { FooterBottomBar };
-export * from "./types";
+export * from './types';

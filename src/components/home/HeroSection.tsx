@@ -1,5 +1,5 @@
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import Link from "next/link";
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -21,10 +21,9 @@ export default function HeroSection() {
               Authenticate Anywhere® & ANYONE
             </h2>
             <p className="mt-6 md:text-xl text-lg text-gray-600 max-w-4xl mx-auto">
-              Revolutionary platform for verified trust across all digital
-              interactions — <strong>without passwords</strong>. Validate the
-              identity of humans, IoT devices, and AI agents with unprecedented
-              security.
+              Revolutionary platform for verified trust across all digital interactions —{' '}
+              <strong>without passwords</strong>. Validate the identity of humans, IoT devices, and
+              AI agents with unprecedented security.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link

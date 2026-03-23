@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 // import HeroImage from "@/assets/hero-image.png";
 // import HeroImage from "@/assets/hero-image-removebg-preview.png";
-import HeroImage from "@/assets/blue-image.png";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
+import HeroImage from '@/assets/blue-image.png';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
 
 export default function Hero() {
   return (
@@ -12,15 +12,12 @@ export default function Hero() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <FadeInOnScroll>
             <h1 className="text-5xl font-bold tracking-tight text-primary mb-6">
-              <span className="underline decoration-teal-primary ">
-                AI-Adaptive{" "}
-              </span>{" "}
-              Solutions that Redefine Identity
+              <span className="underline decoration-teal-primary ">AI-Adaptive </span> Solutions
+              that Redefine Identity
             </h1>
             <p className="mt-6 md:text-xl text-lg text-gray-600 max-w-3xl">
-              Real-time Identity to Stop Social Engineering and AI Deepfakes.
-              Next Generation Document Access Control. And Everything In
-              Between.
+              Real-time Identity to Stop Social Engineering and AI Deepfakes. Next Generation
+              Document Access Control. And Everything In Between.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link

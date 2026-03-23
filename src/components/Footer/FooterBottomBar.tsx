@@ -1,14 +1,12 @@
-import Link from "next/link";
-import { ChevronRight, ExternalLink } from "lucide-react";
+import Link from 'next/link';
+import { ChevronRight, ExternalLink } from 'lucide-react';
 
 export default function FooterBottomBar() {
   return (
     <div className="bg-[#FAF9F7]">
       <div className="max-w-7xl mx-auto px-4 md:px-0 py-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="text-gray-500 text-sm">
-            © 2026 iVALT. All rights reserved.
-          </p>
+          <p className="text-gray-500 text-sm">© 2026 iVALT. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link
               href="/privacy-policy"

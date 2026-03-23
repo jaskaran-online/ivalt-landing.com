@@ -1,5 +1,5 @@
-import { Heading2, Heading3, SmallText } from "@/components/ui/typography";
-import { CheckIcon } from "lucide-react";
+import { Heading2, Heading3, SmallText } from '@/components/ui/typography';
+import { CheckIcon } from 'lucide-react';
 
 type Patent = {
   title: string;
@@ -8,51 +8,51 @@ type Patent = {
 
 const patentsGranted: Patent[] = [
   {
-    title: "Biometric Access for Streaming",
-    number: "(10,931,667)",
+    title: 'Biometric Access for Streaming',
+    number: '(10,931,667)',
   },
   {
-    title: "Device Identity for IoT",
-    number: "(11,115,403)",
+    title: 'Device Identity for IoT',
+    number: '(11,115,403)',
   },
   {
-    title: "Biometric Password Management",
-    number: "(10,491,588)",
+    title: 'Biometric Password Management',
+    number: '(10,491,588)',
   },
   {
-    title: "Identity Release & Sharing between Devices",
-    number: "(11,736,475)",
+    title: 'Identity Release & Sharing between Devices',
+    number: '(11,736,475)',
   },
   {
-    title: "Identity Verification in IoT Networks",
-    number: "(12,028,335)",
+    title: 'Identity Verification in IoT Networks',
+    number: '(12,028,335)',
   },
   {
-    title: "Method and System for User Authentication",
-    number: "(12,267,321)",
+    title: 'Method and System for User Authentication',
+    number: '(12,267,321)',
   },
   {
-    title: "China: Use of Mobile Biometrics for Online Authentication",
-    number: "ZL201980012921.0",
+    title: 'China: Use of Mobile Biometrics for Online Authentication',
+    number: 'ZL201980012921.0',
   },
 ];
 
 const patentsPending = [
-  "Wide Variety of Use Cases w/AI",
-  "User Data Protection and Control",
-  "Streamlined User Experiences",
-  "Media Identity Applications",
-  "India – Biometrics for Online Auth",
+  'Wide Variety of Use Cases w/AI',
+  'User Data Protection and Control',
+  'Streamlined User Experiences',
+  'Media Identity Applications',
+  'India – Biometrics for Online Auth',
 ];
 
 const trademarks = [
-  "Universal Biometric ID®",
-  "iVALT®",
-  "Authenticate Anywhere®",
-  "IDENTITY Validation Platform®",
-  "1-Click to Zero Trust™",
-  "On-Demand ID™",
-  "DocuID®",
+  'Universal Biometric ID®',
+  'iVALT®',
+  'Authenticate Anywhere®',
+  'IDENTITY Validation Platform®',
+  '1-Click to Zero Trust™',
+  'On-Demand ID™',
+  'DocuID®',
 ];
 
 export default function IntellectualProperty() {
@@ -83,9 +83,7 @@ export default function IntellectualProperty() {
                     <SmallText className="text-base font-medium text-navy-primary">
                       {patent.title}
                     </SmallText>
-                    <SmallText className="text-gray-600 ml-1">
-                      {patent.number}
-                    </SmallText>
+                    <SmallText className="text-gray-600 ml-1">{patent.number}</SmallText>
                   </div>
                 </div>
               ))}
@@ -95,10 +93,7 @@ export default function IntellectualProperty() {
           <div className="flex flex-col gap-4">
             {/* Patents Pending */}
             <div className="bg-white rounded-md p-6 border-4 border-gray-100">
-              <Heading3
-                color="navy-primary"
-                className="text-xl mb-6 text-center"
-              >
+              <Heading3 color="navy-primary" className="text-xl mb-6 text-center">
                 10+ Patents Filed and Pending
               </Heading3>
               <div className="space-y-4">
@@ -117,10 +112,7 @@ export default function IntellectualProperty() {
 
             {/* Trademarks */}
             <div className="bg-white rounded-md p-6 border-4 border-gray-100">
-              <Heading3
-                color="navy-primary"
-                className="text-xl mb-6 text-center"
-              >
+              <Heading3 color="navy-primary" className="text-xl mb-6 text-center">
                 Trademarks
               </Heading3>
               <div className="space-y-4">

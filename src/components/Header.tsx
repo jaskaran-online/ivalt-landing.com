@@ -1,19 +1,19 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import {
   Download,
   Menu,
   ChevronDown,
   FileLock,
   Smartphone,
-  Fingerprint,
+  ShieldCheck,
   Sparkles,
   FileText,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
@@ -21,74 +21,74 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
 
 export const navItems = [
   {
-    label: "Home",
-    href: "/",
+    label: 'Home',
+    href: '/',
   },
   {
-    label: "Why iVALT",
-    href: "/why-ivalt",
+    label: 'Why iVALT',
+    href: '/why-ivalt',
   },
   {
-    label: "Solutions",
-    href: "/solutions",
+    label: 'Solutions',
+    href: '/solutions',
     dropdown: [
       {
-        label: "DocuID®",
-        href: "/solutions/docuid",
+        label: 'DocuID®',
+        href: '/solutions/docuid',
         icon: FileLock,
-        description: "Secure Document Access Control",
+        description: 'Secure Document Access Control',
       },
       {
-        label: "On-Demand ID™",
-        href: "/solutions/ondemandid",
+        label: 'On-Demand ID™',
+        href: '/solutions/ondemandid',
         icon: Smartphone,
-        description: "Combat Deepfakes & Social Engineering",
+        description: 'Combat Deepfakes & Social Engineering',
       },
       {
-        label: "Universal Biometric ID®",
-        href: "/solutions/universalid",
-        icon: Fingerprint,
-        description: "Enterprise Security Solution",
+        label: 'Human-Bound Authority',
+        href: '/solutions/human-bound-authority',
+        icon: ShieldCheck,
+        description: 'Provable at Execution',
       },
     ],
   },
+  // {
+  //   label: 'Recent Updates',
+  //   href: '/recent-updates',
+  //   badge: 'New',
+  // },
+  // {
+  //   label: 'Download Brochure',
+  //   href: '/brochures',
+  //   badge: 'New',
+  //   dropdown: [
+  //     {
+  //       label: 'iVALT Brochure',
+  //       href: '/brochures/iVALT-brochure-final-version.pdf',
+  //       icon: Download,
+  //       description: 'Company overview brochure',
+  //     },
+  //     {
+  //       label: 'DocuID Brochure',
+  //       href: '/brochures/DocuID-Brochure.pdf',
+  //       icon: FileText,
+  //       description: 'DocuID® solution brochure',
+  //     },
+  //     {
+  //       label: 'Ondemandid Brochure',
+  //       href: '/brochures/On-DemandID-Brochure.pdf',
+  //       icon: FileText,
+  //       description: 'On-Demand ID™ solution brochure',
+  //     },
+  //   ],
+  // },
   {
-    label: "Recent Updates",
-    href: "/recent-updates",
-    badge: "New",
-  },
-  {
-    label: "Download Brochure",
-    href: "/brochures",
-    badge: "New",
-    dropdown: [
-      {
-        label: "iVALT Brochure",
-        href: "/brochures/iVALT-brochure-final-version.pdf",
-        icon: Download,
-        description: "Company overview brochure",
-      },
-      {
-        label: "DocuID Brochure",
-        href: "/brochures/DocuID-Brochure.pdf",
-        icon: FileText,
-        description: "DocuID® solution brochure",
-      },
-      {
-        label: "Ondemandid Brochure",
-        href: "/brochures/On-DemandID-Brochure.pdf",
-        icon: FileText,
-        description: "On-Demand ID™ solution brochure",
-      },
-    ],
-  },
-  {
-    label: "About",
-    href: "/about",
+    label: 'About',
+    href: '/about',
   },
 ];
 
@@ -117,10 +117,8 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8 h-full">
-              {navItems.map((item) => {
-                const isActive =
-                  pathname === item.href ||
-                  pathname.startsWith(item.href + "/");
+              {navItems.map(item => {
+                const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
 
                 if (item.dropdown) {
                   return (
@@ -130,36 +128,50 @@ export default function Header() {
                       onMouseEnter={() => setOpenDropdown(item.href)}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <button
-                        className={`inline-flex items-center px-1 py-5 border-b-2 text-md font-medium transition-colors ${
+                      <div
+                        className={`group inline-flex items-center border-b-2 transition-colors ${
                           isActive
-                            ? "border-navy-primary text-navy-primary"
-                            : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                            ? 'border-navy-primary'
+                            : 'border-transparent hover:border-gray-300'
                         }`}
                       >
-                        {item.label}
-                        <ChevronDown
-                          className={`ml-1 w-4 h-4 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
-                        />
-                      </button>
+                        <Link
+                          href={item.href}
+                          className={`inline-flex items-center py-5 pl-1 pr-0.5 text-md font-medium ${
+                            isActive
+                              ? 'text-navy-primary'
+                              : 'text-gray-500 group-hover:text-gray-700'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                        <span
+                          className={`inline-flex items-center py-5 pr-1 ${
+                            isActive
+                              ? 'text-navy-primary'
+                              : 'text-gray-500 group-hover:text-gray-700'
+                          }`}
+                          aria-hidden
+                        >
+                          <ChevronDown
+                            className={`ml-0.5 h-4 w-4 shrink-0 transition-transform ${openDropdown === item.href ? 'rotate-180' : ''}`}
+                          />
+                        </span>
+                      </div>
 
                       {/* Dropdown Menu */}
                       {openDropdown === item.href && (
                         <div className="absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
-                          {item.dropdown.map((subItem) => {
+                          {item.dropdown.map(subItem => {
                             const Icon = subItem.icon;
                             return (
                               <Link
                                 key={subItem.href}
                                 href={subItem.href}
-                                target={
-                                  item.label === "Download Brochure"
-                                    ? "_blank"
-                                    : undefined
-                                }
+                                target={item.label === 'Download Brochure' ? '_blank' : undefined}
                                 rel={
-                                  item.label === "Download Brochure"
-                                    ? "noopener noreferrer"
+                                  item.label === 'Download Brochure'
+                                    ? 'noopener noreferrer'
                                     : undefined
                                 }
                                 className="flex items-start gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
@@ -190,8 +202,8 @@ export default function Header() {
                     href={item.href}
                     className={`inline-flex items-center px-1 py-5 border-b-2 text-md font-medium transition-colors ${
                       isActive
-                        ? "border-navy-primary text-navy-primary"
-                        : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        ? 'border-navy-primary text-navy-primary'
+                        : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                     }`}
                   >
                     {item.label}
@@ -233,57 +245,50 @@ export default function Header() {
                     />
                   </SheetTitle>
                   <SheetDescription>
-                    iVALT is a company that provides a platform for identity
-                    verification.
+                    iVALT is a company that provides a platform for identity verification.
                   </SheetDescription>
                 </SheetHeader>
                 <div className="flex flex-col space-y-4 mt-8 px-4">
-                  {navItems.map((item) => {
-                    const isActive =
-                      pathname === item.href ||
-                      pathname.startsWith(item.href + "/");
+                  {navItems.map(item => {
+                    const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
 
                     if (item.dropdown) {
                       return (
                         <div key={item.href} className="space-y-2">
-                          <div
-                            className={`text-lg font-medium py-2 px-4 rounded-sm ${
+                          <Link
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className={`block text-lg font-medium py-2 px-4 rounded-sm transition-colors ${
                               isActive
-                                ? "bg-primary text-white"
-                                : "text-gray-600"
+                                ? 'bg-primary text-white'
+                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                             }`}
                           >
                             {item.label}
-                          </div>
+                          </Link>
                           <div className="pl-4 space-y-1">
-                            {item.dropdown.map((subItem) => {
+                            {item.dropdown.map(subItem => {
                               const Icon = subItem.icon;
                               const isSubActive = pathname === subItem.href;
                               return (
                                 <Link
                                   key={subItem.href}
                                   href={subItem.href}
-                                  target={
-                                    item.label === "Download Brochure"
-                                      ? "_blank"
-                                      : undefined
-                                  }
+                                  target={item.label === 'Download Brochure' ? '_blank' : undefined}
                                   rel={
-                                    item.label === "Download Brochure"
-                                      ? "noopener noreferrer"
+                                    item.label === 'Download Brochure'
+                                      ? 'noopener noreferrer'
                                       : undefined
                                   }
                                   onClick={() => setIsOpen(false)}
                                   className={`flex items-center gap-2 py-2 px-4 rounded-sm transition-colors ${
                                     isSubActive
-                                      ? "bg-teal-primary text-white"
-                                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                                      ? 'bg-teal-primary text-white'
+                                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                                   }`}
                                 >
                                   <Icon className="w-4 h-4" />
-                                  <span className="text-base">
-                                    {subItem.label}
-                                  </span>
+                                  <span className="text-base">{subItem.label}</span>
                                 </Link>
                               );
                             })}
@@ -299,8 +304,8 @@ export default function Header() {
                         onClick={() => setIsOpen(false)}
                         className={`text-lg font-medium py-2 px-4 rounded-sm transition-colors flex items-center justify-between ${
                           isActive
-                            ? "bg-primary text-white"
-                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                            ? 'bg-primary text-white'
+                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                         }`}
                       >
                         <span>{item.label}</span>
@@ -315,11 +320,7 @@ export default function Header() {
                   })}
                   <div className="pt-4 border-t">
                     <div className="flex items-center gap-4 w-full flex-col">
-                      <Button
-                        variant="shiny"
-                        size="lg"
-                        className=" rounded-[15px] w-full"
-                      >
+                      <Button variant="shiny" size="lg" className=" rounded-[15px] w-full">
                         <Link href="/contact">Contact Us</Link>
                       </Button>
                       <Button
@@ -335,9 +336,7 @@ export default function Header() {
                           rel="noopener noreferrer"
                         >
                           <Download className="size-4 mr-2" />
-                          <span className="text-nowrap">
-                            Download iVALT Brochure
-                          </span>
+                          <span className="text-nowrap">Download iVALT Brochure</span>
                         </Link>
                       </Button>
                     </div>

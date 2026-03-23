@@ -1,14 +1,14 @@
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import Container from "../Container";
-import { Check } from "lucide-react";
-import SectionTitle from "../SectionTitle";
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import Container from '../Container';
+import { Check } from 'lucide-react';
+import SectionTitle from '../SectionTitle';
 
 const Points = [
-  "AI Agent Customizable and Dynamic Identities",
-  "Embedded IOT Identities Securing Advanced Devices",
-  "Electronic Locks Managed Centrally and Opened by   1-Click to Verify 5+ Factors of Identity",
-  "Streaming Services and TV Applications Accessed through 1-Click Identity Verification",
-  "Many Others Through Our Partnerships",
+  'AI Agent Customizable and Dynamic Identities',
+  'Embedded IOT Identities Securing Advanced Devices',
+  'Electronic Locks Managed Centrally and Opened by   1-Click to Verify 5+ Factors of Identity',
+  'Streaming Services and TV Applications Accessed through 1-Click Identity Verification',
+  'Many Others Through Our Partnerships',
 ];
 
 export default function ComingSoon() {
@@ -29,15 +29,9 @@ export default function ComingSoon() {
                   className="inline-flex items-center justify-start gap-4 mb-2 text-left"
                 >
                   <div className="flex items-center justify-center bg-white rounded-full p-2 shadow-sm">
-                    <Check
-                      className="text-navy-primary w-6 h-6"
-                      width={24}
-                      height={24}
-                    />
+                    <Check className="text-navy-primary w-6 h-6" width={24} height={24} />
                   </div>
-                  <h1 className="md:text-lg text-base text-navy-primary text-left">
-                    {point}
-                  </h1>
+                  <h1 className="md:text-lg text-base text-navy-primary text-left">{point}</h1>
                 </FadeInOnScroll>
               ))}
             </div>

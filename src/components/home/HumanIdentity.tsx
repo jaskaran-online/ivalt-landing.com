@@ -1,6 +1,5 @@
-import Image from "next/image";
-import React from "react";
-import humanIdentity from "@/assets/images/home/human-identity.jpg";
+import Image from 'next/image';
+import humanIdentity from '@/assets/images/home/human-identity.jpg';
 
 export const HumanIdentity = () => {
   return (

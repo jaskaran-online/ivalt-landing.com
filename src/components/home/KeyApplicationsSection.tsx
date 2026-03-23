@@ -1,9 +1,9 @@
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import SectionTitle from "@/components/SectionTitle";
-import Link from "next/link";
-import { FileText, Eye, Fingerprint, LucideIcon, Check } from "lucide-react";
-import AnimatedShinyCard from "@/components/ui/animated-shiny-card";
-import { Button } from "../ui/button";
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+import SectionTitle from '@/components/SectionTitle';
+import Link from 'next/link';
+import { FileText, Eye, Fingerprint, LucideIcon, Check } from 'lucide-react';
+import AnimatedShinyCard from '@/components/ui/animated-shiny-card';
+import { Button } from '../ui/button';
 
 interface ApplicationCardProps {
   icon: LucideIcon;
@@ -42,10 +42,7 @@ export function ApplicationCard({
                 <Check className="w-4 h-4 text-teal-primary transition-all duration-300 group-hover:scale-125" />
                 {/* <div className="w-2 h-2 bg-teal-primary rounded-full transition-all duration-300 group-hover:scale-125" /> */}
               </div>
-              <p
-                className="text-sm text-gray-600"
-                dangerouslySetInnerHTML={{ __html: feature }}
-              />
+              <p className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: feature }} />
             </div>
           ))}
         </div>
@@ -65,44 +62,43 @@ export default function KeyApplicationsSection() {
   const applications = [
     {
       icon: FileText,
-      title: "DocuID®",
-      subtitle: "Secure Document Access Control",
-      description:
-        "Authors embed authorized recipients (via mobile #) in encrypted documents.",
+      title: 'DocuID®',
+      subtitle: 'Secure Document Access Control',
+      description: 'Authors embed authorized recipients (via mobile #) in encrypted documents.',
       features: [
-        "Recipients verify identity via multi-factor authentication",
-        "Full Digital Rights Management (DRM)",
-        "Prevents forwarding, printing, screenshots",
+        'Recipients verify identity via multi-factor authentication',
+        'Full Digital Rights Management (DRM)',
+        'Prevents forwarding, printing, screenshots',
       ],
       delay: 0,
-      href: "/solutions/docuid",
+      href: '/solutions/docuid',
     },
     {
       icon: Eye,
-      title: "On-Demand ID™",
-      subtitle: "Combatting Social Engineering & Deepfakes",
-      description: "Real-time identity verification within our mobile app.",
+      title: 'On-Demand ID™',
+      subtitle: 'Combatting Social Engineering & Deepfakes',
+      description: 'Real-time identity verification within our mobile app.',
       features: [
-        "Instantly verify identity of suspicious calls/messages",
-        "Biometrics, registered device and location",
+        'Instantly verify identity of suspicious calls/messages',
+        'Biometrics, registered device and location',
 
-        "The only solution worldwide to truly defeat deepfake & social engineering attacks",
+        'The only solution worldwide to truly defeat deepfake & social engineering attacks',
       ],
       delay: 0.1,
-      href: "/solutions/ondemandid",
+      href: '/solutions/ondemandid',
     },
     {
       icon: Fingerprint,
-      title: "Universal Biometric ID®",
-      subtitle: "Enterprise Security",
-      description: "Enhances corporate Identity and Access Management (IAM).",
+      title: 'Universal Biometric ID®',
+      subtitle: 'Enterprise Security',
+      description: 'Enhances corporate Identity and Access Management (IAM).',
       features: [
         'When an employee logs in, iVALT "pings" their mobile',
-        "Real-time biometric and contextual verification",
-        "1-Click user experience",
+        'Real-time biometric and contextual verification',
+        '1-Click user experience',
       ],
       delay: 0.2,
-      href: "/solutions/universalid",
+      href: '/solutions/universalid',
     },
   ];
 

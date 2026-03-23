@@ -11,7 +11,9 @@ export default function RecaptchaProvider({ children }: RecaptchaProviderProps) 
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   if (!siteKey) {
-    console.warn('reCAPTCHA site key not found. Please add NEXT_PUBLIC_RECAPTCHA_SITE_KEY to your environment variables.');
+    console.warn(
+      'reCAPTCHA site key not found. Please add NEXT_PUBLIC_RECAPTCHA_SITE_KEY to your environment variables.'
+    );
     return <>{children}</>;
   }
 

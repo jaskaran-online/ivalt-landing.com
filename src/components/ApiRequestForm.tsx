@@ -1,21 +1,14 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Heading4 } from "./ui/typography";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import {
-  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  User,
-  Mail,
-  FileText,
-} from "lucide-react";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from 'react';
+import { Heading4 } from './ui/typography';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { ArrowRight, CheckCircle, AlertCircle, User, Mail, FileText } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Form,
   FormControl,
@@ -23,58 +16,56 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { useRecaptcha } from "@/hooks/useRecaptcha";
+} from '@/components/ui/form';
+import { useRecaptcha } from '@/hooks/useRecaptcha';
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: "Name is required" }),
-  email: z.string().email({ message: "Invalid email address" }),
+  name: z.string().min(1, { message: 'Name is required' }),
+  email: z.string().email({ message: 'Invalid email address' }),
   reason: z
     .string()
-    .min(10, { message: "Reason must be at least 10 characters" })
-    .max(1000, { message: "Reason must be less than 1000 characters" }),
+    .min(10, { message: 'Reason must be at least 10 characters' })
+    .max(1000, { message: 'Reason must be less than 1000 characters' }),
 });
 
 export default function ApiRequestForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const { getRecaptchaToken, isRecaptchaReady } = useRecaptcha();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      reason: "",
+      name: '',
+      email: '',
+      reason: '',
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     if (!isRecaptchaReady) {
-      setErrorMessage("reCAPTCHA not ready. Please try again.");
-      setSubmitStatus("error");
+      setErrorMessage('reCAPTCHA not ready. Please try again.');
+      setSubmitStatus('error');
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitStatus("idle");
-    setErrorMessage("");
+    setSubmitStatus('idle');
+    setErrorMessage('');
 
     try {
       // Get reCAPTCHA token
-      const recaptchaToken = await getRecaptchaToken("api_request");
+      const recaptchaToken = await getRecaptchaToken('api_request');
       if (!recaptchaToken) {
-        throw new Error("Failed to verify reCAPTCHA");
+        throw new Error('Failed to verify reCAPTCHA');
       }
 
       // Submit form
-      const response = await fetch("/api/api-request", {
-        method: "POST",
+      const response = await fetch('/api/api-request', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           ...values,
@@ -84,17 +75,15 @@ export default function ApiRequestForm() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to submit API request");
+        throw new Error(errorData.error || 'Failed to submit API request');
       }
 
-      setSubmitStatus("success");
+      setSubmitStatus('success');
       form.reset();
     } catch (error) {
-      console.error("Form submission error:", error);
-      setErrorMessage(
-        error instanceof Error ? error.message : "Failed to submit API request"
-      );
-      setSubmitStatus("error");
+      console.error('Form submission error:', error);
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to submit API request');
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -156,9 +145,7 @@ export default function ApiRequestForm() {
             name="reason"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-gray-500 mb-2">
-                  Reason for API Request
-                </FormLabel>
+                <FormLabel className="text-gray-500 mb-2">Reason for API Request</FormLabel>
                 <FormControl>
                   <div className="relative">
                     <FileText className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -175,17 +162,17 @@ export default function ApiRequestForm() {
               </FormItem>
             )}
           />
-          {submitStatus === "success" && (
+          {submitStatus === 'success' && (
             <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
               <CheckCircle className="h-5 w-5" />
               <span>
-                Request submitted successfully! We&apos;ll send your API key to
-                the email address provided within 24 hours.
+                Request submitted successfully! We&apos;ll send your API key to the email address
+                provided within 24 hours.
               </span>
             </div>
           )}
 
-          {submitStatus === "error" && (
+          {submitStatus === 'error' && (
             <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
               <AlertCircle className="h-5 w-5" />
               <span>{errorMessage}</span>
@@ -197,25 +184,25 @@ export default function ApiRequestForm() {
             disabled={isSubmitting || !isRecaptchaReady}
             className="w-full bg-teal-primary hover:bg-teal-primary/90 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-6 rounded-lg transition-colors duration-200"
           >
-            {isSubmitting ? "Submitting..." : "Request API Access"}
+            {isSubmitting ? 'Submitting...' : 'Request API Access'}
             {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
           </Button>
 
           <p className="text-xs text-gray-500 text-center">
-            This site is protected by reCAPTCHA and the Google{" "}
+            This site is protected by reCAPTCHA and the Google{' '}
             <a
               href="https://policies.google.com/privacy"
               className="text-teal-primary hover:underline"
             >
               Privacy Policy
-            </a>{" "}
-            and{" "}
+            </a>{' '}
+            and{' '}
             <a
               href="https://policies.google.com/terms"
               className="text-teal-primary hover:underline"
             >
               Terms of Service
-            </a>{" "}
+            </a>{' '}
             apply.
           </p>
         </form>
@@ -223,4 +210,3 @@ export default function ApiRequestForm() {
     </div>
   );
 }
-

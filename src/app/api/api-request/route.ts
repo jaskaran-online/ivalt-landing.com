@@ -1,36 +1,33 @@
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import { z } from "zod";
+import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
+import { z } from 'zod';
 
 // Validation schema for API request form
 const apiRequestSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
+  name: z.string().min(1, 'Name is required'),
+  email: z.string().email('Invalid email address'),
   reason: z
     .string()
-    .min(10, "Reason must be at least 10 characters")
-    .max(1000, "Reason must be less than 1000 characters"),
-  recaptchaToken: z.string().min(1, "reCAPTCHA verification required"),
+    .min(10, 'Reason must be at least 10 characters')
+    .max(1000, 'Reason must be less than 1000 characters'),
+  recaptchaToken: z.string().min(1, 'reCAPTCHA verification required'),
 });
 
 // Verify reCAPTCHA token
 async function verifyRecaptcha(token: string): Promise<boolean> {
   try {
-    const response = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
-      }
-    );
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    });
 
     const data = await response.json();
     return data.success && data.score >= 0.5; // Minimum score for v3
   } catch (error) {
-    console.error("reCAPTCHA verification error:", error);
+    console.error('reCAPTCHA verification error:', error);
     return false;
   }
 }
@@ -38,8 +35,8 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 // Create email transporter
 function createTransporter() {
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.gmail.com",
-    port: parseInt(process.env.SMTP_PORT || "587"),
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '587'),
     secure: false, // true for 465, false for other ports
     auth: {
       user: process.env.SMTP_USER,
@@ -49,11 +46,7 @@ function createTransporter() {
 }
 
 // Generate admin notification email template
-function generateAdminNotificationTemplate(
-  name: string,
-  email: string,
-  reason: string
-): string {
+function generateAdminNotificationTemplate(name: string, email: string, reason: string): string {
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -100,7 +93,7 @@ function generateAdminNotificationTemplate(
                     
                     <div>
                       <p style="color: #495057; font-size: 14px; font-weight: 600; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 0.5px;">Reason for API Request</p>
-                      <p style="color: #495057; font-size: 15px; line-height: 1.6; margin: 0;">${reason.replace(/\n/g, "<br>")}</p>
+                      <p style="color: #495057; font-size: 15px; line-height: 1.6; margin: 0;">${reason.replace(/\n/g, '<br>')}</p>
                     </div>
                   </div>
                   
@@ -248,22 +241,17 @@ export async function POST(request: NextRequest) {
     const validatedData = apiRequestSchema.parse(body);
 
     // Verify reCAPTCHA
-    const isValidRecaptcha = await verifyRecaptcha(
-      validatedData.recaptchaToken
-    );
+    const isValidRecaptcha = await verifyRecaptcha(validatedData.recaptchaToken);
     if (!isValidRecaptcha) {
-      return NextResponse.json(
-        { error: "reCAPTCHA verification failed" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 });
     }
 
     // Check if API key is configured
     const apiKey = process.env.API_KEY;
     if (!apiKey) {
-      console.error("API_KEY environment variable is not set");
+      console.error('API_KEY environment variable is not set');
       return NextResponse.json(
-        { error: "API key not configured. Please contact support." },
+        { error: 'API key not configured. Please contact support.' },
         { status: 500 }
       );
     }
@@ -313,7 +301,7 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: `"iVALT" <${process.env.SMTP_USER}>`,
       to: validatedData.email,
-      subject: "Your iVALT API Key - API Access Granted",
+      subject: 'Your iVALT API Key - API Access Granted',
       text: emailText,
       html: emailHtml,
     });
@@ -323,11 +311,11 @@ export async function POST(request: NextRequest) {
       process.env.ADMIN_EMAILS ||
       process.env.CONTACT_EMAILS ||
       process.env.CONTACT_EMAIL ||
-      "info@ivalt.com";
+      'info@ivalt.com';
     const adminRecipients = adminEmails
-      .split(",")
-      .map((email) => email.trim())
-      .filter((email) => email);
+      .split(',')
+      .map(email => email.trim())
+      .filter(email => email);
 
     // Generate admin notification email
     const adminEmailHtml = generateAdminNotificationTemplate(
@@ -364,22 +352,19 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { message: "API request processed successfully. API key sent to email." },
+      { message: 'API request processed successfully. API key sent to email.' },
       { status: 200 }
     );
   } catch (error) {
-    console.error("API request error:", error);
+    console.error('API request error:', error);
 
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: "Validation failed", details: error.message },
+        { error: 'Validation failed', details: error.message },
         { status: 400 }
       );
     }
 
-    return NextResponse.json(
-      { error: "Failed to process API request" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to process API request' }, { status: 500 });
   }
 }

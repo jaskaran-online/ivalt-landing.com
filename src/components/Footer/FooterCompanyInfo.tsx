@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import { BodyText } from "@/components/ui/typography";
-import { Button } from "@/components/ui/button";
-import LinkedIn from "@/assets/linkedin.png";
+import Image from 'next/image';
+import Link from 'next/link';
+import { BodyText } from '@/components/ui/typography';
+import { Button } from '@/components/ui/button';
+import LinkedIn from '@/assets/linkedin.png';
 
 export default function FooterCompanyInfo() {
   return (
@@ -19,9 +19,8 @@ export default function FooterCompanyInfo() {
           />
         </Link>
         <BodyText className="text-gray-800 max-w-md text-md">
-          Innovative identity solutions for modern security challenges.
-          Protecting your digital future with advanced authentication
-          technology.
+          Innovative identity solutions for modern security challenges. Protecting your digital
+          future with advanced authentication technology.
         </BodyText>
       </div>
 

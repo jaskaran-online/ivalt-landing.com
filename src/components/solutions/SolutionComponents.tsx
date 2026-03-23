@@ -1,10 +1,10 @@
-import Container from "../Container";
-import SectionTitle from "../SectionTitle";
+import Container from '../Container';
+import SectionTitle from '../SectionTitle';
 
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
-import Image from "next/image";
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
+import Image from 'next/image';
 
-import BuildingBlocks from "@/assets/images/solutions/2.png";
+import BuildingBlocks from '@/assets/images/solutions/2.png';
 export default function SolutionComponents() {
   return (
     <FadeInOnScroll className="py-12">

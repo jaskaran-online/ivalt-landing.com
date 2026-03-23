@@ -1,25 +1,25 @@
-import SectionTitle from "../SectionTitle";
-import { Fingerprint, FileIcon, UserIcon } from "lucide-react";
-import Link from "next/link";
-import { FadeInOnScroll } from "../ui/FadeInOnScroll";
+import SectionTitle from '../SectionTitle';
+import { Fingerprint, FileIcon, UserIcon } from 'lucide-react';
+import Link from 'next/link';
+import { FadeInOnScroll } from '../ui/FadeInOnScroll';
 
 const solutions = [
   {
-    title: "Universal Biometric ID®",
+    title: 'Universal Biometric ID®',
     description:
-      "Biometrics as one component of next gen MFA to render stolen credentials worthless.",
+      'Biometrics as one component of next gen MFA to render stolen credentials worthless.',
     icon: <Fingerprint className="w-8 h-8 text-teal-primary" />,
   },
   {
-    title: "On-Demand ID™",
+    title: 'On-Demand ID™',
     description:
-      "Real-time identity to stop social engineering and AI deepfakes by adding context & dynamic factors.",
+      'Real-time identity to stop social engineering and AI deepfakes by adding context & dynamic factors.',
     icon: <UserIcon className="w-8 h-8 text-teal-primary" />,
   },
   {
-    title: "DocuID®",
+    title: 'DocuID®',
     description:
-      "Restricted access control through embedded identifiers that must be verified in real-time.",
+      'Restricted access control through embedded identifiers that must be verified in real-time.',
     icon: <FileIcon className="w-8 h-8 text-teal-primary" />,
   },
 ];
@@ -43,9 +43,7 @@ export default function Solutions() {
                 className="bg-white rounded-lg p-8 border-4 border-gray-100 transition-all duration-300"
               >
                 <div className="text-accent mb-4">{solution.icon}</div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {solution.title}
-                </h3>
+                <h3 className="text-xl font-semibold text-primary mb-2">{solution.title}</h3>
                 <p className="text-gray-600">{solution.description}</p>
 
                 <Link

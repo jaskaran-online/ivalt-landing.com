@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,10 +19,10 @@
           rgba(0, 61, 116, 1) 62%,
           rgba(0, 181, 202, 1) 100%
         );
-        font-family: "Noto Sans", sans-serif;
+        font-family: 'Noto Sans', sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
-        font-variation-settings: "wdth" 100;
+        font-variation-settings: 'wdth' 100;
       }
 
       .glass-effect {
@@ -55,18 +55,13 @@
       }
 
       .button:before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          120deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
         transition: all 0.6s;
       }
 
@@ -84,22 +79,11 @@
       }
 
       .bg-grid {
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 1px
-          );
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 20px 20px;
-        mask-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 1),
-          rgba(0, 0, 0, 0)
-        );
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         opacity: 0.7;
       }
       .text-ivalt {
@@ -173,9 +157,7 @@
       </div>
 
       <!-- Form Card -->
-      <div
-        class="max-w-lg mx-auto bg-[#1a2942] rounded-lg shadow-xl p-6 text-white glass-effect"
-      >
+      <div class="max-w-lg mx-auto bg-[#1a2942] rounded-lg shadow-xl p-6 text-white glass-effect">
         <form id="registrationForm" class="space-y-4">
           <!-- Name -->
           <div>
@@ -218,9 +200,7 @@
 
           <!-- Organization Name -->
           <div>
-            <label for="orgName" class="label-text block"
-              >Organization Name</label
-            >
+            <label for="orgName" class="label-text block">Organization Name</label>
             <input
               type="text"
               id="orgName"
@@ -233,9 +213,7 @@
 
           <!-- Organization Code -->
           <div>
-            <label for="orgCode" class="label-text block"
-              >Organization Code</label
-            >
+            <label for="orgCode" class="label-text block">Organization Code</label>
             <input
               type="text"
               id="orgCode"
@@ -251,16 +229,10 @@
               Edit Code
             </button>
           </div>
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LddhhAeAAAAADYxWHRGh_ri02K_pyoVUnjuuBow"
-          ></div>
+          <div class="g-recaptcha" data-sitekey="6LddhhAeAAAAADYxWHRGh_ri02K_pyoVUnjuuBow"></div>
           <!-- Submit Button -->
           <div>
-            <button
-              type="submit"
-              class="button w-full py-3 text-white font-medium"
-            >
+            <button type="submit" class="button w-full py-3 text-white font-medium">
               Register
             </button>
           </div>
@@ -275,92 +247,88 @@
       </div>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("registrationForm");
-        const orgNameInput = document.getElementById("orgName");
-        const orgCodeInput = document.getElementById("orgCode");
-        const editOrgCodeBtn = document.getElementById("editOrgCode");
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('registrationForm');
+        const orgNameInput = document.getElementById('orgName');
+        const orgCodeInput = document.getElementById('orgCode');
+        const editOrgCodeBtn = document.getElementById('editOrgCode');
 
         // Updated generateOrgCode function to show all characters
         function generateOrgCode(name) {
           return name
             .trim()
             .toUpperCase()
-            .replace(/\s+/g, "-")
-            .replace(/[^A-Z0-9\-_]/g, "");
+            .replace(/\s+/g, '-')
+            .replace(/[^A-Z0-9\-_]/g, '');
         }
 
         // Add validation for org code input
-        orgCodeInput.addEventListener("input", function (e) {
+        orgCodeInput.addEventListener('input', function (e) {
           let value = e.target.value;
-          let sanitizedValue = value.replace(/[^A-Za-z0-9\-_]/g, "");
+          let sanitizedValue = value.replace(/[^A-Za-z0-9\-_]/g, '');
           if (value !== sanitizedValue) {
             this.value = sanitizedValue;
             showError(
-              "orgCode",
-              "Only letters, numbers, hyphens (-) and underscores (_) are allowed"
+              'orgCode',
+              'Only letters, numbers, hyphens (-) and underscores (_) are allowed'
             );
           }
         });
 
         // Update org code when org name changes
-        orgNameInput.addEventListener("input", function () {
+        orgNameInput.addEventListener('input', function () {
           orgCodeInput.value = generateOrgCode(this.value);
         });
 
         // Toggle org code input editability
-        editOrgCodeBtn.addEventListener("click", function () {
+        editOrgCodeBtn.addEventListener('click', function () {
           if (orgCodeInput.readOnly) {
             orgCodeInput.readOnly = false;
             orgCodeInput.focus();
-            this.textContent = "Lock Code";
+            this.textContent = 'Lock Code';
           } else {
             const validCode = orgCodeInput.value.match(/^[A-Za-z0-9\-_]+$/);
             if (!validCode) {
-              showError("orgCode", "Invalid characters in organization code");
+              showError('orgCode', 'Invalid characters in organization code');
               return;
             }
             orgCodeInput.readOnly = true;
-            this.textContent = "Edit Code";
+            this.textContent = 'Edit Code';
           }
         });
 
         // Initialize the telephone input
-        const phoneInput = window.intlTelInput(
-          document.querySelector("#mobile"),
-          {
-            utilsScript:
-              "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-            preferredCountries: ["us", "in"],
-            separateDialCode: true,
-            formatOnDisplay: true,
-            autoPlaceholder: "polite",
-          }
-        );
+        const phoneInput = window.intlTelInput(document.querySelector('#mobile'), {
+          utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js',
+          preferredCountries: ['us', 'in'],
+          separateDialCode: true,
+          formatOnDisplay: true,
+          autoPlaceholder: 'polite',
+        });
 
         // Update mobile validation in the form submit handler
-        form.addEventListener("submit", async function (e) {
+        form.addEventListener('submit', async function (e) {
           e.preventDefault();
 
           let isValid = true;
-          const nameInput = document.getElementById("name");
+          const nameInput = document.getElementById('name');
           const name = nameInput.value.trim();
           if (name.length < 2) {
-            showError("name", "Name must be at least 2 characters long");
+            showError('name', 'Name must be at least 2 characters long');
             isValid = false;
           }
 
           // Validate email
-          const emailInput = document.getElementById("email");
+          const emailInput = document.getElementById('email');
           const email = emailInput.value.trim();
           if (!email.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
-            showError("email", "Please enter a valid email address");
+            showError('email', 'Please enter a valid email address');
             isValid = false;
           }
 
           // Validate mobile number
           if (!phoneInput.isValidNumber()) {
-            showError("mobile", "Please enter a valid phone number");
+            showError('mobile', 'Please enter a valid phone number');
             isValid = false;
           }
 
@@ -372,25 +340,25 @@
             email: email,
             mobile: phoneInput
               .getNumber(intlTelInputUtils.numberFormat.NATIONAL)
-              .replace(/\D/g, "")
-              .replace(/^0+/, ""),
+              .replace(/\D/g, '')
+              .replace(/^0+/, ''),
             country_code: phoneInput.getSelectedCountryData().dialCode,
             mobile_with_country_code: phoneInput.getNumber(), // Get full number with country code
-            organization_name: document.getElementById("orgName").value.trim(),
-            organization_code: document.getElementById("orgCode").value.trim(),
-            "g-recaptcha-response": grecaptcha.getResponse(),
+            organization_name: document.getElementById('orgName').value.trim(),
+            organization_code: document.getElementById('orgCode').value.trim(),
+            'g-recaptcha-response': grecaptcha.getResponse(),
           };
 
           // console.log("Sending data:", JSON.stringify(formData, null, 2));
 
           try {
             const response = await fetch(
-              "https://api.ivalt.com/admin/public/api/organization/create/onboarding",
+              'https://api.ivalt.com/admin/public/api/organization/create/onboarding',
               {
-                method: "POST",
+                method: 'POST',
                 headers: {
-                  "Content-Type": "application/json",
-                  "x-api-key": "NgwbltECec1LignlFDa57479D3cZfgnE2bvwGyCp"
+                  'Content-Type': 'application/json',
+                  'x-api-key': 'NgwbltECec1LignlFDa57479D3cZfgnE2bvwGyCp',
                 },
                 body: JSON.stringify(formData),
               }
@@ -399,28 +367,24 @@
             const result = await response.json();
 
             if (response.ok) {
-              window.location.href = "/success.html";
+              window.location.href = '/success.html';
               // alert("Registration successful!");
-              document.getElementById("registrationForm").reset();
+              document.getElementById('registrationForm').reset();
             } else {
               const errorMessage =
-                result.error && result.error.detail
-                  ? result.error.detail
-                  : "Registration failed.";
+                result.error && result.error.detail ? result.error.detail : 'Registration failed.';
               alert(`Error: ${errorMessage}`);
             }
           } catch (error) {
-            console.error("Error:", error);
-            alert(
-              "An error occurred while submitting the form. Please try again."
-            );
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form. Please try again.');
           }
         });
 
         function showError(fieldId, message) {
           const errorElement = document.getElementById(`${fieldId}Error`);
           errorElement.textContent = message;
-          errorElement.classList.remove("hidden");
+          errorElement.classList.remove('hidden');
         }
       });
     </script>

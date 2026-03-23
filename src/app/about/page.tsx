@@ -1,14 +1,14 @@
-import Container from "@/components/Container";
-import SectionTitle from "@/components/SectionTitle";
-import { BodyText, Heading2 } from "@/components/ui/typography";
-import IntellectualProperty from "@/components/IntellectualProperty";
+import Container from '@/components/Container';
+import SectionTitle from '@/components/SectionTitle';
+import { BodyText, Heading2 } from '@/components/ui/typography';
+import IntellectualProperty from '@/components/IntellectualProperty';
 
-import Image, { StaticImageData } from "next/image";
-import Baldev from "@/assets/images/about/baldev.png";
-import Brian from "@/assets/images/about/Brian.png";
-import Marc from "@/assets/images/about/Marc.jpg";
-import LinkedIn from "@/assets/linkedin.png";
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
+import Image, { StaticImageData } from 'next/image';
+import Baldev from '@/assets/images/about/baldev.png';
+import Brian from '@/assets/images/about/Brian.png';
+import Marc from '@/assets/images/about/Marc.jpg';
+import LinkedIn from '@/assets/linkedin.png';
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
 
 type Founder = {
   name: string;
@@ -21,20 +21,20 @@ type Founder = {
 
 const founders: Founder[] = [
   {
-    name: "Baldev Krishan, Ph.D.",
+    name: 'Baldev Krishan, Ph.D.',
     image: Baldev,
-    title: "Founder and CEO",
+    title: 'Founder and CEO',
     description: `2X Nominated for "Entrepreneur of the Year" in Silicon Valley, 22 patents`,
-    awards: ["Visionary", "Innovator"],
-    linkedin: "https://www.linkedin.com/in/baldev-krishan-1ab14b9/",
+    awards: ['Visionary', 'Innovator'],
+    linkedin: 'https://www.linkedin.com/in/baldev-krishan-1ab14b9/',
   },
   {
-    name: "Brian Stout",
+    name: 'Brian Stout',
     image: Brian,
-    title: "Co-Founder and CPO",
-    description: "25+ years CXO Mobile, Internet, SaaS – Startups through Exit",
-    awards: ["Strategist", "Product Expert"],
-    linkedin: "https://www.linkedin.com/in/baldev-krishan-1ab14b9/",
+    title: 'Co-Founder and CPO',
+    description: '25+ years CXO Mobile, Internet, SaaS – Startups through Exit',
+    awards: ['Strategist', 'Product Expert'],
+    linkedin: 'https://www.linkedin.com/in/baldev-krishan-1ab14b9/',
   },
   // {
   //   name: "Marc Ricker",
@@ -54,29 +54,18 @@ const Founder = ({ founder }: { founder: Founder }) => {
         <div className="flex flex-col items-center gap-6">
           {/* Profile Image */}
           <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-teal-primary/20">
-            <Image
-              src={founder.image}
-              alt={founder.name}
-              fill
-              className="object-cover"
-            />
+            <Image src={founder.image} alt={founder.name} fill className="object-cover" />
           </div>
 
           {/* Content */}
           <div className="text-center">
-            <h3 className="text-xl font-bold text-navy-primary mb-2">
-              {founder.name}
-            </h3>
-            <p className="text-teal-primary font-semibold mb-3">
-              {founder.title}
-            </p>
-            <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-              {founder.description}
-            </p>
+            <h3 className="text-xl font-bold text-navy-primary mb-2">{founder.name}</h3>
+            <p className="text-teal-primary font-semibold mb-3">{founder.title}</p>
+            <p className="text-gray-600 mb-4 text-sm leading-relaxed">{founder.description}</p>
 
             {/* Awards */}
             <div className="flex justify-center gap-2 mb-4">
-              {founder.awards.map((award) => (
+              {founder.awards.map(award => (
                 <div
                   key={award}
                   className="px-3 py-1 bg-teal-primary/10 text-teal-primary rounded-full text-xs font-medium"
@@ -138,21 +127,19 @@ export default function About() {
                 Our Story
               </Heading2>
               <BodyText className="text-gray-700 text-sm leading-relaxed">
-                Founded in 2019 by Baldev Krishan and Brian Stout, iVALT®
-                addresses the persistent issue of identity fraud by moving
-                beyond outdated username/password authentication and ineffective
-                2FA.
+                Founded in 2019 by Baldev Krishan and Brian Stout, iVALT® addresses the persistent
+                issue of identity fraud by moving beyond outdated username/password authentication
+                and ineffective 2FA.
               </BodyText>
               <BodyText className="text-gray-700 text-sm leading-relaxed mt-4">
-                Recognizing that technology alone isn&apos;t the solution, they
-                developed a mobile app that captures and verifies 5+ dynamic
-                variables, including biometrics, location, and time, in a single
-                click.
+                Recognizing that technology alone isn&apos;t the solution, they developed a mobile
+                app that captures and verifies 5+ dynamic variables, including biometrics, location,
+                and time, in a single click.
               </BodyText>
               <BodyText className="text-gray-700 text-sm leading-relaxed mt-4">
-                This innovative approach, combining a mobile app with a secure
-                SaaS engine, aims to provide technology efficiency and the
-                highest level of security against evolving hacking techniques.
+                This innovative approach, combining a mobile app with a secure SaaS engine, aims to
+                provide technology efficiency and the highest level of security against evolving
+                hacking techniques.
               </BodyText>
             </div>
           </FadeInOnScroll>

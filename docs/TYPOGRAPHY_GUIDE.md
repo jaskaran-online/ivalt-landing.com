@@ -9,47 +9,42 @@ A comprehensive typography system with brand color integration, responsive sizin
 ### Main Typography Component
 
 ```tsx
-import { Typography } from "@/components/ui/typography";
+import { Typography } from '@/components/ui/typography';
 
-<Typography 
-  variant="h1" 
-  color="teal-primary" 
-  weight="bold"
-  className="mb-4"
->
+<Typography variant="h1" color="teal-primary" weight="bold" className="mb-4">
   Your Text Here
-</Typography>
+</Typography>;
 ```
 
 ### Shortcut Components
 
 ```tsx
-import { 
-  Heading1, 
-  Heading2, 
-  Heading3, 
-  BodyText, 
-  SmallText, 
-  Caption 
-} from "@/components/ui/typography";
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  BodyText,
+  SmallText,
+  Caption,
+} from '@/components/ui/typography';
 ```
 
 ## Variants
 
 ### Text Sizes
 
-| Variant | Desktop | Tablet | Mobile | Use Case |
-|---------|---------|--------|--------|----------|
-| `h1` | 6xl (60px) | 5xl (48px) | 4xl (36px) | Main page titles |
-| `h2` | 5xl (48px) | 4xl (36px) | 3xl (30px) | Section headers |
-| `h3` | 4xl (36px) | 3xl (30px) | 2xl (24px) | Subsection headers |
-| `h4` | 3xl (30px) | 2xl (24px) | xl (20px) | Component titles |
-| `h5` | 2xl (24px) | xl (20px) | lg (18px) | Small headers |
-| `h6` | xl (20px) | lg (18px) | base (16px) | Micro headers |
-| `body1` | base (16px) | base (16px) | base (16px) | Main body text |
-| `body2` | sm (14px) | sm (14px) | sm (14px) | Secondary text |
-| `caption` | xs (12px) | xs (12px) | xs (12px) | Captions, labels |
-| `overline` | xs (12px) | xs (12px) | xs (12px) | Overline text |
+| Variant    | Desktop     | Tablet      | Mobile      | Use Case           |
+| ---------- | ----------- | ----------- | ----------- | ------------------ |
+| `h1`       | 6xl (60px)  | 5xl (48px)  | 4xl (36px)  | Main page titles   |
+| `h2`       | 5xl (48px)  | 4xl (36px)  | 3xl (30px)  | Section headers    |
+| `h3`       | 4xl (36px)  | 3xl (30px)  | 2xl (24px)  | Subsection headers |
+| `h4`       | 3xl (30px)  | 2xl (24px)  | xl (20px)   | Component titles   |
+| `h5`       | 2xl (24px)  | xl (20px)   | lg (18px)   | Small headers      |
+| `h6`       | xl (20px)   | lg (18px)   | base (16px) | Micro headers      |
+| `body1`    | base (16px) | base (16px) | base (16px) | Main body text     |
+| `body2`    | sm (14px)   | sm (14px)   | sm (14px)   | Secondary text     |
+| `caption`  | xs (12px)   | xs (12px)   | xs (12px)   | Captions, labels   |
+| `overline` | xs (12px)   | xs (12px)   | xs (12px)   | Overline text      |
 
 ### Color Variants
 
@@ -102,12 +97,8 @@ import {
   <Heading4 color="navy-primary" className="mb-3">
     Feature Title
   </Heading4>
-  <BodyText className="mb-4">
-    Description of the feature and its benefits for users.
-  </BodyText>
-  <Caption color="muted">
-    Last updated: January 2024
-  </Caption>
+  <BodyText className="mb-4">Description of the feature and its benefits for users.</BodyText>
+  <Caption color="muted">Last updated: January 2024</Caption>
 </div>
 ```
 
@@ -140,12 +131,9 @@ import {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div>
       <BodyText className="mb-4">
-        We are a team of passionate developers and designers 
-        creating innovative solutions.
+        We are a team of passionate developers and designers creating innovative solutions.
       </BodyText>
-      <SmallText color="muted">
-        Founded in 2020, we've helped over 100 companies.
-      </SmallText>
+      <SmallText color="muted">Founded in 2020, we've helped over 100 companies.</SmallText>
     </div>
   </div>
 </section>
@@ -159,11 +147,7 @@ import {
     <Typography variant="body2" weight="medium" className="mb-2">
       Email Address
     </Typography>
-    <input 
-      type="email" 
-      className="w-full p-3 border rounded-lg"
-      placeholder="your@email.com"
-    />
+    <input type="email" className="w-full p-3 border rounded-lg" placeholder="your@email.com" />
     <Caption color="muted" className="mt-1">
       We'll never share your email with anyone else.
     </Caption>
@@ -174,6 +158,7 @@ import {
 ## Brand Color Combinations
 
 ### Primary Brand Theme
+
 ```tsx
 <Heading1 color="teal-primary">Main Title</Heading1>
 <Heading2 color="navy-primary">Section Title</Heading2>
@@ -182,6 +167,7 @@ import {
 ```
 
 ### Accent Theme
+
 ```tsx
 <Heading1 color="navy-primary">Main Title</Heading1>
 <Heading2 color="light-teal">Section Title</Heading2>
@@ -201,8 +187,8 @@ All typography components are responsive by default:
 
 ```tsx
 // Override with custom classes
-<Typography 
-  variant="h2" 
+<Typography
+  variant="h2"
   color="teal-primary"
   className="text-center underline decoration-2 decoration-navy-primary"
 >
@@ -210,9 +196,9 @@ All typography components are responsive by default:
 </Typography>
 
 // Use as different HTML element
-<Typography 
-  variant="h3" 
-  as="span" 
+<Typography
+  variant="h3"
+  as="span"
   color="navy-primary"
 >
   Span with H3 styling
@@ -232,4 +218,4 @@ All typography components are responsive by default:
 - Semantic HTML elements are used by default
 - Proper heading hierarchy is maintained
 - Color contrast meets WCAG guidelines
-- Font sizes are scalable and readable 
+- Font sizes are scalable and readable

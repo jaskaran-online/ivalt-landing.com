@@ -1,15 +1,8 @@
-import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import SectionTitle from "@/components/SectionTitle";
-import IdentityValidation from "@/assets/images/home/Identity-validation.png";
-import Image from "next/image";
-import {
-  Smartphone,
-  Fingerprint,
-  MapPin,
-  TrendingUp,
-  Users,
-  Bot,
-} from "lucide-react";
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
+import SectionTitle from '@/components/SectionTitle';
+import IdentityValidation from '@/assets/images/home/Identity-validation.png';
+import Image from 'next/image';
+import { Smartphone, Fingerprint, MapPin, TrendingUp, Users, Bot } from 'lucide-react';
 
 export default function PlatformOverviewSection() {
   return (
@@ -46,27 +39,20 @@ export default function PlatformOverviewSection() {
                 <div className="space-y-3">
                   <div className="flex items-center  text-sm gap-3">
                     <Fingerprint className="h-5 w-5  text-teal-primary" />
-                    <p className="text-gray-600">
-                      Biometrics: Face, fingerprint
-                    </p>
+                    <p className="text-gray-600">Biometrics: Face, fingerprint</p>
                   </div>
                   <div className="flex items-center  text-sm gap-3">
                     <Smartphone className="h-5 w-5 text-teal-primary" />
-                    <p className="text-gray-600">
-                      Device identity: Registered phone
-                    </p>
+                    <p className="text-gray-600">Device identity: Registered phone</p>
                   </div>
                   <div className="flex items-center  text-sm gap-3">
                     <MapPin className="h-5 w-5 text-teal-primary" />
-                    <p className="text-gray-600">
-                      GPS & Time: Real-world context
-                    </p>
+                    <p className="text-gray-600">GPS & Time: Real-world context</p>
                   </div>
                   <div className="flex  text-sm items-center gap-3">
                     <TrendingUp className="h-5 w-5 text-teal-primary" />
                     <p className="text-gray-600">
-                      Dynamic Variables: Real-time random data (weather, stocks,
-                      etc.)
+                      Dynamic Variables: Real-time random data (weather, stocks, etc.)
                     </p>
                   </div>
                   <div className="flex items-center  text-sm gap-3">
@@ -94,7 +80,7 @@ export default function PlatformOverviewSection() {
         </div>
         <div className="bg-primary/5 p-6 rounded-lg mt-8 border-4 border-primary/5">
           <p className="text-primary font-semibold text-center text-lg">
-            Result: Dynamic, context-aware authentication that is{" "}
+            Result: Dynamic, context-aware authentication that is{' '}
             <strong>nearly impossible to hack, even by AI</strong>.
           </p>
         </div>
