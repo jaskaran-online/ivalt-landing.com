@@ -43,9 +43,9 @@ export default function PrivacyPolicy() {
               (“Company”) collect, use and share personal information of users in the use of its
               WordPress plug-in and authentication services.
             </p>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               WHAT WE COLLECT
-            </h3>
+            </h2>
             <p className="text-normal text-justify ">
               The Company may collect information about you in several ways.
             </p>
@@ -99,9 +99,9 @@ export default function PrivacyPolicy() {
               indefinitely unless the user explicitly asks us via email to remove it from our
               server.
             </p>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               USE OF PERSONAL INFORMATION
-            </h3>
+            </h2>
             <p className="text-normal text-center font-bold ">
               The Company may use your personal information as follows:
             </p>
@@ -117,9 +117,9 @@ export default function PrivacyPolicy() {
                 the Company.
               </li>
             </ul>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               SHARING OF PERSONAL INFORMATION
-            </h3>
+            </h2>
             <p className="text-normal text-center font-bold mt-4 mb-4 text-navy-primary">
               We may share personal information as follows:
             </p>
@@ -154,10 +154,10 @@ export default function PrivacyPolicy() {
               <li>The Company may share information with those who need it to do work for us.</li>
               <li>The Company will only share information for Marketing with your consent.</li>
             </ul>
-            <h3 className="text-normal text-justify font-bold">&nbsp;</h3>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-normal text-justify font-bold">&nbsp;</h2>
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               INFORMATION CHANGES
-            </h3>
+            </h2>
             <p className="text-normal text-justify ">
               All information the Company collects from you can be modified within the WordPress
               dashboard or through the associated mobile application on your mobile phone. You may{' '}
@@ -180,9 +180,9 @@ export default function PrivacyPolicy() {
               Company’s services following the posting of changes or updates to this Privacy Policy,
               your use shall mean that you are in agreement with such changes.
             </p>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               SOFTWARE END USER LICENSE AGREEMENT
-            </h3>
+            </h2>
             <p className="text-normal text-justify ">
               <strong> IMPORTANT-READ CAREFULLY:</strong> This End-User License Agreement (“EULA”)
               is a legal agreement between you (either an individual or a single entity) and
@@ -206,9 +206,9 @@ export default function PrivacyPolicy() {
               may protect their rights in the event of any violation of this EULA. Therefore, you
               must treat the SOFTWARE like any other copyrighted material.
             </p>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-4 list-disc ml-8">
               <li className="text-normal text-justify">
                 Limitations on Reverse-Engineering, Decompilation, and Disassembly. You may not
@@ -261,9 +261,9 @@ export default function PrivacyPolicy() {
               of the U.S. Department of Commerce, or such other governmental entity as may have
               jurisdiction over such export or transmission.
             </p>
-            <h3 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
+            <h2 className="text-2xl text-normal text-justify font-bold mt-7 mb-4 text-navy-primary">
               MISCELLANEOUS
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-4 list-disc ml-8">
               <li className="text-normal text-justify">
                 This EULA is governed by the laws of the State of Illinois, United States of
