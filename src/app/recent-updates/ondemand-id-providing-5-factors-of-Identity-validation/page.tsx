@@ -11,17 +11,17 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical:
-      'https://ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
+      'https://www.ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
   },
   openGraph: {
     type: 'article',
-    url: 'https://ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
+    url: 'https://www.ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
     title: 'iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation',
     description:
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     images: [
       {
-        url: 'https://ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+        url: 'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
         width: 1200,
         height: 630,
         alt: 'iVALT Launches OnDemand ID',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     images: [
-      'https://ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+      'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
     ],
   },
   other: {

@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ivalt.com'),
+  metadataBase: new URL('https://www.ivalt.com'),
   title: {
     default: 'iVALT | Advanced Identity Verification & Biometric Security',
     template: '%s | iVALT',

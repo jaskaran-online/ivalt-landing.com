@@ -11,17 +11,17 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical:
-      'https://ivalt.com/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
+      'https://www.ivalt.com/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
   },
   openGraph: {
     type: 'article',
-    url: 'https://ivalt.com/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
+    url: 'https://www.ivalt.com/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
     title: 'iVALT Revolutionizes Document Security with Launch of DocuID',
     description:
       'iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     images: [
       {
-        url: 'https://ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+        url: 'https://www.ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
         width: 1200,
         height: 630,
         alt: 'iVALT Revolutionizes Document Security with DocuID',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       'iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     images: [
-      'https://ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+      'https://www.ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
     ],
   },
   other: {

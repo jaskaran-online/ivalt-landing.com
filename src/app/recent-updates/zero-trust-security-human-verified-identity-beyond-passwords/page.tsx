@@ -11,17 +11,17 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical:
-      'https://ivalt.com/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
+      'https://www.ivalt.com/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
   },
   openGraph: {
     type: 'article',
-    url: 'https://ivalt.com/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
+    url: 'https://www.ivalt.com/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
     title: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
     description:
       'Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization. Learn how to move beyond passwords and tokens to ensure verified humans can access networks.',
     images: [
       {
-        url: 'https://ivalt.com/press-release/images/ivalt-openvpn-webinar.png',
+        url: 'https://www.ivalt.com/press-release/images/ivalt-openvpn-webinar.png',
         width: 1200,
         height: 630,
         alt: 'iVALT OpenVPN Zero Trust Webinar',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
     description:
       'Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization.',
-    images: ['https://ivalt.com/press-release/images/ivalt-openvpn-webinar.png'],
+    images: ['https://www.ivalt.com/press-release/images/ivalt-openvpn-webinar.png'],
   },
   other: {
     'article:published_time': '2026-02-11T00:00:00+00:00',

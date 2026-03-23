@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     title: 'Request API Access | iVALT',
     description:
       "Get API access to integrate iVALT's identity verification solutions into your applications.",
-    url: 'https://ivalt.com/api-request',
+    url: 'https://www.ivalt.com/api-request',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://ivalt.com/api-request',
+    canonical: 'https://www.ivalt.com/api-request',
   },
 };
 

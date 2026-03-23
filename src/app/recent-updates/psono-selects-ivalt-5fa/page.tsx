@@ -10,17 +10,17 @@ export const metadata: Metadata = {
   authors: [{ name: 'iVALT' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://ivalt.com/recent-updates/psono-selects-ivalt-5fa',
+    canonical: 'https://www.ivalt.com/recent-updates/psono-selects-ivalt-5fa',
   },
   openGraph: {
     type: 'article',
-    url: 'https://ivalt.com/recent-updates/psono-selects-ivalt-5fa',
+    url: 'https://www.ivalt.com/recent-updates/psono-selects-ivalt-5fa',
     title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
     description:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
     images: [
       {
-        url: 'https://ivalt.com/press-release/images/psono-collaborates-with-ivalt.png',
+        url: 'https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.png',
         width: 1200,
         height: 630,
         alt: 'Psono Selects iVALT 5FA',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
     description:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
-    images: ['https://ivalt.com/press-release/images/psono-collaborates-with-ivalt.png'],
+    images: ['https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.png'],
   },
   other: {
     'article:published_time': '2025-01-10T00:00:00+00:00',
