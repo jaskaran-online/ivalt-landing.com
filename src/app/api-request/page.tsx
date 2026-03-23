@@ -28,6 +28,9 @@ export default function ApiRequest() {
   return (
     <>
       <Container className="bg-[#FAF9F7] py-16">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-navy-primary">Request API Access</h1>
+        </div>
         <SectionTitle
           title="Request API Access"
           description="Get started with iVALT's powerful API to integrate advanced identity verification and biometric security into your applications."

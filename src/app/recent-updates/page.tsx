@@ -18,5 +18,10 @@ export const metadata = {
 };
 
 export default function RecentUpdatesPage() {
-  return <RecentUpdatesClient />;
+  return (
+    <>
+      <h1 className="sr-only">Recent Updates</h1>
+      <RecentUpdatesClient />
+    </>
+  );
 }

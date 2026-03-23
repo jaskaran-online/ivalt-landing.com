@@ -28,6 +28,9 @@ export const metadata: Metadata = {
 export default function WhyIvalt() {
   return (
     <Container className="bg-[#FAF9F7] md:py-12 py-6">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-navy-primary">Why iVALT</h1>
+      </div>
       <SectionTitle title="Why iVALT ?" description="" />
       {/* <PioneeringContent /> */}
       {/* <FactorsOfIdentity /> */}

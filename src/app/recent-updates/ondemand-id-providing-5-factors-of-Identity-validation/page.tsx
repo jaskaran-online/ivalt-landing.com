@@ -130,7 +130,7 @@ export default function Page() {
           own identities instead of delegating control to all of their digital relationships, any of
           which can be easily breached."
         </p>
-        <h1 className="text-2xl font-bold text-navy-primary mb-4">About iVALT</h1>
+        <h2 className="text-2xl font-bold text-navy-primary mb-4">About iVALT</h2>
         <p className="mb-6 text-justify">
           iVALT is a leading provider of patented 5+ factor identity solutions that empower
           businesses and individuals alike with secure and convenient identity verification. Its

@@ -19,6 +19,9 @@ export default function Contact() {
   return (
     <>
       <Container className="bg-[#FAF9F7] py-16">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-navy-primary">Contact Us</h1>
+        </div>
         <SectionTitle
           title="Contact Us"
           description="Ready to revolutionize your security? Get in touch with our team to learn how iVALT® can protect your organization from identity fraud."

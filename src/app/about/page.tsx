@@ -108,6 +108,9 @@ export default function About() {
   return (
     <>
       <Container className="bg-[#f6f5f4] py-16">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-navy-primary">About iVALT</h1>
+        </div>
         <SectionTitle
           title="Our Mission"
           description="To eliminate identity fraud by providing seamless, one-click authentication that dynamically verifies user and contextual variables, ensuring unparalleled security and user convenience."
