@@ -67,7 +67,7 @@ function ThreatPartnershipCard({
           </div>
 
           <div className="mb-6 flex-grow space-y-3">
-            {items.map((item) => (
+            {items.map(item => (
               <div key={item} className="flex items-start gap-3">
                 <div className="mt-1 shrink-0">
                   <Check className="h-5 w-5 text-teal-primary" aria-hidden />
@@ -86,15 +86,14 @@ function ThreatPartnershipCard({
 
 export function CyberThreatsSection() {
   return (
-    <section className="relative z-20 overflow-hidden py-16 md:mb-16" aria-labelledby="cyber-threats-heading">
+    <section
+      className="relative z-20 overflow-hidden py-16 md:mb-16"
+      aria-labelledby="cyber-threats-heading"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInOnScroll>
           <div className="mb-8 text-center">
-            <Heading2
-              id="cyber-threats-heading"
-              color="dark-navy"
-              className="text-3xl font-bold"
-            >
+            <Heading2 id="cyber-threats-heading" color="dark-navy" className="text-3xl font-bold">
               Attackers Don&apos;t Break In.
             </Heading2>
             <p className="mx-auto mt-4 max-w-3xl text-xl font-bold italic text-teal-primary sm:text-2xl">
@@ -122,7 +121,9 @@ export function CyberThreatsSection() {
                 <p className="text-sm font-bold uppercase tracking-wide text-primary">
                   AI execution risks
                 </p>
-                <p className="mt-1 text-sm font-medium italic text-gray-700">Agents &amp; Workflows</p>
+                <p className="mt-1 text-sm font-medium italic text-gray-700">
+                  Agents &amp; Workflows
+                </p>
               </div>
             }
           />

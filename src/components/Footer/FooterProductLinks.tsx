@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Heading4, SmallText } from '@/components/ui/typography';
 import { Smartphone, FileLock, ChevronRight, ShieldCheck } from 'lucide-react';
 
-
 const productLinks = [
   {
     label: 'Human-Bound Authority',

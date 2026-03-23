@@ -37,7 +37,9 @@ export default function OnDemandIdPage() {
             {c.title}
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-semibold text-teal-primary mb-8">{c.subtitle}</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-teal-primary mb-8">
+            {c.subtitle}
+          </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={c.visitUrl} target="_blank" rel="noopener noreferrer">
