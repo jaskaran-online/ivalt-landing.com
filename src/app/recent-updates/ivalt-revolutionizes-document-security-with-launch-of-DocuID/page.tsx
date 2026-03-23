@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'iVALT Revolutionizes Document Security with Launch of DocuID',
@@ -55,6 +56,28 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="max-w-7xl px-6 py-10 bg-white mx-6 shadow-sm md:mx-auto">
+      <JsonLd
+        data={articleJsonLd({
+          title: 'iVALT Revolutionizes Document Security with Launch of DocuID',
+          description:
+            'iVALT today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
+          path: '/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
+          datePublished: '2025-04-22',
+          author: 'Baldev Krishan',
+          image:
+            '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: 'Home', url: '/' },
+          { name: 'Recent Updates', url: '/recent-updates' },
+          {
+            name: 'iVALT Launches DocuID',
+            url: '/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
+          },
+        ])}
+      />
       <article className="leading-relaxed">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy-primary mb-12">
           iVALT Revolutionizes Document Security with Launch of DocuID(™), a Mobile-Centric Access

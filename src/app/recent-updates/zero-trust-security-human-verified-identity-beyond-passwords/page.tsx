@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
@@ -53,6 +54,27 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="max-w-7xl px-6 py-10 bg-white mx-6 shadow-sm md:mx-auto">
+      <JsonLd
+        data={articleJsonLd({
+          title: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
+          description:
+            'Join iVALT and OpenVPN for an exclusive webinar on delivering human-verified Zero Trust for your organization.',
+          path: '/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
+          datePublished: '2026-02-11',
+          author: 'iVALT',
+          image: '/press-release/images/ivalt-openvpn-webinar.png',
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: 'Home', url: '/' },
+          { name: 'Recent Updates', url: '/recent-updates' },
+          {
+            name: 'Zero Trust Security: Human-Verified Identity Beyond Passwords',
+            url: '/recent-updates/zero-trust-security-human-verified-identity-beyond-passwords',
+          },
+        ])}
+      />
       <article className="leading-relaxed">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy-primary mb-12">
           Zero Trust Security: Human-Verified Identity Beyond Passwords
