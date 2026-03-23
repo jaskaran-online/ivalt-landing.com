@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     images: [
       {
-        url: 'https://www.ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+        url: 'https://www.ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.webp',
         width: 1200,
         height: 630,
         alt: 'iVALT Revolutionizes Document Security with DocuID',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       'iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     images: [
-      'https://www.ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+      'https://www.ivalt.com/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.webp',
     ],
   },
   other: {
@@ -65,7 +65,7 @@ export default function Page() {
           datePublished: '2025-04-22',
           author: 'Baldev Krishan',
           image:
-            '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+            '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.webp',
         })}
       />
       <JsonLd
@@ -84,7 +84,7 @@ export default function Page() {
           Control Solution
         </h1>
         <Image
-          src="/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png"
+          src="/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.webp"
           alt="iVALT launches DocuID document security solution"
           width={1200}
           height={630}

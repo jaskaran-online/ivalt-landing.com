@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
     images: [
       {
-        url: 'https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.png',
+        url: 'https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.webp',
         width: 1200,
         height: 630,
         alt: 'Psono Selects iVALT 5FA',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
     description:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
-    images: ['https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.png'],
+    images: ['https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.webp'],
   },
   other: {
     'article:published_time': '2025-01-10T00:00:00+00:00',
@@ -61,7 +61,7 @@ export default function PsonoSelectsIvalt5fa() {
           path: '/recent-updates/psono-selects-ivalt-5fa',
           datePublished: '2025-01-10',
           author: 'Baldev Krishan',
-          image: '/press-release/images/psono-collaborates-with-ivalt.png',
+          image: '/press-release/images/psono-collaborates-with-ivalt.webp',
         })}
       />
       <JsonLd
@@ -79,7 +79,7 @@ export default function PsonoSelectsIvalt5fa() {
           Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication
         </h1>
         <Image
-          src="/press-release/images/psono-collaborates-with-ivalt.png"
+          src="/press-release/images/psono-collaborates-with-ivalt.webp"
           alt="Psono partners with iVALT for 5-Factor Authentication"
           width={1200}
           height={630}

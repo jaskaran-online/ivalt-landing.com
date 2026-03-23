@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     images: [
       {
-        url: 'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+        url: 'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
         width: 1200,
         height: 630,
         alt: 'iVALT Launches OnDemand ID',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     images: [
-      'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+      'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
     ],
   },
   other: {
@@ -65,7 +65,7 @@ export default function Page() {
           datePublished: '2025-01-08',
           author: 'Baldev Krishan',
           image:
-            '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+            '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
         })}
       />
       <JsonLd
@@ -83,7 +83,7 @@ export default function Page() {
           iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation
         </h1>
         <Image
-          src="/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png"
+          src="/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp"
           alt="iVALT launches OnDemand ID with 5+ factors of identity validation"
           width={1200}
           height={630}
