@@ -38,7 +38,9 @@ export default function HumanBoundAuthorityPage() {
             {c.title}
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-semibold text-teal-primary mb-10">{c.subtitle}</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-teal-primary mb-10">
+            {c.subtitle}
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left mb-12">
             {c.features.map((text, index) => {
@@ -57,14 +59,26 @@ export default function HumanBoundAuthorityPage() {
             })}
           </div>
         </div>
-        <div className="flex justify-center items-center my-4 mb-6">
+        <div className="flex justify-between max-w-7xl mx-auto items-center my-4 mb-6 gap-4 md:gap-16 px-8">
           <Image
             src={HumanBoundAuthorityImage}
             alt={c.title}
             width={1500}
             height={1500}
-            className="w-full md:w-[50%] h-full object-cover mb-3"
+            className="w-full md:w-[60%] h-full object-cover mb-3"
           />
+          <div className="flex flex-col justify-between gap-2 md:gap-8 h-[250px] md:h-[400px]">
+            <div className="border-4 p-2 md:p-8 rounded-lg">
+              <h3 className="text-lg md:text-2xl font-semibold md:font-bold text-navy-primary text-center">
+                IAM Extended to AI with PKI as for Cryptographic User Identity
+              </h3>
+            </div>
+            <div className="border-4 p-2 md:p-8 rounded-lg">
+              <h3 className="text-lg md:text-2xl font-semibold md:font-bold text-navy-primary text-center">
+                Human-Bound Authority Verified Before Execution
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>
