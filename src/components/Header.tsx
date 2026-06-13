@@ -56,6 +56,10 @@ export const navItems = [
       },
     ],
   },
+  {
+    label: 'Leadership',
+    href: '/leadership',
+  },
   // {
   //   label: 'Recent Updates',
   //   href: '/recent-updates',
