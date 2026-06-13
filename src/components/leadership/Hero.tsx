@@ -50,7 +50,7 @@ export function Hero() {
             />
 
             {/* Floating Person Cards */}
-            <div className="absolute top-12 md:top-20 left-4 md:left-10 animate-float" style={{ animationDelay: '0s' }}>
+            <div className="absolute top-12 md:top-2 left-4 md:left-20 animate-float" style={{ animationDelay: '0s' }}>
               <div className="bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
                 <div className="size-12 rounded-full overflow-hidden bg-gray-100">
                   <Image
