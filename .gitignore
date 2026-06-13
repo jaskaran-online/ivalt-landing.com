@@ -42,3 +42,4 @@ next-env.d.ts
 pnpm-lock.yaml
 # next-agents-md
 .next-docs/
+codedb.snapshot
