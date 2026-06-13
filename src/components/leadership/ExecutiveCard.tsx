@@ -15,7 +15,7 @@ export function ExecutiveCard({ person, index }: { person: Executive; index: num
               src={person.image}
               alt={person.name}
               fill
-              className="object-cover object-center"
+              className="object-cover object-right scale-110"
             />
           ) : (
             <Initials name={person.name} />
