@@ -4,11 +4,24 @@ import { BodyText, Heading2 } from '@/components/ui/typography';
 import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ContactForm from '@/components/ContactForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description:
+    'Get in touch with iVALT to learn how our identity verification and biometric security solutions can protect your organization from fraud and deepfakes.',
+  alternates: {
+    canonical: '/contact',
+  },
+};
 
 export default function Contact() {
   return (
     <>
       <Container className="bg-[#FAF9F7] py-16">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-navy-primary">Contact Us</h1>
+        </div>
         <SectionTitle
           title="Contact Us"
           description="Ready to revolutionize your security? Get in touch with our team to learn how iVALT® can protect your organization from identity fraud."

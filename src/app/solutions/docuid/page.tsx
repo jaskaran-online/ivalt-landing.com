@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description:
       "Take control of your document security with iVALT's DocuID. Multi-factor authentication and DRM to prevent unauthorized access.",
   },
+  alternates: {
+    canonical: '/solutions/docuid',
+  },
 };
 
 export default function DocuIdPage() {
@@ -76,12 +79,12 @@ export default function DocuIdPage() {
 
       <div className="relative overflow-hidden mt-16 border">
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 text-center mt-16">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-navy-primary mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-navy-primary mb-6 tracking-tight">
             {c.futureTitle}
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-teal-primary">
-            {c.futureSubtitle}
           </h2>
+          <h3 className="text-2xl md:text-3xl font-semibold text-teal-primary">
+            {c.futureSubtitle}
+          </h3>
         </div>
         <div className="flex justify-center items-center mb-6 max-w-7xl mx-auto">
           <Image

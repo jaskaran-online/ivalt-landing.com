@@ -9,14 +9,19 @@ export const metadata = {
   openGraph: {
     title: 'Recent Updates | iVALT',
     description: 'Latest news, updates and announcements from iVALT.',
-    url: 'https://ivalt.com/recent-updates',
+    url: 'https://www.ivalt.com/recent-updates',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://ivalt.com/recent-updates',
+    canonical: 'https://www.ivalt.com/recent-updates',
   },
 };
 
 export default function RecentUpdatesPage() {
-  return <RecentUpdatesClient />;
+  return (
+    <>
+      <h1 className="sr-only">Recent Updates</h1>
+      <RecentUpdatesClient />
+    </>
+  );
 }

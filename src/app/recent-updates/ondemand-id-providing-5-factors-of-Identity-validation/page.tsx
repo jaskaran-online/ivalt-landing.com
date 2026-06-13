@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation',
@@ -11,17 +12,17 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical:
-      'https://ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
+      'https://www.ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
   },
   openGraph: {
     type: 'article',
-    url: 'https://ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
+    url: 'https://www.ivalt.com/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
     title: 'iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation',
     description:
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     images: [
       {
-        url: 'https://ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+        url: 'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
         width: 1200,
         height: 630,
         alt: 'iVALT Launches OnDemand ID',
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     images: [
-      'https://ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+      'https://www.ivalt.com/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
     ],
   },
   other: {
@@ -55,13 +56,35 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="max-w-7xl px-6 py-10 bg-white mx-6 shadow-sm md:mx-auto">
+      <JsonLd
+        data={articleJsonLd({
+          title: 'iVALT Launches OnDemand ID providing 5+ Factors of Identity Validation',
+          description:
+            'iVALT today announced the official launch of OnDemand ID, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
+          path: '/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
+          datePublished: '2025-01-08',
+          author: 'Baldev Krishan',
+          image:
+            '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: 'Home', url: '/' },
+          { name: 'Recent Updates', url: '/recent-updates' },
+          {
+            name: 'iVALT Launches OnDemand ID',
+            url: '/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
+          },
+        ])}
+      />
       <article className="leading-relaxed">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy-primary mb-12">
           iVALT® Launches OnDemand ID providing 5+ Factors of Identity Validation
         </h1>
         <Image
-          src="/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png"
-          alt=""
+          src="/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp"
+          alt="iVALT launches OnDemand ID with 5+ factors of identity validation"
           width={1200}
           height={630}
           className="w-full h-auto mx-auto"
@@ -130,7 +153,7 @@ export default function Page() {
           own identities instead of delegating control to all of their digital relationships, any of
           which can be easily breached."
         </p>
-        <h1 className="text-2xl font-bold text-navy-primary mb-4">About iVALT</h1>
+        <h2 className="text-2xl font-bold text-navy-primary mb-4">About iVALT</h2>
         <p className="mb-6 text-justify">
           iVALT is a leading provider of patented 5+ factor identity solutions that empower
           businesses and individuals alike with secure and convenient identity verification. Its

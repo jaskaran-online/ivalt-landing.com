@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description:
       "Don't fall for deepfakes or scams. Use iVALT's On-Demand ID for instant, reliable identity verification.",
   },
+  alternates: {
+    canonical: '/solutions/ondemandid',
+  },
 };
 
 export default function OnDemandIdPage() {

@@ -35,7 +35,7 @@ const recentUpdates: Update[] = [
     summary:
       'iVALT, an innovator in identity verification and security solutions, today announced the launch of DocuID, a groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     imageSrc:
-      '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+      '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.webp',
     imageAlt: 'iVALT DocuID Launch',
     path: '/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
   },
@@ -46,7 +46,7 @@ const recentUpdates: Update[] = [
     summary:
       'iVALT®, a leading innovator of Zero Trust identity solutions, today announced the official launch of OnDemand ID™, a groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     imageSrc:
-      '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+      '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
     imageAlt: 'iVALT OnDemand ID Launch',
     path: '/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
   },
@@ -56,7 +56,7 @@ const recentUpdates: Update[] = [
     date: 'January 10, 2025',
     summary:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
-    imageSrc: '/press-release/images/psono-collaborates-with-ivalt.png',
+    imageSrc: '/press-release/images/psono-collaborates-with-ivalt.webp',
     imageAlt: 'Psono Selects iVALT 5FA',
     path: '/recent-updates/psono-selects-ivalt-5fa',
   },

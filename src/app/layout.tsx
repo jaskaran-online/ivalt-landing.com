@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RecaptchaProvider from '@/components/providers/RecaptchaProvider';
+import { JsonLd, organizationJsonLd, webSiteJsonLd } from '@/components/JsonLd';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -12,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ivalt.com'),
+  metadataBase: new URL('https://www.ivalt.com'),
   title: {
     default: 'iVALT | Advanced Identity Verification & Biometric Security',
     template: '%s | iVALT',
@@ -81,6 +82,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} font-sans antialiased`}>
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={webSiteJsonLd()} />
         <RecaptchaProvider>
           <Header />
           {children}

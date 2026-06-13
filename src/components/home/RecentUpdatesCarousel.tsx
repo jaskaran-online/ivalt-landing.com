@@ -32,7 +32,7 @@ const recentUpdates: Update[] = [
     summary:
       'A groundbreaking document protection service that empowers document owners with unprecedented control over access to their critical information.',
     imageSrc:
-      '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.png',
+      '/press-release/images/ivalt-revolutionizes-document-security-with-launch-of-DocuID-net.webp',
     path: '/recent-updates/ivalt-revolutionizes-document-security-with-launch-of-DocuID',
   },
   {
@@ -42,7 +42,7 @@ const recentUpdates: Update[] = [
     summary:
       'A groundbreaking universal 5+factor identity product that empowers enterprises with the highest level of identity verification available.',
     imageSrc:
-      '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.png',
+      '/press-release/images/ivalt-launches-ondemand-id-providing-5-factors-of-Identity-validation.webp',
     path: '/recent-updates/ondemand-id-providing-5-factors-of-Identity-validation',
   },
   {
@@ -51,7 +51,7 @@ const recentUpdates: Update[] = [
     date: 'January 10, 2025',
     summary:
       'Psono chose iVALT to dramatically upgrade digital security using biometric and industry-leading 5 factor authentication (5FA).',
-    imageSrc: '/press-release/images/psono-collaborates-with-ivalt.png',
+    imageSrc: '/press-release/images/psono-collaborates-with-ivalt.webp',
     path: '/recent-updates/psono-selects-ivalt-5fa',
   },
 ];

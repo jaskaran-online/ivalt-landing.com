@@ -26,7 +26,10 @@ import TheFutureofIdentity from '@/components/home/TheFutureofIdentity';
 export const metadata: Metadata = {
   title: 'iVALT Home - Identity Validation Platform',
   description:
-    'Discover iVALT’s revolutionary identity validation solutions for secure digital interactions.',
+    'Discover iVALT\u2019s revolutionary identity validation solutions for secure digital interactions.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Homepage2() {

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
@@ -10,17 +11,17 @@ export const metadata: Metadata = {
   authors: [{ name: 'iVALT' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://ivalt.com/recent-updates/psono-selects-ivalt-5fa',
+    canonical: 'https://www.ivalt.com/recent-updates/psono-selects-ivalt-5fa',
   },
   openGraph: {
     type: 'article',
-    url: 'https://ivalt.com/recent-updates/psono-selects-ivalt-5fa',
+    url: 'https://www.ivalt.com/recent-updates/psono-selects-ivalt-5fa',
     title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
     description:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
     images: [
       {
-        url: 'https://ivalt.com/press-release/images/psono-collaborates-with-ivalt.png',
+        url: 'https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.webp',
         width: 1200,
         height: 630,
         alt: 'Psono Selects iVALT 5FA',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
     description:
       "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
-    images: ['https://ivalt.com/press-release/images/psono-collaborates-with-ivalt.png'],
+    images: ['https://www.ivalt.com/press-release/images/psono-collaborates-with-ivalt.webp'],
   },
   other: {
     'article:published_time': '2025-01-10T00:00:00+00:00',
@@ -52,13 +53,34 @@ export const metadata: Metadata = {
 export default function PsonoSelectsIvalt5fa() {
   return (
     <main className="max-w-7xl px-6 py-10 bg-white mx-6 shadow-sm md:mx-auto">
+      <JsonLd
+        data={articleJsonLd({
+          title: 'Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication',
+          description:
+            "Psono, a leader in secure password management using end-to-end encryption, chose iVALT to dramatically upgrade digital security using iVALT's biometric and industry-leading 5 factor authentication (5FA).",
+          path: '/recent-updates/psono-selects-ivalt-5fa',
+          datePublished: '2025-01-10',
+          author: 'Baldev Krishan',
+          image: '/press-release/images/psono-collaborates-with-ivalt.webp',
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: 'Home', url: '/' },
+          { name: 'Recent Updates', url: '/recent-updates' },
+          {
+            name: 'Psono Selects iVALT for 5-Factor Authentication',
+            url: '/recent-updates/psono-selects-ivalt-5fa',
+          },
+        ])}
+      />
       <article className="leading-relaxed">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy-primary mb-12">
           Psono Selects iVALT to Transform Digital Security with 5-Factor Authentication
         </h1>
         <Image
-          src="/press-release/images/psono-collaborates-with-ivalt.png"
-          alt=""
+          src="/press-release/images/psono-collaborates-with-ivalt.webp"
+          alt="Psono partners with iVALT for 5-Factor Authentication"
           width={1200}
           height={630}
           className="w-full h-auto mx-auto"
