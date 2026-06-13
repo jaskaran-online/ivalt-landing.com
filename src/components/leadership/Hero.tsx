@@ -39,19 +39,20 @@ export function Hero() {
               </div>
             </FadeInOnScroll>
           </div>
-          <div className="order-2 lg:order-2 relative">
+          <div className="order-2 lg:order-2 relative min-h-[300px] lg:min-h-0">
             <Image
               src="/world-map.svg"
-              alt="World map showing global presence"
+              alt=""
               width={2100}
               height={1312}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-auto opacity-60 scale-120"
+              aria-hidden="true"
             />
-            
+
             {/* Floating Person Cards */}
-            <div className="absolute top-20 left-10 animate-float" style={{ animationDelay: '0s' }}>
+            <div className="absolute top-12 md:top-20 left-4 md:left-10 animate-float" style={{ animationDelay: '0s' }}>
               <div className="bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                <div className="size-12 rounded-full overflow-hidden bg-gray-100">
                   <Image
                     src={featuredExecutives[0].image}
                     alt={featuredExecutives[0].name}
@@ -67,9 +68,9 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '1s' }}>
+            <div className="absolute top-36 md:top-40 right-4 md:right-20 animate-float" style={{ animationDelay: '1s' }}>
               <div className="bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                <div className="size-12 rounded-full overflow-hidden bg-gray-100">
                   <Image
                     src={featuredExecutives[1].image}
                     alt={featuredExecutives[1].name}
@@ -85,9 +86,9 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="absolute bottom-32 left-1/4 animate-float" style={{ animationDelay: '2s' }}>
+            <div className="absolute bottom-16 md:bottom-32 left-1/4 animate-float max-md:hidden" style={{ animationDelay: '2s' }}>
               <div className="bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                <div className="size-12 rounded-full overflow-hidden bg-gray-100">
                   <Image
                     src={featuredExecutives[2].image}
                     alt={featuredExecutives[2].name}
