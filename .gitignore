@@ -43,3 +43,5 @@ pnpm-lock.yaml
 # next-agents-md
 .next-docs/
 codedb.snapshot
+# docx files (content extracted to docs/ as markdown)
+*.docx
