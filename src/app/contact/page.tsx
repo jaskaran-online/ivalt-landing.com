@@ -61,7 +61,6 @@ export default function Contact() {
                       <div>
                         <h3 className="font-semibold text-navy-primary mb-1">Email Us</h3>
                         <BodyText className="text-gray-600">info@ivalt.com</BodyText>
-                        <BodyText className="text-gray-600">support@ivalt.com</BodyText>
                       </div>
                     </div>
                   </CardContent>

@@ -200,7 +200,7 @@ function generateApiKeyEmailTemplate(name: string, apiKey: string): string {
                   <div style="background-color: #e7f3ff; border-left: 4px solid #1E4884; padding: 20px; border-radius: 4px; margin: 30px 0;">
                     <p style="color: #495057; font-size: 15px; line-height: 1.6; margin: 0;">
                       <strong style="color: #1E4884;">Need Help?</strong><br>
-                      Our support team is here to assist you. Reach out to us at <a href="mailto:support@ivalt.com" style="color: #30B68E; text-decoration: none;">support@ivalt.com</a> or visit our <a href="https://documenter.getpostman.com/view/26384076/2sA2rGuzHV" style="color: #30B68E; text-decoration: none;">API documentation</a>.
+                      Our support team is here to assist you. Reach out to us at <a href="mailto:info@ivalt.com" style="color: #30B68E; text-decoration: none;">info@ivalt.com</a> or visit our <a href="https://documenter.getpostman.com/view/26384076/2sA2rGuzHV" style="color: #30B68E; text-decoration: none;">API documentation</a>.
                     </p>
                   </div>
                   
@@ -287,7 +287,7 @@ export async function POST(request: NextRequest) {
       - Use HTTPS for all API requests
 
       Need Help?
-      Our support team is here to assist you. Reach out to us at support@ivalt.com or visit our API documentation: https://documenter.getpostman.com/view/26384076/2sA2rGuzHV
+      Our support team is here to assist you. Reach out to us at info@ivalt.com or visit our API documentation: https://documenter.getpostman.com/view/26384076/2sA2rGuzHV
 
       Best regards,
       The iVALT Team

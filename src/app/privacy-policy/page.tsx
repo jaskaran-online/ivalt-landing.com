@@ -164,8 +164,8 @@ export default function PrivacyPolicy() {
               <strong className="text-navy-primary">“opt-out”</strong> at any time by discontinuing
               the use of the Company&apos;s WordPress plug-in and deleting the Company&apos;s mobile
               application from your mobile phone. The user may send us an email at{' '}
-              <a href="mailto:support@ivalt.com" className="text-teal-primary underline">
-                support@ivalt.com
+              <a href="mailto:info@ivalt.com" className="text-teal-primary underline">
+                info@ivalt.com
               </a>{' '}
               to explicitly ask for removal of their data. As a follow-up, we will ensure the
               removal of the data (metadata) from our system.
